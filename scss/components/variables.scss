@@ -1,0 +1,27 @@
+$blanco: #f7f9f9;
+$blanquito: #fffef4;
+$gris: #727272;
+$grisClaro: #d1d1d1;
+$grisMasClaro: #ebebeb;
+$grisOscuro: #a3a3a3;
+$grisMasOscuro: #707070;
+$shadow: 0px 0px 5px 3px #00000020;
+
+* {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "poppins";
+}
+
+body {
+  background-color: $grisMasClaro;
+}
+
+@font-face {
+  font-family: "pixel";
+  src: url("../assets/font/VCR_OSD_MONO_1.001.ttf");
+}

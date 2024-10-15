@@ -1,0 +1,104 @@
+* {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "poppins";
+}
+
+body {
+  background-color: #ebebeb;
+}
+
+@font-face {
+  font-family: "pixel";
+  src: url("../assets/font/VCR_OSD_MONO_1.001.ttf");
+}
+.intro {
+  position: fixed;
+  z-index: 50;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #161616;
+  transition: 1s;
+}
+.intro .logoHeader {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-family: "Poppins";
+  display: flex;
+  align-items: center;
+}
+.intro .logoHeader .logo {
+  position: relative;
+  display: inline-block;
+  bottom: -20px;
+  opacity: 0;
+  padding-right: 10px;
+}
+.intro .logoHeader .active {
+  bottom: 0;
+  opacity: 1;
+  transition: ease-in-out 0.5s;
+}
+.intro .logoHeader .fade {
+  bottom: 150px;
+  opacity: 0;
+  transition: ease-in-out 0.5s;
+}
+.intro .logoHeader img {
+  width: 80px;
+}
+
+@media (max-width: 737px) {
+  .intro {
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
+    transition: 1s;
+  }
+  .intro .logoHeader {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-family: "Poppins";
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+  }
+  .intro .logoHeader .logo {
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+    padding-right: 10px;
+  }
+  .intro .logoHeader .active {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+  }
+  .intro .logoHeader .fade {
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+  }
+  .intro .logoHeader img {
+    width: 80px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
