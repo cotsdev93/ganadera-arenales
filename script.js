@@ -27,6 +27,53 @@ function animacionInicial() {
   });
 }
 
-animacionInicial()
-
 // POP UP
+
+const popup = document.querySelector(".popupContainer");
+const buttonx = document.getElementById("x");
+function popUp() {
+  popup.style.top = "50px";
+}
+
+buttonx.addEventListener("click", () => {
+  popup.style.transform = "translateX(-50%) translateY(-100vh)";
+});
+
+// INICIO INTRO Y POP UP
+
+window.addEventListener("DOMContentLoaded", () => {
+  animacionInicial();
+  setTimeout(() => {
+    popUp();
+  }, 5000);
+});
+
+// NAV
+
+const menu = document.querySelector(".menuContainer");
+const navMenu = document.querySelector(".navMenu");
+const opcionMenu = document.querySelectorAll(".opcionMenu");
+const body = document.querySelector("body")
+// const blureado2 = document.querySelector(".blureado2");
+// const blureado3 = document.querySelector(".blureado3");
+var isSmallScreen = window.innerWidth <= 737;
+
+menu.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+  menu.classList.toggle("opacity");
+  body.classList.toggle("hidden")
+  // if (isSmallScreen) {
+  //   blureado2.classList.toggle("blur");
+  //   blureado3.classList.toggle("blur");
+  // }
+});
+
+opcionMenu.forEach((opcion) => {
+  opcion.addEventListener("click", () => {
+    navMenu.classList.remove("show");
+    // if (isSmallScreen) {
+    //   blureado2.classList.toggle("blur");
+    //   blureado3.classList.toggle("blur");
+    // }
+  });
+});

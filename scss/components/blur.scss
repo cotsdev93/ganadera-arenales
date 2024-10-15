@@ -1,0 +1,15 @@
+body {
+  .blureado2 {
+    transition: all 1.3s ease;
+  }
+  main {
+    .blureado3 {
+      transition: all 1s ease;
+    }
+  }
+  .blur {
+    filter: blur(3px);
+    transition: 1s ease;
+    z-index: 1;
+  }
+}
