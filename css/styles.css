@@ -305,7 +305,7 @@ body header nav #carrito {
   background-color: #d1d1d1;
   position: relative;
   margin-right: 40px;
-  z-index: 5;
+  z-index: 7;
   cursor: pointer;
 }
 body header nav #carrito .fa-cart-shopping {
@@ -335,7 +335,7 @@ body header nav #carrito .circuloCantidad span {
   transform: translate(-50%, -50%);
 }
 body header nav .carritoListarContainer {
-  z-index: 4;
+  z-index: 6;
   display: flex;
   flex-direction: column;
   padding-top: 80px;
@@ -469,10 +469,10 @@ body header nav .menuContainer {
   }
   body header nav #carrito {
     margin-right: 0px;
-    z-index: 1;
+    z-index: 4;
   }
   body header nav .carritoListarContainer {
-    z-index: 0;
+    z-index: 3;
   }
   body header nav .show {
     right: 0px;

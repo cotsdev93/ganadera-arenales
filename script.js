@@ -94,5 +94,10 @@ const carritoListarContainer = document.querySelector(
 
 botonCarrito.addEventListener("click", () => {
   carritoListarContainer.classList.toggle("showCarrito");
-  body.classList.toggle("hidden");
+
+  if (carritoListarContainer.classList.contains("showCarrito")) {
+    body.style.overflow = "hidden"; // Desactiva el scroll del body
+  } else {
+    body.style.overflow = ""; // Restaura el scroll del body cuando el carrito se cierra
+  }
 });
