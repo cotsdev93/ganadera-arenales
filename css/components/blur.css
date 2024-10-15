@@ -1,13 +1,8 @@
-body .blureado2 {
-  transition: all 1.3s ease;
+body .toBlur {
+  transition: 2s ease-in-out;
 }
-body main .blureado3 {
-  transition: all 1s ease;
-}
-body .blur {
+body .toBlur .blur {
   filter: blur(3px);
-  transition: 1s ease;
-  z-index: 1;
 }
 
 /*# sourceMappingURL=blur.css.map */

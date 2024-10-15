@@ -74,87 +74,87 @@ header {
         }
       }
     }
-    // .carritoListarContainer {
-    //   z-index: 5;
-    //   display: flex;
-    //   flex-direction: column;
-    //   padding-top: 80px;
-    //   width: 180px;
-    //   height: 100%;
-    //   position: fixed;
-    //   right: -180px;
-    //   top: 0;
-    //   background-color: $blanco;
-    //   transition: 1s;
-    //   box-shadow: 0px 0px 1px 1px #00000005;
-    //   .carritoListar {
-    //     width: 100%;
-    //     height: auto;
-    //     justify-content: center;
-    //     .productoCarrito {
-    //       display: flex;
-    //       width: 100%;
-    //       margin: 5px;
-    //       img {
-    //         width: 60px;
-    //         object-fit: cover;
-    //       }
-    //       .dataCarrito {
-    //         width: 100%;
-    //         .cNombre {
-    //           width: 100%;
-    //         }
-    //         .dataCarrito2 {
-    //           display: flex;
-    //           height: 20px;
-    //           .cCantidad {
-    //             width: 40%;
-    //             font-size: 15px;
-    //             color: $grisOscuro;
-    //           }
-    //           .cPrecio {
-    //             width: 50%;
-    //             color: green;
-    //           }
-    //         }
-    //         .btnQuitar {
-    //           color: $grisClaro;
-    //           transition: 0.5s;
-    //           &:hover {
-    //             color: rgb(248, 124, 124);
-    //             &:active {
-    //               transition: none;
-    //               color: red;
-    //             }
-    //           }
-    //         }
-    //         .btnAgregar {
-    //           color: $grisClaro;
-    //           transition: 0.5s;
-    //           &:hover {
-    //             color: rgb(108, 230, 108);
-    //             &:active {
-    //               color: rgb(0, 215, 0);
-    //               transition: none;
-    //             }
-    //           }
-    //         }
-    //       }
-    //     }
-    //     .line {
-    //       width: 80%;
-    //       height: 1px;
-    //       background-color: $grisClaro;
-    //       margin: auto;
-    //     }
-    //   }
-    //   .total {
-    //     font-size: 20px;
-    //     padding: 0px 0px 0px 0px;
-    //     margin-right: 20px;
-    //     text-align: right;
-    //   }
-    // }
+    .carritoListarContainer {
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      padding-top: 80px;
+      width: 180px;
+      height: 100%;
+      position: fixed;
+      right: -180px;
+      top: 0;
+      background-color: $blanco;
+      transition: 1s;
+      box-shadow: 0px 0px 1px 1px #00000005;
+      .carritoListar {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        .productoCarrito {
+          display: flex;
+          width: 100%;
+          margin: 5px;
+          img {
+            width: 60px;
+            object-fit: cover;
+          }
+          .dataCarrito {
+            width: 100%;
+            .cNombre {
+              width: 100%;
+            }
+            .dataCarrito2 {
+              display: flex;
+              height: 20px;
+              .cCantidad {
+                width: 40%;
+                font-size: 15px;
+                color: $grisOscuro;
+              }
+              .cPrecio {
+                width: 50%;
+                color: green;
+              }
+            }
+            .btnQuitar {
+              color: $grisClaro;
+              transition: 0.5s;
+              &:hover {
+                color: rgb(248, 124, 124);
+                &:active {
+                  transition: none;
+                  color: red;
+                }
+              }
+            }
+            .btnAgregar {
+              color: $grisClaro;
+              transition: 0.5s;
+              &:hover {
+                color: rgb(108, 230, 108);
+                &:active {
+                  color: rgb(0, 215, 0);
+                  transition: none;
+                }
+              }
+            }
+          }
+        }
+        .line {
+          width: 80%;
+          height: 1px;
+          background-color: $grisClaro;
+          margin: auto;
+        }
+      }
+      .total {
+        font-size: 20px;
+        padding: 0px 0px 0px 0px;
+        margin-right: 20px;
+        text-align: right;
+      }
+    }
     .showCarrito {
       right: 0px;
     }
@@ -181,7 +181,6 @@ header {
           }
         }
         .navMenu {
-          // border: solid 1px red;
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
@@ -190,6 +189,7 @@ header {
           height: 100vh;
           position: fixed;
           right: -145px;
+          filter: none;
           margin-left: 0px;
           top: 0;
           background-color: $grisClaro;
@@ -210,6 +210,10 @@ header {
         }
         #carrito {
           margin-right: 0px;
+          z-index: 1;
+        }
+        .carritoListarContainer {
+            z-index: 0;
         }
         .show {
           right: 0px;

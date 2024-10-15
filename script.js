@@ -53,7 +53,8 @@ window.addEventListener("DOMContentLoaded", () => {
 const menu = document.querySelector(".menuContainer");
 const navMenu = document.querySelector(".navMenu");
 const opcionMenu = document.querySelectorAll(".opcionMenu");
-const body = document.querySelector("body")
+const body = document.querySelector("body");
+
 // const blureado2 = document.querySelector(".blureado2");
 // const blureado3 = document.querySelector(".blureado3");
 var isSmallScreen = window.innerWidth <= 737;
@@ -61,7 +62,8 @@ var isSmallScreen = window.innerWidth <= 737;
 menu.addEventListener("click", () => {
   navMenu.classList.toggle("show");
   menu.classList.toggle("opacity");
-  body.classList.toggle("hidden")
+  body.classList.toggle("hidden");
+
   // if (isSmallScreen) {
   //   blureado2.classList.toggle("blur");
   //   blureado3.classList.toggle("blur");
@@ -71,9 +73,27 @@ menu.addEventListener("click", () => {
 opcionMenu.forEach((opcion) => {
   opcion.addEventListener("click", () => {
     navMenu.classList.remove("show");
+    menu.classList.remove("opacity");
+    body.classList.remove("hidden");
     // if (isSmallScreen) {
     //   blureado2.classList.toggle("blur");
     //   blureado3.classList.toggle("blur");
     // }
   });
+});
+
+
+// CARRITO
+
+const spanTotalCarrito = document.querySelector("#totalCarrito");
+const spanCantidadProductos = document.querySelector("#cantidadProductos");
+const botonCarrito = document.querySelector("#carrito");
+const carritoListar = document.querySelector(".carritoListar");
+const carritoListarContainer = document.querySelector(
+  ".carritoListarContainer"
+);
+
+botonCarrito.addEventListener("click", () => {
+  carritoListarContainer.classList.toggle("showCarrito");
+  body.classList.toggle("hidden");
 });

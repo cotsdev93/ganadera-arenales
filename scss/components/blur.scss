@@ -1,15 +1,8 @@
 body {
-  .blureado2 {
-    transition: all 1.3s ease;
-  }
-  main {
-    .blureado3 {
-      transition: all 1s ease;
+  .toBlur {
+    transition: 2s ease-in-out;
+    .blur {
+      filter: blur(3px);
     }
-  }
-  .blur {
-    filter: blur(3px);
-    transition: 1s ease;
-    z-index: 1;
   }
 }
