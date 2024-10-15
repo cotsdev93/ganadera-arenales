@@ -82,7 +82,6 @@ opcionMenu.forEach((opcion) => {
   });
 });
 
-
 // CARRITO
 
 const spanTotalCarrito = document.querySelector("#totalCarrito");
