@@ -227,7 +227,9 @@ function initMap() {
     });
 
     marker.addListener("mouseout", function () {
-      infoWindow.close();
+      setTimeout(() => {
+        infoWindow.close();
+      }, 1000);
     });
 
     return marker;
@@ -273,21 +275,9 @@ function initMap() {
     "Colombia"
   );
 
-  crearMarcador(
-    -6,
-    -50.796387,
-    "assets/img/marker.png",
-    "marcador",
-    "Brasil"
-  );
+  crearMarcador(-6, -50.796387, "assets/img/marker.png", "marcador", "Brasil");
 
-  crearMarcador(
-    -32,
-    25,
-    "assets/img/marker.png",
-    "marcador",
-    "Sudafrica"
-  );
+  crearMarcador(-32, 25, "assets/img/marker.png", "marcador", "Sudafrica");
 }
 
 initMap();
