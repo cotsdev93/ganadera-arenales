@@ -10,9 +10,7 @@
 }
 
 body {
-  background-color: #ebebeb;
-  height: 100%;
-  border: solid 5px red;
+  height: 100vh;
 }
 
 @font-face {

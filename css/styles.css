@@ -10,9 +10,7 @@
 }
 
 body {
-  background-color: #ebebeb;
-  height: 100%;
-  border: solid 5px red;
+  height: 100vh;
 }
 
 @font-face {
@@ -775,29 +773,27 @@ body main .sliderContainer .btnRight {
     border-radius: 50%;
   }
 }
-.sobreNosotros {
+body main .sobreNosotros {
   width: 100%;
   height: 100%;
-  padding: 15px;
 }
-.sobreNosotros h3 {
+body main .sobreNosotros h3 {
   color: #707070;
   font-size: 30px;
-  padding: 0px;
+  padding: 10px;
 }
-.sobreNosotros .imgContainer01 {
+body main .sobreNosotros .imgContainer01 {
   width: 100%;
   position: relative;
-  margin: 10px;
 }
-.sobreNosotros .imgContainer01 img {
+body main .sobreNosotros .imgContainer01 img {
   width: 100%;
   height: 150px;
   object-fit: cover;
   object-position: 20% 30%;
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
 }
-.sobreNosotros .imgContainer01 h4 {
+body main .sobreNosotros .imgContainer01 h4 {
   text-align: center;
   color: #fffef4;
   text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5019607843);
@@ -808,38 +804,38 @@ body main .sliderContainer .btnRight {
   left: 50%;
   transform: translate(-50%);
 }
-.sobreNosotros .higieneInfo01 {
+body main .sobreNosotros .higieneInfo01 {
   width: 100%;
   display: flex;
   justify-content: space-around;
 }
-.sobreNosotros .higieneInfo01 .info {
+body main .sobreNosotros .higieneInfo01 .info {
   width: 30%;
   height: 100%;
   margin: 20px;
 }
-.sobreNosotros .higieneInfo01 .info h5 {
+body main .sobreNosotros .higieneInfo01 .info h5 {
   color: #707070;
   font-size: 18px;
 }
-.sobreNosotros .higieneInfo01 .info p {
+body main .sobreNosotros .higieneInfo01 .info p {
   color: #a3a3a3;
   font-size: 14px;
   text-align: justify;
+  line-height: 1.3;
 }
-.sobreNosotros .imgContainer02 {
+body main .sobreNosotros .imgContainer02 {
   width: 100%;
   position: relative;
-  margin: 10px;
 }
-.sobreNosotros .imgContainer02 img {
+body main .sobreNosotros .imgContainer02 img {
   width: 100%;
   height: 150px;
   object-fit: cover;
   object-position: 0% 65%;
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
 }
-.sobreNosotros .imgContainer02 h4 {
+body main .sobreNosotros .imgContainer02 h4 {
   text-align: center;
   color: #fffef4;
   text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5019607843);
@@ -850,38 +846,38 @@ body main .sliderContainer .btnRight {
   left: 50%;
   transform: translate(-50%);
 }
-.sobreNosotros .higieneInfo02 {
+body main .sobreNosotros .higieneInfo02 {
   width: 100%;
   display: flex;
   justify-content: space-around;
 }
-.sobreNosotros .higieneInfo02 .info {
+body main .sobreNosotros .higieneInfo02 .info {
   width: 50%;
   height: 100%;
   margin: 20px;
 }
-.sobreNosotros .higieneInfo02 .info h5 {
+body main .sobreNosotros .higieneInfo02 .info h5 {
   color: #707070;
   font-size: 18px;
 }
-.sobreNosotros .higieneInfo02 .info p {
+body main .sobreNosotros .higieneInfo02 .info p {
   color: #a3a3a3;
   font-size: 14px;
   text-align: justify;
+  line-height: 1.3;
 }
-.sobreNosotros .imgContainer03 {
+body main .sobreNosotros .imgContainer03 {
   width: 100%;
   position: relative;
-  margin: 10px;
 }
-.sobreNosotros .imgContainer03 img {
+body main .sobreNosotros .imgContainer03 img {
   width: 100%;
   height: 150px;
   object-fit: cover;
   object-position: 0% 40%;
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
 }
-.sobreNosotros .imgContainer03 h4 {
+body main .sobreNosotros .imgContainer03 h4 {
   text-align: center;
   color: #fffef4;
   text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5019607843);
@@ -892,24 +888,25 @@ body main .sliderContainer .btnRight {
   left: 50%;
   transform: translate(-50%);
 }
-.sobreNosotros .higieneInfo03 {
+body main .sobreNosotros .higieneInfo03 {
   width: 100%;
   display: flex;
   justify-content: space-around;
 }
-.sobreNosotros .higieneInfo03 .info {
+body main .sobreNosotros .higieneInfo03 .info {
   width: 30%;
   height: 100%;
   margin: 20px;
 }
-.sobreNosotros .higieneInfo03 .info h5 {
+body main .sobreNosotros .higieneInfo03 .info h5 {
   color: #707070;
   font-size: 18px;
 }
-.sobreNosotros .higieneInfo03 .info p {
+body main .sobreNosotros .higieneInfo03 .info p {
   color: #a3a3a3;
   font-size: 14px;
   text-align: justify;
+  line-height: 1.3;
 }
 
 @media (max-width: 737px) {
@@ -1049,6 +1046,71 @@ body main .sliderContainer .btnRight {
     color: #a3a3a3;
     font-size: 14px;
     text-align: justify;
+  }
+}
+body main .exportacion {
+  padding: 0px 20px 30px 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 0;
+  background-color: #ebebeb;
+}
+body main .exportacion h3 {
+  padding: 10px 0px 10px 0px;
+  color: #707070;
+  font-size: 30px;
+  text-align: left;
+}
+body main .exportacion p {
+  padding: 0px 0px 15px 0px;
+  color: #a3a3a3;
+}
+body main .exportacion #map {
+  margin: auto;
+  width: 100%;
+  height: 400px;
+  border: solid #f7f9f9 4px;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
+}
+body main .exportacion #map:focus, body main .exportacion #map:active, body main .exportacion #map:hover {
+  outline: red;
+}
+body main:focus, body main:active {
+  outline: none;
+}
+
+@media (max-width: 737px) {
+  body main .exportacion {
+    padding: 0px 20px 30px 20px;
+    background-color: #ebebeb;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 0;
+  }
+  body main .exportacion h3 {
+    padding: 10px 0px 10px 0px;
+  }
+  body main .exportacion p {
+    padding: 0px 0px 15px 0px;
+    color: #a3a3a3;
+    text-align: justify;
+  }
+  body main .exportacion #map {
+    margin: auto;
+    width: 100%;
+    height: 400px;
+    border: solid #f7f9f9 4px;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1254901961);
+  }
+  body main .exportacion #map:focus, body main .exportacion #map:active {
+    outline: none;
+  }
+  body main:focus, body main:active {
+    outline: none;
   }
 }
 
