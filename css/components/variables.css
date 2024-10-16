@@ -11,6 +11,8 @@
 
 body {
   background-color: #ebebeb;
+  height: 100%;
+  border: solid 5px red;
 }
 
 @font-face {

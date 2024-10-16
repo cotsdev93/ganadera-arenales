@@ -145,3 +145,9 @@ function moveToLeft() {
   operacion = operacion - widthImg;
   slider.style.transform = `translate(-${operacion}%)`;
 }
+
+// AOS
+
+AOS.init();
+
+// 

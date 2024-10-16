@@ -11,6 +11,8 @@
 
 body {
   background-color: #ebebeb;
+  height: 100%;
+  border: solid 5px red;
 }
 
 @font-face {
@@ -128,9 +130,7 @@ body {
   }
 }
 body {
-  height: 200vh;
   overflow-x: hidden;
-  position: relative;
 }
 body .popupContainer {
   position: fixed;
@@ -502,31 +502,31 @@ body header nav .menuContainer {
     overflow: hidden;
   }
 }
-.sliderContainer {
+body main .sliderContainer {
   width: 100%;
   height: 400px;
   box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1882352941);
   overflow: hidden;
   position: relative;
 }
-.sliderContainer .slider {
+body main .sliderContainer .slider {
   width: 300%;
   height: 100%;
   display: flex;
   transition: 1s all ease;
 }
-.sliderContainer .slider .sliderSection {
+body main .sliderContainer .slider .sliderSection {
   width: 33.3333333333%;
   height: 100%;
   position: relative;
 }
-.sliderContainer .slider .sliderSection img {
+body main .sliderContainer .slider .sliderSection img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   position: relative;
 }
-.sliderContainer .slider .sliderSection .textTitle01 {
+body main .sliderContainer .slider .sliderSection .textTitle01 {
   width: 400px;
   position: absolute;
   top: 5%;
@@ -534,24 +534,24 @@ body header nav .menuContainer {
   line-height: 50px;
   font-size: 50px;
 }
-.sliderContainer .slider .sliderSection .textTitle01 p {
+body main .sliderContainer .slider .sliderSection .textTitle01 p {
   color: #fffef4;
   text-shadow: -3px 3px 1px rgba(0, 0, 0, 0.5019607843);
 }
-.sliderContainer .slider .sliderSection .text01 {
+body main .sliderContainer .slider .sliderSection .text01 {
   max-width: 50%;
   position: absolute;
   bottom: 10%;
   left: 50%;
 }
-.sliderContainer .slider .sliderSection .text01 p {
+body main .sliderContainer .slider .sliderSection .text01 p {
   color: #fffef4;
   text-shadow: -2px 1px 0px rgba(0, 0, 0, 0.5019607843);
   padding-right: 20px;
   text-align: justify;
   line-height: 17px;
 }
-.sliderContainer .slider .sliderSection .textTitle02 {
+body main .sliderContainer .slider .sliderSection .textTitle02 {
   width: 400px;
   position: absolute;
   top: 5%;
@@ -559,24 +559,24 @@ body header nav .menuContainer {
   line-height: 50px;
   font-size: 50px;
 }
-.sliderContainer .slider .sliderSection .textTitle02 p {
+body main .sliderContainer .slider .sliderSection .textTitle02 p {
   color: #fffef4;
   text-shadow: -3px 3px 1px rgba(0, 0, 0, 0.5019607843);
 }
-.sliderContainer .slider .sliderSection .text02 {
+body main .sliderContainer .slider .sliderSection .text02 {
   max-width: 50%;
   position: absolute;
   bottom: 10%;
   left: 50%;
 }
-.sliderContainer .slider .sliderSection .text02 p {
+body main .sliderContainer .slider .sliderSection .text02 p {
   color: #fffef4;
   text-shadow: -2px 1px 0px rgba(0, 0, 0, 0.5019607843);
   padding-right: 20px;
   text-align: justify;
   line-height: 17px;
 }
-.sliderContainer .slider .sliderSection .textTitle03 {
+body main .sliderContainer .slider .sliderSection .textTitle03 {
   width: 400px;
   position: absolute;
   top: 5%;
@@ -584,25 +584,25 @@ body header nav .menuContainer {
   line-height: 50px;
   font-size: 50px;
 }
-.sliderContainer .slider .sliderSection .textTitle03 p {
+body main .sliderContainer .slider .sliderSection .textTitle03 p {
   color: #fffef4;
   text-shadow: -3px 3px 1px rgba(0, 0, 0, 0.5019607843);
 }
-.sliderContainer .slider .sliderSection .text03 {
+body main .sliderContainer .slider .sliderSection .text03 {
   max-width: 50%;
   position: absolute;
   bottom: 10%;
   left: 50%;
 }
-.sliderContainer .slider .sliderSection .text03 p {
+body main .sliderContainer .slider .sliderSection .text03 p {
   color: #fffef4;
   text-shadow: -2px 1px 0px rgba(0, 0, 0, 0.5019607843);
   padding-right: 20px;
   text-align: justify;
   line-height: 17px;
 }
-.sliderContainer .btnLeft,
-.sliderContainer .btnRight {
+body main .sliderContainer .btnLeft,
+body main .sliderContainer .btnRight {
   display: flex;
   position: absolute;
   top: 45%;
@@ -616,22 +616,22 @@ body header nav .menuContainer {
   transition: background-color 0.5s ease, color 0.2s ease;
   user-select: none;
 }
-.sliderContainer .btnLeft:hover,
-.sliderContainer .btnRight:hover {
+body main .sliderContainer .btnLeft:hover,
+body main .sliderContainer .btnRight:hover {
   background-color: rgba(255, 255, 255, 0.5019607843);
 }
-.sliderContainer .btnLeft:active,
-.sliderContainer .btnRight:active {
+body main .sliderContainer .btnLeft:active,
+body main .sliderContainer .btnRight:active {
   color: white;
 }
-.sliderContainer .btnLeft {
+body main .sliderContainer .btnLeft {
   left: 10px;
   display: flex;
   justify-content: center;
   width: 35px;
   border-radius: 50%;
 }
-.sliderContainer .btnRight {
+body main .sliderContainer .btnRight {
   display: flex;
   justify-content: center;
   width: 35px;
@@ -773,6 +773,282 @@ body header nav .menuContainer {
     width: 35px;
     right: 10px;
     border-radius: 50%;
+  }
+}
+.sobreNosotros {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+}
+.sobreNosotros h3 {
+  color: #707070;
+  font-size: 30px;
+  padding: 0px;
+}
+.sobreNosotros .imgContainer01 {
+  width: 100%;
+  position: relative;
+  margin: 10px;
+}
+.sobreNosotros .imgContainer01 img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: 20% 30%;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
+}
+.sobreNosotros .imgContainer01 h4 {
+  text-align: center;
+  color: #fffef4;
+  text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5019607843);
+  padding: 15px;
+  font-size: 28px;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.sobreNosotros .higieneInfo01 {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.sobreNosotros .higieneInfo01 .info {
+  width: 30%;
+  height: 100%;
+  margin: 20px;
+}
+.sobreNosotros .higieneInfo01 .info h5 {
+  color: #707070;
+  font-size: 18px;
+}
+.sobreNosotros .higieneInfo01 .info p {
+  color: #a3a3a3;
+  font-size: 14px;
+  text-align: justify;
+}
+.sobreNosotros .imgContainer02 {
+  width: 100%;
+  position: relative;
+  margin: 10px;
+}
+.sobreNosotros .imgContainer02 img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: 0% 65%;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
+}
+.sobreNosotros .imgContainer02 h4 {
+  text-align: center;
+  color: #fffef4;
+  text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5019607843);
+  padding: 15px;
+  font-size: 28px;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.sobreNosotros .higieneInfo02 {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.sobreNosotros .higieneInfo02 .info {
+  width: 50%;
+  height: 100%;
+  margin: 20px;
+}
+.sobreNosotros .higieneInfo02 .info h5 {
+  color: #707070;
+  font-size: 18px;
+}
+.sobreNosotros .higieneInfo02 .info p {
+  color: #a3a3a3;
+  font-size: 14px;
+  text-align: justify;
+}
+.sobreNosotros .imgContainer03 {
+  width: 100%;
+  position: relative;
+  margin: 10px;
+}
+.sobreNosotros .imgContainer03 img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: 0% 40%;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
+}
+.sobreNosotros .imgContainer03 h4 {
+  text-align: center;
+  color: #fffef4;
+  text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5019607843);
+  padding: 15px;
+  font-size: 28px;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.sobreNosotros .higieneInfo03 {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.sobreNosotros .higieneInfo03 .info {
+  width: 30%;
+  height: 100%;
+  margin: 20px;
+}
+.sobreNosotros .higieneInfo03 .info h5 {
+  color: #707070;
+  font-size: 18px;
+}
+.sobreNosotros .higieneInfo03 .info p {
+  color: #a3a3a3;
+  font-size: 14px;
+  text-align: justify;
+}
+
+@media (max-width: 737px) {
+  .sobreNosotros {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+  }
+  .sobreNosotros h3 {
+    padding: 15px;
+  }
+  .sobreNosotros .imgContainer01 {
+    width: 100%;
+    position: relative;
+    margin: 0px;
+  }
+  .sobreNosotros .imgContainer01 img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: 20% 30%;
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
+  }
+  .sobreNosotros .imgContainer01 h4 {
+    text-align: center;
+    color: #fffef4;
+    text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5019607843);
+    padding: 15px;
+    font-size: 24px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+  }
+  .sobreNosotros .higieneInfo01 {
+    width: 100%;
+    display: inline-block;
+    justify-content: space-around;
+  }
+  .sobreNosotros .higieneInfo01 .info {
+    width: 90%;
+    height: 100%;
+    margin: 20px;
+  }
+  .sobreNosotros .higieneInfo01 .info h5 {
+    color: #707070;
+    font-size: 18px;
+  }
+  .sobreNosotros .higieneInfo01 .info p {
+    color: #a3a3a3;
+    font-size: 14px;
+    text-align: justify;
+  }
+  .sobreNosotros .imgContainer02 {
+    width: 100%;
+    position: relative;
+    margin: 0px;
+  }
+  .sobreNosotros .imgContainer02 img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: 0% 80%;
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
+  }
+  .sobreNosotros .imgContainer02 h4 {
+    text-align: center;
+    color: #fffef4;
+    text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5019607843);
+    padding: 15px;
+    font-size: 24px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+  }
+  .sobreNosotros .higieneInfo02 {
+    width: 100%;
+    display: inline-block;
+    justify-content: space-around;
+  }
+  .sobreNosotros .higieneInfo02 .info {
+    width: 90%;
+    height: 100%;
+    margin: 20px;
+  }
+  .sobreNosotros .higieneInfo02 .info h5 {
+    color: #707070;
+    font-size: 18px;
+  }
+  .sobreNosotros .higieneInfo02 .info p {
+    color: #a3a3a3;
+    font-size: 14px;
+    text-align: justify;
+  }
+  .sobreNosotros .imgContainer03 {
+    width: 100%;
+    position: relative;
+    margin: 0px;
+  }
+  .sobreNosotros .imgContainer03 img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: 0% 40%;
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
+  }
+  .sobreNosotros .imgContainer03 h4 {
+    text-align: center;
+    color: #fffef4;
+    text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5019607843);
+    padding: px;
+    font-size: 28px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+  }
+  .sobreNosotros .higieneInfo03 {
+    width: 100%;
+    display: inline-block;
+    justify-content: space-around;
+  }
+  .sobreNosotros .higieneInfo03 .info {
+    width: 90%;
+    height: 100%;
+    margin: 20px;
+  }
+  .sobreNosotros .higieneInfo03 .info h5 {
+    color: #707070;
+    font-size: 18px;
+  }
+  .sobreNosotros .higieneInfo03 .info p {
+    color: #a3a3a3;
+    font-size: 14px;
+    text-align: justify;
   }
 }
 

@@ -19,6 +19,8 @@ $shadow: 0px 0px 5px 3px #00000020;
 
 body {
   background-color: $grisMasClaro;
+  height: 100%;
+  border: solid 5px red;
 }
 
 @font-face {
