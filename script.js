@@ -101,3 +101,47 @@ botonCarrito.addEventListener("click", () => {
     body.style.overflow = ""; // Restaura el scroll del body cuando el carrito se cierra
   }
 });
+
+// SLIDER
+
+const btnLeft = document.querySelector(".btnLeft");
+const btnRight = document.querySelector(".btnRight");
+const slider = document.getElementById("slider");
+const sliderSection = document.querySelectorAll(".sliderSection");
+
+btnLeft.addEventListener("click", (e) => moveToLeft());
+btnRight.addEventListener("click", (e) => moveToRight());
+
+setTimeout(() => {
+  setInterval(() => {
+    moveToRight();
+  }, 7000);
+}, 12000);
+
+let operacion = 0;
+let counter = 0;
+let widthImg = 100 / sliderSection.length;
+
+function moveToRight() {
+  if (counter >= sliderSection.length - 1) {
+    counter = 0;
+    operacion = 0;
+    slider.style.transform = `translate(-${operacion}%)`;
+    return;
+  }
+  counter++;
+  operacion = operacion + widthImg;
+  slider.style.transform = `translate(-${operacion}%)`;
+}
+
+function moveToLeft() {
+  counter--;
+  if (counter < 0) {
+    counter = sliderSection.length - 1;
+    operacion = widthImg * (sliderSection.length - 1);
+    slider.style.transform = `translate(-${operacion}%)`;
+    return;
+  }
+  operacion = operacion - widthImg;
+  slider.style.transform = `translate(-${operacion}%)`;
+}
