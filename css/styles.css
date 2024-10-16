@@ -43,7 +43,7 @@ body {
   background-color: #555; /* Cambia el color cuando está en hover */
 }
 
-.intro {
+body .intro {
   position: fixed;
   z-index: 50;
   left: 0;
@@ -53,7 +53,7 @@ body {
   background-color: #161616;
   transition: 1s;
 }
-.intro .logoHeader {
+body .intro .logoHeader {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -63,39 +63,39 @@ body {
   display: flex;
   align-items: center;
 }
-.intro .logoHeader .logo {
+body .intro .logoHeader .logo {
   position: relative;
   display: inline-block;
   bottom: -20px;
   opacity: 0;
   padding-right: 10px;
 }
-.intro .logoHeader .active {
+body .intro .logoHeader .active {
   bottom: 0;
   opacity: 1;
   transition: ease-in-out 0.5s;
 }
-.intro .logoHeader .fade {
+body .intro .logoHeader .fade {
   bottom: 150px;
   opacity: 0;
   transition: ease-in-out 0.5s;
 }
-.intro .logoHeader img {
+body .intro .logoHeader img {
   width: 80px;
 }
 
 @media (max-width: 737px) {
-  .intro {
+  body .intro {
     position: fixed;
     z-index: 50;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     background-color: #161616;
     transition: 1s;
   }
-  .intro .logoHeader {
+  body .intro .logoHeader {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -106,24 +106,24 @@ body {
     align-items: center;
     font-size: 24px;
   }
-  .intro .logoHeader .logo {
+  body .intro .logoHeader .logo {
     position: relative;
     display: inline-block;
     bottom: -20px;
     opacity: 0;
     padding-right: 10px;
   }
-  .intro .logoHeader .active {
+  body .intro .logoHeader .active {
     bottom: 0;
     opacity: 1;
     transition: ease-in-out 0.5s;
   }
-  .intro .logoHeader .fade {
+  body .intro .logoHeader .fade {
     bottom: 150px;
     opacity: 0;
     transition: ease-in-out 0.5s;
   }
-  .intro .logoHeader img {
+  body .intro .logoHeader img {
     width: 80px;
   }
 }
@@ -637,30 +637,30 @@ body main .sliderContainer .btnRight {
   border-radius: 50%;
 }
 
-@media screen and (max-width: 737px) {
-  .sliderContainer {
+@media (max-width: 737px) {
+  body main .sliderContainer {
     width: 100%;
-    height: 550px;
+    height: 100vh;
     box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1882352941);
     overflow: hidden;
     position: relative;
   }
-  .sliderContainer .slider {
+  body main .sliderContainer .slider {
     width: 300%;
     height: 100%;
     display: flex;
     transition: 1s all ease;
   }
-  .sliderContainer .slider .sliderSection {
+  body main .sliderContainer .slider .sliderSection {
     width: 33.3333333333%;
     height: 100%;
   }
-  .sliderContainer .slider .sliderSection img {
+  body main .sliderContainer .slider .sliderSection img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  .sliderContainer .slider .sliderSection .textTitle01 {
+  body main .sliderContainer .slider .sliderSection .textTitle01 {
     width: 90%;
     position: absolute;
     top: 5%;
@@ -668,24 +668,24 @@ body main .sliderContainer .btnRight {
     line-height: 50px;
     font-size: 50px;
   }
-  .sliderContainer .slider .sliderSection .textTitle01 p {
+  body main .sliderContainer .slider .sliderSection .textTitle01 p {
     color: #f7f9f9;
     text-shadow: -3px 3px 1px rgba(0, 0, 0, 0.5019607843);
   }
-  .sliderContainer .slider .sliderSection .text01 {
+  body main .sliderContainer .slider .sliderSection .text01 {
     max-width: 90%;
     position: absolute;
     bottom: 5%;
     left: 5%;
   }
-  .sliderContainer .slider .sliderSection .text01 p {
+  body main .sliderContainer .slider .sliderSection .text01 p {
     color: #f7f9f9;
     text-shadow: -2px 1px 0px rgba(0, 0, 0, 0.5019607843);
     padding-right: 20px;
     text-align: justify;
     line-height: 20px;
   }
-  .sliderContainer .slider .sliderSection .textTitle02 {
+  body main .sliderContainer .slider .sliderSection .textTitle02 {
     width: 90%;
     position: absolute;
     top: 5%;
@@ -693,24 +693,24 @@ body main .sliderContainer .btnRight {
     line-height: 50px;
     font-size: 50px;
   }
-  .sliderContainer .slider .sliderSection .textTitle02 p {
+  body main .sliderContainer .slider .sliderSection .textTitle02 p {
     color: #f7f9f9;
     text-shadow: -3px 3px 1px rgba(0, 0, 0, 0.5019607843);
   }
-  .sliderContainer .slider .sliderSection .text02 {
+  body main .sliderContainer .slider .sliderSection .text02 {
     max-width: 100%;
     position: absolute;
     bottom: 5%;
     left: 5%;
   }
-  .sliderContainer .slider .sliderSection .text02 p {
+  body main .sliderContainer .slider .sliderSection .text02 p {
     color: #f7f9f9;
     text-shadow: -2px 1px 0px rgba(0, 0, 0, 0.5019607843);
     padding-right: 20px;
     text-align: justify;
     line-height: 20px;
   }
-  .sliderContainer .slider .sliderSection .textTitle03 {
+  body main .sliderContainer .slider .sliderSection .textTitle03 {
     width: 90%;
     position: absolute;
     top: 5%;
@@ -718,25 +718,25 @@ body main .sliderContainer .btnRight {
     line-height: 50px;
     font-size: 50px;
   }
-  .sliderContainer .slider .sliderSection .textTitle03 p {
+  body main .sliderContainer .slider .sliderSection .textTitle03 p {
     color: #f7f9f9;
     text-shadow: -3px 3px 1px rgba(0, 0, 0, 0.5019607843);
   }
-  .sliderContainer .slider .sliderSection .text03 {
+  body main .sliderContainer .slider .sliderSection .text03 {
     max-width: 100%;
     position: absolute;
     bottom: 5%;
     left: 5%;
   }
-  .sliderContainer .slider .sliderSection .text03 p {
+  body main .sliderContainer .slider .sliderSection .text03 p {
     color: #f7f9f9;
     text-shadow: -2px 1px 0px rgba(0, 0, 0, 0.5019607843);
     padding-right: 20px;
     text-align: justify;
     line-height: 20px;
   }
-  .sliderContainer .btnLeft,
-  .sliderContainer .btnRight {
+  body main .sliderContainer .btnLeft,
+  body main .sliderContainer .btnRight {
     display: flex;
     position: absolute;
     top: 45%;
@@ -750,22 +750,22 @@ body main .sliderContainer .btnRight {
     transition: background-color 0.5s ease, color 0.2s ease;
     user-select: none;
   }
-  .sliderContainer .btnLeft:hover,
-  .sliderContainer .btnRight:hover {
+  body main .sliderContainer .btnLeft:hover,
+  body main .sliderContainer .btnRight:hover {
     background-color: rgba(209, 209, 209, 0.502);
   }
-  .sliderContainer .btnLeft:active,
-  .sliderContainer .btnRight:active {
+  body main .sliderContainer .btnLeft:active,
+  body main .sliderContainer .btnRight:active {
     color: white;
   }
-  .sliderContainer .btnLeft {
+  body main .sliderContainer .btnLeft {
     left: 10px;
     display: flex;
     justify-content: center;
     width: 35px;
     border-radius: 50%;
   }
-  .sliderContainer .btnRight {
+  body main .sliderContainer .btnRight {
     display: flex;
     justify-content: center;
     width: 35px;

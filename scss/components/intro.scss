@@ -1,45 +1,4 @@
-.intro {
-  position: fixed;
-  z-index: 50;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: #161616;
-  transition: 1s;
-  .logoHeader {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #ffffff;
-    font-family: "Poppins";
-    display: flex;
-    align-items: center;
-    .logo {
-      position: relative;
-      display: inline-block;
-      bottom: -20px;
-      opacity: 0;
-      padding-right: 10px;
-    }
-    .active {
-      bottom: 0;
-      opacity: 1;
-      transition: ease-in-out 0.5s;
-    }
-    .fade {
-      bottom: 150px;
-      opacity: 0;
-      transition: ease-in-out 0.5s;
-    }
-    img {
-      width: 80px;
-    }
-  }
-}
-
-@media (max-width: 737px) {
+body {
   .intro {
     position: fixed;
     z-index: 50;
@@ -58,7 +17,6 @@
       font-family: "Poppins";
       display: flex;
       align-items: center;
-      font-size: 24px;
       .logo {
         position: relative;
         display: inline-block;
@@ -78,6 +36,52 @@
       }
       img {
         width: 80px;
+      }
+    }
+  }
+}
+
+@media (max-width: 737px) {
+  body {
+    .intro {
+      position: fixed;
+      z-index: 50;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 120vh;
+      background-color: #161616;
+      transition: 1s;
+      .logoHeader {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #ffffff;
+        font-family: "Poppins";
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        .logo {
+          position: relative;
+          display: inline-block;
+          bottom: -20px;
+          opacity: 0;
+          padding-right: 10px;
+        }
+        .active {
+          bottom: 0;
+          opacity: 1;
+          transition: ease-in-out 0.5s;
+        }
+        .fade {
+          bottom: 150px;
+          opacity: 0;
+          transition: ease-in-out 0.5s;
+        }
+        img {
+          width: 80px;
+        }
       }
     }
   }

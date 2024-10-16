@@ -22,7 +22,7 @@ function animacionInicial() {
     }, 3000);
 
     setTimeout(() => {
-      intro.style.top = "-100vh";
+      intro.style.top = "-120vh";
     }, 3200);
   });
 }
@@ -32,7 +32,11 @@ function animacionInicial() {
 const popup = document.querySelector(".popupContainer");
 const buttonx = document.getElementById("x");
 function popUp() {
-  popup.style.top = "50px";
+  if(isSmallScreen) {
+    popup.style.top = "100px";
+  } else {
+    popup.style.top = "50px";
+  }
 }
 
 buttonx.addEventListener("click", () => {

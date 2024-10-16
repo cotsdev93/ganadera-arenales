@@ -1,4 +1,4 @@
-.intro {
+body .intro {
   position: fixed;
   z-index: 50;
   left: 0;
@@ -8,7 +8,7 @@
   background-color: #161616;
   transition: 1s;
 }
-.intro .logoHeader {
+body .intro .logoHeader {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -18,39 +18,39 @@
   display: flex;
   align-items: center;
 }
-.intro .logoHeader .logo {
+body .intro .logoHeader .logo {
   position: relative;
   display: inline-block;
   bottom: -20px;
   opacity: 0;
   padding-right: 10px;
 }
-.intro .logoHeader .active {
+body .intro .logoHeader .active {
   bottom: 0;
   opacity: 1;
   transition: ease-in-out 0.5s;
 }
-.intro .logoHeader .fade {
+body .intro .logoHeader .fade {
   bottom: 150px;
   opacity: 0;
   transition: ease-in-out 0.5s;
 }
-.intro .logoHeader img {
+body .intro .logoHeader img {
   width: 80px;
 }
 
 @media (max-width: 737px) {
-  .intro {
+  body .intro {
     position: fixed;
     z-index: 50;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     background-color: #161616;
     transition: 1s;
   }
-  .intro .logoHeader {
+  body .intro .logoHeader {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -61,24 +61,24 @@
     align-items: center;
     font-size: 24px;
   }
-  .intro .logoHeader .logo {
+  body .intro .logoHeader .logo {
     position: relative;
     display: inline-block;
     bottom: -20px;
     opacity: 0;
     padding-right: 10px;
   }
-  .intro .logoHeader .active {
+  body .intro .logoHeader .active {
     bottom: 0;
     opacity: 1;
     transition: ease-in-out 0.5s;
   }
-  .intro .logoHeader .fade {
+  body .intro .logoHeader .fade {
     bottom: 150px;
     opacity: 0;
     transition: ease-in-out 0.5s;
   }
-  .intro .logoHeader img {
+  body .intro .logoHeader img {
     width: 80px;
   }
 }
