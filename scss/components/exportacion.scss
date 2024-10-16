@@ -1,7 +1,8 @@
 body {
   main {
     .exportacion {
-      padding: 10px 20px 10px 20px;
+      // border: solid 1px red;
+      padding: 10px 20px;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -9,30 +10,39 @@ body {
       z-index: 0;
       background-color: $grisMasClaro;
       h3 {
-        padding: 10px 0px 10px 0px;
         color: $grisMasOscuro;
         font-size: 30px;
         text-align: left;
+        // border: solid 1px red;
       }
       .mapContainer {
         display: flex;
+        // text-align: right;
         .mapTextsContainer {
           width: 40%;
           // border: solid 1px red;
+          display: flex;
+          flex-direction: column;
+          // justify-content: center;
+          h3 {
+            // text-align: right;
+          }
           p {
             width: 100%;
             padding: 0px 0px 15px 0px;
             color: $grisOscuro;
             display: flex;
             align-items: center;
+            line-height: 1;
           }
         }
         #map {
           margin: 10px;
           width: 60%;
-          height: 350px;
+          height: 300px;
           border: solid $blanco 4px;
           box-shadow: $shadow;
+          border-radius: 50%;
           .gm-ui-hover-effect {
             display: none !important;
           }

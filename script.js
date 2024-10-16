@@ -157,7 +157,7 @@ function initMap() {
   var centerPosition = isSmallScreen
     ? { lat: 10, lng: 0 }
     : { lat: 20, lng: 0 };
-  var zoomPosition = isSmallScreen ? 1 : 2;
+  var zoomPosition = isSmallScreen ? 1 : 1.5;
   var options = {
     center: centerPosition,
     zoom: zoomPosition,
