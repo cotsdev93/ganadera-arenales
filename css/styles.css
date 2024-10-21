@@ -1307,14 +1307,13 @@ body main .productosContainer h3 {
 body main .productosContainer .productos {
   display: flex;
   justify-content: center;
-  margin: auto;
-  width: 95%;
+  width: 100%;
 }
 body main .productosContainer .productos .productosCategorias {
   width: 30%;
-  height: 80vh;
+  height: 81vh;
   border-radius: 20px 0px 0px 20px;
-  border: solid 1px #d1d1d1;
+  border: solid 5px #d1d1d1;
   padding: 10px;
   background-color: #f7f9f9;
 }
@@ -1369,10 +1368,15 @@ body main .productosContainer .productos .productosCategorias.active .dropDownCo
   padding: 10px;
 }
 body main .productosContainer .productos .productosListar {
-  width: 70%;
-  height: 80vh;
+  width: 60%;
+  height: 81vh;
   border-radius: 0px 20px 20px 0px;
-  border: solid 1px #d1d1d1;
+  background-color: #d1d1d1;
+  box-shadow: inset 0px 0px 6px 2px rgba(0, 0, 0, 0.1254901961);
+  border-top: solid 5px #d1d1d1;
+  border-bottom: solid 5px #d1d1d1;
+  border-right: solid 5px #d1d1d1;
+  border-left: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

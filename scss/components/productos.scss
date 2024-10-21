@@ -14,14 +14,15 @@ body {
       .productos {
         display: flex;
         justify-content: center;
-        margin: auto;
-        width: 95%;
-
+        // margin: auto;
+        width: 100%;
+        // border :solid 1px red;
         .productosCategorias {
+            
           width: 30%;
-          height: 80vh;
+          height: 81vh;
           border-radius: 20px 0px 0px 20px;
-          border: solid 1px $grisClaro;
+          border: solid 5px $grisClaro;
           padding: 10px;
           background-color: $blanco;
           .dropDownBtn {
@@ -44,7 +45,6 @@ body {
           }
 
           .dropDownContent {
-            //   border: solid 1px red;
             width: 100%;
             margin: 5px;
             max-height: 0;
@@ -55,7 +55,6 @@ body {
               padding: 0;
               margin: 5;
               li {
-                // padding: 10px 0;
                 list-style: none;
                 text-align: center;
                 cursor: pointer;
@@ -81,10 +80,15 @@ body {
         }
 
         .productosListar {
-          width: 70%;
-          height: 80vh;
+          width: 60%;
+          height: 81vh;
           border-radius: 0px 20px 20px 0px;
-          border: solid 1px $grisClaro;
+          background-color: $grisClaro;
+          box-shadow: inset 0px 0px 6px 2px #00000020;
+          border-top: solid 5px $grisClaro;
+          border-bottom: solid 5px $grisClaro;
+          border-right: solid 5px $grisClaro;
+          border-left: none;
         }
       }
     }
