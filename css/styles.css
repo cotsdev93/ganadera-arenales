@@ -1049,8 +1049,7 @@ body main .sobreNosotros .higieneInfo03 .info p {
   }
 }
 body main .exportacion {
-  padding: 10px 20px;
-  height: 100%;
+  padding: 30px 20px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -1103,8 +1102,8 @@ body main .exportacion .mapContainer #map .gm-style-iw-tc::after {
 body main .exportacion .mapContainer #map .gm-style-iw-chr {
   display: none;
 }
-body main .exportacion .mapContainer #map:focus, body main .exportacion .mapContainer #map:active, body main .exportacion .mapContainer #map:hover {
-  outline: red;
+body main .exportacion .mapContainer #map .gmnoprint {
+  display: none;
 }
 body main .exportacion:focus, body main .exportacion:active {
   outline: none;
@@ -1294,6 +1293,78 @@ body main .form .formInputs form .buttonContainer button:hover {
   body main .form .formInputs form .buttonContainer button:hover {
     background-color: #a3a3a3;
   }
+}
+body main .productosContainer {
+  width: 100%;
+  height: 100vh;
+  background-color: #ebebeb;
+}
+body main .productosContainer h3 {
+  font-size: 30px;
+  color: #707070;
+  margin: 5px 20px;
+}
+body main .productosContainer .productos {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 95%;
+}
+body main .productosContainer .productos .productosCategorias {
+  width: 30%;
+  height: 80vh;
+  border-radius: 20px 0px 0px 20px;
+  border: solid 1px #d1d1d1;
+  padding: 10px;
+}
+body main .productosContainer .productos .productosCategorias .dropDownBtn {
+  width: 70%;
+  padding: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+body main .productosContainer .productos .productosCategorias .dropDownBtn:hover {
+  background-color: #d1d1d1;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+body main .productosContainer .productos .productosCategorias .dropDownContent {
+  width: 100%;
+  margin-top: 5px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+  padding: 0 10px;
+}
+body main .productosContainer .productos .productosCategorias .dropDownContent ul {
+  padding: 0;
+  margin: 0;
+}
+body main .productosContainer .productos .productosCategorias .dropDownContent ul li {
+  list-style: none;
+  text-align: center;
+  cursor: pointer;
+  background-color: white;
+  transition: background-color 0.3s ease, padding-left 0.3s ease;
+  border-radius: 6px;
+  margin: 5px 0;
+}
+body main .productosContainer .productos .productosCategorias .dropDownContent ul li:hover {
+  background-color: #d1d1d1;
+}
+body main .productosContainer .productos .productosCategorias.active .dropDownContent {
+  max-height: 300px;
+  padding: 10px;
+}
+body main .productosContainer .productos .productosListar {
+  width: 70%;
+  height: 80vh;
+  border-radius: 0px 20px 20px 0px;
+  border: solid 1px #d1d1d1;
 }
 
 /*# sourceMappingURL=styles.css.map */

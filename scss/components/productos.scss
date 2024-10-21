@@ -1,0 +1,90 @@
+body {
+  main {
+    .productosContainer {
+      width: 100%;
+      height: 100vh;
+      background-color: $grisMasClaro;
+
+      h3 {
+        font-size: 30px;
+        color: $grisMasOscuro;
+        margin: 5px 20px;
+      }
+
+      .productos {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        width: 95%;
+
+        .productosCategorias {
+          width: 30%;
+          height: 80vh;
+          border-radius: 20px 0px 0px 20px;
+          border: solid 1px $grisClaro;
+          padding: 10px;
+
+          .dropDownBtn {
+            width: 70%;
+            padding: 5px;
+            font-size: 15px;
+            cursor: pointer;
+            background-color: white;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            // margin-bottom: 10px;
+
+            &:hover {
+              background-color: $grisClaro;
+            //   transform: translateY(-2px);
+              box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            }
+          }
+
+          .dropDownContent {
+            width: 100%;
+            margin-top: 5px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+            padding: 0 10px;
+
+            ul {
+              padding: 0;
+              margin: 0;
+              li {
+                // padding: 10px 0;
+                list-style: none;
+                text-align: center;
+                cursor: pointer;
+                background-color: white;
+                transition: background-color 0.3s ease, padding-left 0.3s ease;
+                border-radius: 6px;
+                margin: 5px 0;
+
+                &:hover {
+                  background-color: $grisClaro;
+                //   padding-left: 20px;
+                }
+              }
+            }
+          }
+
+          &.active .dropDownContent {
+            max-height: 300px; // Ajustar según el contenido
+            padding: 10px;
+          }
+        }
+
+        .productosListar {
+          width: 70%;
+          height: 80vh;
+          border-radius: 0px 20px 20px 0px;
+          border: solid 1px $grisClaro;
+        }
+      }
+    }
+  }
+}

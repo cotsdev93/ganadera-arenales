@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "nombre": "",
+    "categoria": "",
+    "descripcion": "",
+    "precio": 0.0,
+    "img": "",
+    "stock": 0
+  },
+  {
+    "id": 2,
+    "nombre": "",
+    "categoria": "",
+    "descripcion": "",
+    "precio": 0.0,
+    "img": "",
+    "stock": 0
+  },
+  {
+    "id": 3,
+    "nombre": "",
+    "categoria": "",
+    "descripcion": "",
+    "precio": 0.0,
+    "img": "",
+    "stock": 0
+  },
+  {
+    "id": 4,
+    "nombre": "",
+    "categoria": "",
+    "descripcion": "",
+    "precio": 0.0,
+    "img": "",
+    "stock": 0
+  },
+  {
+    "id": 5,
+    "nombre": "",
+    "categoria": "",
+    "descripcion": "",
+    "precio": 0.0,
+    "img": "",
+    "stock": 0
+  }
+]

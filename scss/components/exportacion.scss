@@ -2,8 +2,7 @@ body {
   main {
     .exportacion {
       // border: solid 1px red;
-      padding: 10px 20px;
-      height: 100%;
+      padding: 30px 20px;
       display: flex;
       flex-direction: column;
       position: relative;
@@ -13,19 +12,15 @@ body {
         color: $grisMasOscuro;
         font-size: 30px;
         text-align: left;
-        // border: solid 1px red;
       }
       .mapContainer {
         display: flex;
-        // text-align: right;
         .mapTextsContainer {
           width: 40%;
-          // border: solid 1px red;
           display: flex;
           flex-direction: column;
-          // justify-content: center;
           h3 {
-            // text-align: right;
+    
           }
           p {
             width: 100%;
@@ -58,14 +53,11 @@ body {
             width: 15px;
             left: 5px;
           }
-
           .gm-style-iw-chr {
             display: none;
           }
-          &:focus,
-          &:active,
-          &:hover {
-            outline: red;
+          .gmnoprint {
+            display: none;
           }
         }
       }
