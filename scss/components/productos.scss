@@ -2,13 +2,14 @@ body {
   main {
     .productosContainer {
       width: 100%;
-      height: 100vh;
+      height: 100%;
       background-color: $grisMasClaro;
-
+      border: $grisMasClaro solid 1px;
+      padding-bottom: 30px;
       h3 {
         font-size: 30px;
         color: $grisMasOscuro;
-        margin: 5px 20px;
+        margin: 10px 45px;
       }
 
       .productos {
@@ -18,7 +19,6 @@ body {
         width: 100%;
         // border :solid 1px red;
         .productosCategorias {
-            
           width: 30%;
           height: 81vh;
           border-radius: 20px 0px 0px 20px;
