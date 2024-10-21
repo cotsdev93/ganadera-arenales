@@ -23,6 +23,7 @@ body {
           border-radius: 20px 0px 0px 20px;
           border: solid 1px $grisClaro;
           padding: 10px;
+          background-color: $blanco;
           .dropDownBtn {
             width: 70%;
             padding: 5px;
@@ -31,18 +32,18 @@ body {
             background-color: $grisClaro;
             border-radius: 10px;
             border: none;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             color: $blanco;
             border: solid 1px $grisMasClaro;
             &:hover {
-                background-color: $grisClaro;
-                transform: translateY(-1px);
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+              background-color: $grisClaro;
+              transform: translateY(-1px);
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
             }
-        }
-        
-        .dropDownContent {
+          }
+
+          .dropDownContent {
             //   border: solid 1px red;
             width: 100%;
             margin: 5px;
@@ -50,7 +51,6 @@ body {
             overflow: hidden;
             transition: max-height 1s ease-in-out, padding 0.5s ease-in-out;
             padding: 0 10px;
-
             ul {
               padding: 0;
               margin: 5;
@@ -64,7 +64,8 @@ body {
                 border-radius: 6px;
                 margin: 5px 0;
                 color: $grisMasOscuro;
-
+                border: solid 0.5px $grisMasClaro;
+                box-shadow: inset 0px 0px 5px 1px #00000020;
                 &:hover {
                   background-color: $grisClaro;
                   padding-left: 10px;

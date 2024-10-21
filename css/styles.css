@@ -1316,6 +1316,7 @@ body main .productosContainer .productos .productosCategorias {
   border-radius: 20px 0px 0px 20px;
   border: solid 1px #d1d1d1;
   padding: 10px;
+  background-color: #f7f9f9;
 }
 body main .productosContainer .productos .productosCategorias .dropDownBtn {
   width: 70%;
@@ -1325,7 +1326,7 @@ body main .productosContainer .productos .productosCategorias .dropDownBtn {
   background-color: #d1d1d1;
   border-radius: 10px;
   border: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   color: #f7f9f9;
   border: solid 1px #ebebeb;
@@ -1356,6 +1357,8 @@ body main .productosContainer .productos .productosCategorias .dropDownContent u
   border-radius: 6px;
   margin: 5px 0;
   color: #707070;
+  border: solid 0.5px #ebebeb;
+  box-shadow: inset 0px 0px 5px 1px rgba(0, 0, 0, 0.1254901961);
 }
 body main .productosContainer .productos .productosCategorias .dropDownContent ul li:hover {
   background-color: #d1d1d1;
