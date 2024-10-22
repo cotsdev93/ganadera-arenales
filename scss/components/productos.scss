@@ -41,7 +41,7 @@ body {
               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
             }
           }
-
+          
           .dropDownContent {
             width: 100%;
             margin: 5px;
@@ -70,13 +70,13 @@ body {
               }
             }
           }
-
+          
           &.active .dropDownContent {
             max-height: 300px; // Ajustar según el contenido
             padding: 10px;
           }
         }
-
+        
         .productosListarContainer {
           width: 60%;
           height: 81vh;
@@ -88,6 +88,8 @@ body {
           border-right: solid 5px $grisClaro;
           border-left: none;
           overflow-x: auto;
+          // border: solid 1px red;
+          z-index: 2;
           .productosListar {
             display: flex;
             flex-direction: row;
@@ -101,6 +103,32 @@ body {
             }
           }
         }
+      }
+      /* Personalizar la barra de desplazamiento */
+      ::-webkit-scrollbar {
+        width: 9px; /* Ancho de la barra vertical */
+        height: 9px; /* Altura de la barra horizontal (si existe) */
+      }
+
+      /* Fondo de la barra de desplazamiento */
+      ::-webkit-scrollbar-track {
+        background: $grisOscuro; /* Color de fondo del track */
+        border-radius: 5px; /* Bordes redondeados */
+        z-index: 0;
+      }
+
+      /* La barra de desplazamiento misma */
+      ::-webkit-scrollbar-thumb {
+        background-color: #a90a0a; /* Color de la barra */
+        border-radius: 10px; /* Bordes redondeados para suavidad */
+        border: 1px solid transparent; /* Espacio entre el scrollbar y el track */
+        background-clip: padding-box; /* Asegura que el borde sea visible */
+      }
+
+      /* Cambio de color cuando el mouse pasa sobre la barra */
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #900909; /* Cambia el color cuando está en hover */
+        cursor: pointer;
       }
     }
   }
