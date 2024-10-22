@@ -1370,7 +1370,7 @@ body main .productosContainer .productos .productosCategorias.active .dropDownCo
   max-height: 300px;
   padding: 10px;
 }
-body main .productosContainer .productos .productosListar {
+body main .productosContainer .productos .productosListarContainer {
   width: 60%;
   height: 81vh;
   border-radius: 0px 20px 20px 0px;
@@ -1380,13 +1380,19 @@ body main .productosContainer .productos .productosListar {
   border-bottom: solid 5px #d1d1d1;
   border-right: solid 5px #d1d1d1;
   border-left: none;
-  display: flex;
-  flex-wrap: wrap;
+  overflow-x: auto;
 }
-body main .productosContainer .productos .productosListar .producto {
-  width: 50px;
-  height: 50px;
+body main .productosContainer .productos .productosListarContainer .productosListar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+body main .productosContainer .productos .productosListarContainer .productosListar .producto {
   border: solid 1px red;
+  width: 150px;
+  height: 150px;
+  margin: 5px;
 }
 
 /*# sourceMappingURL=styles.css.map */

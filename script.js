@@ -365,11 +365,9 @@ class BaseDeDatosProductos {
   }
 }
 
-const productosListar = document.querySelector("#productosListar");
-
 function cargarProductos(productos) {
 
-  const productosListar = document.getElementById("productosListar");
+  const productosListar = document.querySelector(".productosListar");
 
   if (productosListar) {
     productosListar.innerHTML = "";
@@ -377,7 +375,8 @@ function cargarProductos(productos) {
     for (const producto of productos) {
       productosListar.innerHTML += `
         <div class="producto">
-          <p>${producto.nombre}<p>
+          <p>${producto.nombre}</p>
+          <p>${producto.precio}</p>
         </div>
       `;
     }

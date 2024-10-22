@@ -52,5 +52,95 @@
     "precio": 500,
     "img": "",
     "stock": 100
+  },
+  {
+    "id": 7,
+    "nombre": "vacio",
+    "categoria": "vaca",
+    "descripcion": "",
+    "precio": 500,
+    "img": "",
+    "stock": 100
+  },
+  {
+    "id": 8,
+    "nombre": "asado",
+    "categoria": "vaca",
+    "descripcion": "",
+    "precio": 500,
+    "img": "",
+    "stock": 100
+  },
+  {
+    "id": 9,
+    "nombre": "entraña",
+    "categoria": "vaca",
+    "descripcion": "",
+    "precio": 500,
+    "img": "",
+    "stock": 100
+  },
+  {
+    "id": 10,
+    "nombre": "cuadril",
+    "categoria": "vaca",
+    "descripcion": "",
+    "precio": 500,
+    "img": "",
+    "stock": 100
+  },
+  {
+    "id": 11,
+    "nombre": "matambre",
+    "categoria": "vaca",
+    "descripcion": "",
+    "precio": 500,
+    "img": "",
+    "stock": 100
+  },
+  {
+    "id": 12,
+    "nombre": "codillo",
+    "categoria": "vaca",
+    "descripcion": "",
+    "precio": 500,
+    "img": "",
+    "stock": 100
+  },
+  {
+    "id": 13,
+    "nombre": "pechuga",
+    "categoria": "pollo",
+    "descripcion": "",
+    "precio": 500,
+    "img": "",
+    "stock": 100
+  },
+  {
+    "id": 14,
+    "nombre": "pata muslo",
+    "categoria": "pollo",
+    "descripcion": "",
+    "precio": 500,
+    "img": "",
+    "stock": 100
+  },
+  {
+    "id": 15,
+    "nombre": "alitas",
+    "categoria": "pollo",
+    "descripcion": "",
+    "precio": 500,
+    "img": "",
+    "stock": 100
+  },
+  {
+    "id": 16,
+    "nombre": "pollo entero",
+    "categoria": "pollo",
+    "descripcion": "",
+    "precio": 500,
+    "img": "",
+    "stock": 100
   }
 ]
