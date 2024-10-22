@@ -1,47 +1,56 @@
 [
   {
     "id": 1,
-    "nombre": "",
-    "categoria": "",
+    "nombre": "Lomo",
+    "categoria": "cerdo",
     "descripcion": "",
-    "precio": 0.0,
+    "precio": 500,
     "img": "",
-    "stock": 0
+    "stock": 100
   },
   {
     "id": 2,
-    "nombre": "",
-    "categoria": "",
+    "nombre": "chuletas",
+    "categoria": "cerdo",
     "descripcion": "",
-    "precio": 0.0,
+    "precio": 500,
     "img": "",
-    "stock": 0
+    "stock": 100
   },
   {
     "id": 3,
-    "nombre": "",
-    "categoria": "",
+    "nombre": "costillas",
+    "categoria": "cerdo",
     "descripcion": "",
-    "precio": 0.0,
+    "precio": 500,
     "img": "",
-    "stock": 0
+    "stock": 100
   },
   {
     "id": 4,
-    "nombre": "",
-    "categoria": "",
+    "nombre": "panceta",
+    "categoria": "cerdo",
     "descripcion": "",
-    "precio": 0.0,
+    "precio": 500,
     "img": "",
-    "stock": 0
+    "stock": 100
   },
   {
     "id": 5,
-    "nombre": "",
-    "categoria": "",
+    "nombre": "jamon",
+    "categoria": "cerdo",
     "descripcion": "",
-    "precio": 0.0,
+    "precio": 500,
     "img": "",
-    "stock": 0
+    "stock": 100
+  },
+  {
+    "id": 6,
+    "nombre": "paleta",
+    "categoria": "cerdo",
+    "descripcion": "",
+    "precio": 500,
+    "img": "",
+    "stock": 100
   }
 ]

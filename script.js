@@ -32,7 +32,7 @@ function animacionInicial() {
 const popup = document.querySelector(".popupContainer");
 const buttonx = document.getElementById("x");
 function popUp() {
-  if(isSmallScreen) {
+  if (isSmallScreen) {
     popup.style.top = "100px";
   } else {
     popup.style.top = "50px";
@@ -102,7 +102,7 @@ botonCarrito.addEventListener("click", () => {
   if (carritoListarContainer.classList.contains("showCarrito")) {
     body.style.overflow = "hidden"; // Desactiva el scroll del body
   } else {
-    body.style.overflow = ""; 
+    body.style.overflow = "";
   }
 });
 
@@ -286,16 +286,15 @@ function initMap() {
 
 initMap();
 
-
-// Productos
+// Categorias Productos
 
 // Seleccionamos todos los botones de dropdown
-const dropDownButtons = document.querySelectorAll('.dropDownBtn');
+const dropDownButtons = document.querySelectorAll(".dropDownBtn");
 
 // Añadimos un evento a cada botón
-dropDownButtons.forEach(button => {
-  button.addEventListener('click', function() {
-    const dropDownId = button.getAttribute('id').replace('Btn', 'DropDown'); // Obtener el ID del dropdown relacionado
+dropDownButtons.forEach((button) => {
+  button.addEventListener("click", function () {
+    const dropDownId = button.getAttribute("id").replace("Btn", "DropDown"); // Obtener el ID del dropdown relacionado
 
     toggleDropdown(dropDownId, button);
   });
@@ -304,32 +303,89 @@ dropDownButtons.forEach(button => {
 // Función para manejar la apertura/cierre de los dropdowns
 function toggleDropdown(id, btn) {
   // Obtener todos los dropdowns y botones
-  const allDropdowns = document.querySelectorAll('.dropDownContent');
-  const allButtons = document.querySelectorAll('.dropDownBtn');
+  const allDropdowns = document.querySelectorAll(".dropDownContent");
+  const allButtons = document.querySelectorAll(".dropDownBtn");
 
   // Cerrar todos los dropdowns y quitar la clase activa de todos los botones
   allDropdowns.forEach((dropdown) => {
     if (dropdown.id !== id) {
-      dropdown.style.maxHeight = '0';  // Cerrar los que no están seleccionados
+      dropdown.style.maxHeight = "0"; // Cerrar los que no están seleccionados
     }
   });
 
-  allButtons.forEach(button => {
+  allButtons.forEach((button) => {
     if (button !== btn) {
-      button.classList.remove('active');  // Quitar la clase activa de los otros botones
+      button.classList.remove("active"); // Quitar la clase activa de los otros botones
     }
   });
 
   // Alternar el dropdown actual
   const dropdown = document.getElementById(id);
-  const isActive = btn.classList.contains('active');
+  const isActive = btn.classList.contains("active");
 
   if (isActive) {
-    dropdown.style.maxHeight = '0'; // Cerrar si está activo
-    btn.classList.remove('active'); // Eliminar la clase activa del botón
+    dropdown.style.maxHeight = "0"; // Cerrar si está activo
+    btn.classList.remove("active"); // Eliminar la clase activa del botón
   } else {
-    dropdown.style.maxHeight = dropdown.scrollHeight + 'px'; // Abrir el dropdown
-    btn.classList.add('active');  // Agregar la clase activa al botón
+    dropdown.style.maxHeight = dropdown.scrollHeight + "px"; // Abrir el dropdown
+    btn.classList.add("active"); // Agregar la clase activa al botón
   }
 }
 
+// Productos Listar
+
+class BaseDeDatosProductos {
+  constructor() {
+    this.productos = [];
+    this.cargarRegistros();
+  }
+
+  async cargarRegistros() {
+    const resultado = await fetch("./JSON/productos.json");
+    this.productos = await resultado.json();
+    cargarProductos(this.productos);
+  }
+
+  registrosPorCategoria(palabra) {
+    return this.productos.filter(
+      (producto) =>
+        producto.categoria.toLowerCase().indexOf(palabra.toLowerCase()) !== -1
+    );
+  }
+
+  registroPorNombre(nombre) {
+    return this.productos.filter(
+      (producto) =>
+        producto.nombre.toLowerCase().indexOf(nombre.toLowerCase()) !== -1
+    );
+  }
+
+  registroPorId(id) {
+    return this.productos.find((producto) => producto.id === id);
+  }
+}
+
+const productosListar = document.querySelector("#productosListar");
+
+function cargarProductos(productos) {
+
+  const productosListar = document.getElementById("productosListar");
+
+  if (productosListar) {
+    productosListar.innerHTML = "";
+
+    for (const producto of productos) {
+      productosListar.innerHTML += `
+        <div class="producto">
+          <p>${producto.nombre}<p>
+        </div>
+      `;
+    }
+  } else {
+    console.error("El contenedor de productos no existe");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const bdProductos = new BaseDeDatosProductos();
+});

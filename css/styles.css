@@ -1196,7 +1196,8 @@ body main .form .formInputs form .input input {
   border: none;
   border-radius: 3px;
   height: 25px;
-  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1254901961);
+  box-shadow: inset 0px 0px 6px 2px rgba(0, 0, 0, 0.1254901961);
+  padding-left: 5px;
 }
 body main .form .formInputs form .buttonContainer {
   padding: 15px 0px 4px 50px;
@@ -1379,6 +1380,13 @@ body main .productosContainer .productos .productosListar {
   border-bottom: solid 5px #d1d1d1;
   border-right: solid 5px #d1d1d1;
   border-left: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+body main .productosContainer .productos .productosListar .producto {
+  width: 50px;
+  height: 50px;
+  border: solid 1px red;
 }
 
 /*# sourceMappingURL=styles.css.map */
