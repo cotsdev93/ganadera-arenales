@@ -1423,7 +1423,7 @@ body main .productosContainer .productos .productosListarContainer .productosLis
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer:hover img {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 body main .productosContainer ::-webkit-scrollbar {
   width: 9px; /* Ancho de la barra vertical */
