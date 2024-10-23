@@ -379,7 +379,7 @@ function cargarProductos(productos) {
             <img class="img"src="${producto.img}" alt="${producto.alt}" />
           </div>
           <div class="productoInfo">
-            <p class="nombre">${producto.nombre}</p>
+            <p class="nombreProducto">${capitalizarPrimeraLetra(producto.nombre)}</p>
             <div class="precioContainer">
               <p class="precio">$${producto.precio}</p>
               <p class="xKilo"><i class="fa-solid fa-x"></i> kg. </p>
@@ -399,3 +399,9 @@ function cargarProductos(productos) {
 document.addEventListener("DOMContentLoaded", () => {
   const bdProductos = new BaseDeDatosProductos();
 });
+
+function capitalizarPrimeraLetra(texto) {
+  return texto.charAt(0).toUpperCase() + texto.slice(1);
+}
+
+const nombreProducto = capitalizarPrimeraLetra(producto.nombre);

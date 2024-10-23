@@ -88,8 +88,6 @@ body {
           border-right: solid 5px $grisClaro;
           border-left: none;
           overflow-x: auto;
-          // border: solid 1px red;
-          z-index: 2;
           .productosListar {
             display: flex;
             flex-direction: row;
@@ -98,7 +96,7 @@ body {
             justify-content: center;
             margin: 10px;
             .productoContainer {
-              border: solid 1px $grisOscuro;
+              border: solid 0.5px $grisOscuro;
               border-radius: 5px;
               width: 150px;
               height: 170px;
@@ -133,11 +131,12 @@ body {
                 }
               }
               .productoInfo {
-                background-color: $grisClaro;
+                background-color: $grisMasClaro;
                 padding: 5px;
                 line-height: 1;
-                .nombre{
-                  margin: 0px 0px 3px 0px;
+                height: 100%;
+                .nombreProducto {
+                  margin: 0px 0px 5px 0px;
                 }
                 .precioContainer {
                   display: flex;
@@ -150,6 +149,7 @@ body {
                     
                     .fa-solid {
                       font-size: 9px;
+                      
                     }
                   }
                 }
@@ -163,6 +163,7 @@ body {
                 top: 0 ;
                 .logo {
                   width: 100%;
+                  filter: invert(55%) sepia(1%) saturate(0%) hue-rotate(180deg) brightness(70%);
                 }
               }
             }

@@ -1383,7 +1383,6 @@ body main .productosContainer .productos .productosListarContainer {
   border-right: solid 5px #d1d1d1;
   border-left: none;
   overflow-x: auto;
-  z-index: 2;
 }
 body main .productosContainer .productos .productosListarContainer .productosListar {
   display: flex;
@@ -1394,7 +1393,7 @@ body main .productosContainer .productos .productosListarContainer .productosLis
   margin: 10px;
 }
 body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer {
-  border: solid 1px #a3a3a3;
+  border: solid 0.5px #a3a3a3;
   border-radius: 5px;
   width: 150px;
   height: 170px;
@@ -1427,12 +1426,13 @@ body main .productosContainer .productos .productosListarContainer .productosLis
   transform: scale(1.05);
 }
 body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer .productoInfo {
-  background-color: #d1d1d1;
+  background-color: #ebebeb;
   padding: 5px;
   line-height: 1;
+  height: 100%;
 }
-body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer .productoInfo .nombre {
-  margin: 0px 0px 3px 0px;
+body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer .productoInfo .nombreProducto {
+  margin: 0px 0px 5px 0px;
 }
 body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer .productoInfo .precioContainer {
   display: flex;
@@ -1456,6 +1456,7 @@ body main .productosContainer .productos .productosListarContainer .productosLis
 }
 body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer .logoContainer .logo {
   width: 100%;
+  filter: invert(55%) sepia(1%) saturate(0%) hue-rotate(180deg) brightness(70%);
 }
 body main .productosContainer ::-webkit-scrollbar {
   width: 9px; /* Ancho de la barra vertical */
