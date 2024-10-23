@@ -60,7 +60,7 @@
     "categoria": "vaca",
     "descripcion": "",
     "precio": 500,
-    "img": "",
+    "img": "../assets/img/vacio.png",
     "alt": "",
     "stock": 100,
     "logo" : "../assets/img/vaca.png"

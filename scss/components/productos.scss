@@ -11,7 +11,6 @@ body {
         color: $grisMasOscuro;
         margin: 10px 45px;
       }
-
       .productos {
         display: flex;
         justify-content: center;
@@ -41,7 +40,6 @@ body {
               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
             }
           }
-
           .dropDownContent {
             width: 100%;
             margin: 5px;
@@ -64,19 +62,17 @@ body {
                 border: solid 0.5px $grisMasClaro;
                 box-shadow: inset 0px 0px 5px 1px #00000020;
                 &:hover {
-                  background-color: $grisClaro;
+                  background-color: $grisMasClaro;
                   padding-left: 10px;
                 }
               }
             }
           }
-
           &.active .dropDownContent {
-            max-height: 300px; // Ajustar según el contenido
+            max-height: 300px;
             padding: 10px;
           }
         }
-
         .productosListarContainer {
           width: 60%;
           height: 81vh;
@@ -103,7 +99,7 @@ body {
               margin: 5px;
               overflow: hidden;
               box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-              transition: all 0.3s ;
+              transition: all 0.3s;
               cursor: pointer;
               position: relative;
               .imgContainer {
@@ -146,10 +142,9 @@ body {
                   .xKilo {
                     padding-left: 5px;
                     color: $gris;
-                    
+
                     .fa-solid {
                       font-size: 9px;
-                      
                     }
                   }
                 }
@@ -160,10 +155,11 @@ body {
                 // border: solid 1px red;
                 position: absolute;
                 right: 0;
-                top: 0 ;
+                top: 0;
                 .logo {
                   width: 100%;
-                  filter: invert(55%) sepia(1%) saturate(0%) hue-rotate(180deg) brightness(70%);
+                  filter: invert(55%) sepia(1%) saturate(0%) hue-rotate(180deg)
+                    brightness(70%);
                 }
               }
             }

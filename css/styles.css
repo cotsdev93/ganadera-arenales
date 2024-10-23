@@ -1365,7 +1365,7 @@ body main .productosContainer .productos .productosCategorias .dropDownContent u
   box-shadow: inset 0px 0px 5px 1px rgba(0, 0, 0, 0.1254901961);
 }
 body main .productosContainer .productos .productosCategorias .dropDownContent ul li:hover {
-  background-color: #d1d1d1;
+  background-color: #ebebeb;
   padding-left: 10px;
 }
 body main .productosContainer .productos .productosCategorias.active .dropDownContent {
