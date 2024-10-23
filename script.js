@@ -374,7 +374,10 @@ function cargarProductos(productos) {
 
     for (const producto of productos) {
       productosListar.innerHTML += `
-        <div class="producto">
+        <div class="productoContainer">
+          <div class="imgContainer">
+            <img src="${producto.img}" alt="${producto.alt}">
+          </div>
           <p>${producto.nombre}</p>
           <p>${producto.precio}</p>
         </div>

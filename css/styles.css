@@ -1390,12 +1390,40 @@ body main .productosContainer .productos .productosListarContainer .productosLis
   flex-direction: row;
   flex-wrap: wrap;
   overflow: hidden;
+  justify-content: center;
+  margin: 10px;
 }
-body main .productosContainer .productos .productosListarContainer .productosListar .producto {
-  border: solid 1px red;
+body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer {
+  border: solid 1px #a3a3a3;
+  border-radius: 5px;
   width: 150px;
-  height: 150px;
+  height: 170px;
   margin: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer .imgContainer {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ebebeb;
+  box-shadow: inset 0px 0px 5px 1px rgba(0, 0, 0, 0.1254901961);
+}
+body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer .imgContainer img {
+  width: 90%;
+  transition: all 0.7s;
+}
+body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer:hover {
+  background-color: #d1d1d1;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer:hover img {
+  transform: scale(1.1);
 }
 body main .productosContainer ::-webkit-scrollbar {
   width: 9px; /* Ancho de la barra vertical */
