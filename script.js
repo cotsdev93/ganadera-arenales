@@ -416,3 +416,14 @@ btnCategoria.forEach((boton) => {
     cargarProductos(productos);
   });
 });
+
+const btnNombre = document.querySelectorAll(".btnNombre")
+
+btnNombre.forEach((boton) => {
+  boton.addEventListener("click", () => {
+    const productos = bdProductos.registroPorNombre(
+      boton.dataset.nombre
+    )
+    cargarProductos(productos)
+  })
+})
