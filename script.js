@@ -376,10 +376,18 @@ function cargarProductos(productos) {
       productosListar.innerHTML += `
         <div class="productoContainer">
           <div class="imgContainer">
-            <img src="${producto.img}" alt="${producto.alt}">
+            <img class="img"src="${producto.img}" alt="${producto.alt}" />
           </div>
-          <p>${producto.nombre}</p>
-          <p>${producto.precio}</p>
+          <div class="productoInfo">
+            <p class="nombre">${producto.nombre}</p>
+            <div class="precioContainer">
+              <p class="precio">$${producto.precio}</p>
+              <p class="xKilo"><i class="fa-solid fa-x"></i> kg. </p>
+            </div>
+          </div>
+          <div class="logoContainer">
+            <img class="logo" src="${producto.logo}" alt="" />
+          </div>
         </div>
       `;
     }

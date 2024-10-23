@@ -107,6 +107,7 @@ body {
               box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
               transition: all 0.3s ;
               cursor: pointer;
+              position: relative;
               .imgContainer {
                 width: 100%;
                 height: 120px;
@@ -127,8 +128,41 @@ body {
                 background-color: $grisClaro;
                 transform: translateY(-1px);
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-                img {
+                .img {
                   transform: scale(1.05);
+                }
+              }
+              .productoInfo {
+                background-color: $grisClaro;
+                padding: 5px;
+                line-height: 1;
+                .nombre{
+                  margin: 0px 0px 3px 0px;
+                }
+                .precioContainer {
+                  display: flex;
+                  .precio {
+                    color: green;
+                  }
+                  .xKilo {
+                    padding-left: 5px;
+                    color: $gris;
+                    
+                    .fa-solid {
+                      font-size: 9px;
+                    }
+                  }
+                }
+              }
+              .logoContainer {
+                width: 50px;
+                height: 50px;
+                // border: solid 1px red;
+                position: absolute;
+                right: 0;
+                top: 0 ;
+                .logo {
+                  width: 100%;
                 }
               }
             }
