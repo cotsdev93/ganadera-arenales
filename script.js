@@ -346,11 +346,8 @@ class BaseDeDatosProductos {
     cargarProductos(this.productos);
   }
 
-  registrosPorCategoria(palabra) {
-    return this.productos.filter(
-      (producto) =>
-        producto.categoria.toLowerCase().indexOf(palabra.toLowerCase()) !== -1
-    );
+  registrosPorCategoria(categoria) {
+    return this.productos.filter((producto) => producto.categoria == categoria);
   }
 
   registroPorNombre(nombre) {
@@ -366,7 +363,6 @@ class BaseDeDatosProductos {
 }
 
 function cargarProductos(productos) {
-
   const productosListar = document.querySelector(".productosListar");
 
   if (productosListar) {
@@ -379,7 +375,9 @@ function cargarProductos(productos) {
             <img class="img"src="${producto.img}" alt="${producto.alt}" />
           </div>
           <div class="productoInfo">
-            <p class="nombreProducto">${capitalizarPrimeraLetra(producto.nombre)}</p>
+            <p class="nombreProducto">${capitalizarPrimeraLetra(
+              producto.nombre
+            )}</p>
             <div class="precioContainer">
               <p class="precio">$${producto.precio}</p>
               <p class="xKilo"><i class="fa-solid fa-x"></i> kg. </p>
@@ -400,8 +398,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const bdProductos = new BaseDeDatosProductos();
 });
 
+const bdProductos = new BaseDeDatosProductos();
+
 function capitalizarPrimeraLetra(texto) {
   return texto.charAt(0).toUpperCase() + texto.slice(1);
 }
 
-const nombreProducto = capitalizarPrimeraLetra(producto.nombre);
+// const nombreProducto = capitalizarPrimeraLetra(producto.nombre);
+
+const btnCategoria = document.querySelectorAll(".btnCategoria");
+
+btnCategoria.forEach((boton) => {
+  boton.addEventListener("click", () => {
+    const productos = bdProductos.registrosPorCategoria(
+      boton.dataset.categoria
+    );
+    cargarProductos(productos);
+  });
+});

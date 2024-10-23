@@ -71,7 +71,7 @@
     "categoria": "vaca",
     "descripcion": "",
     "precio": 500,
-    "img": "",
+    "img": "../assets/img/asado.png",
     "alt": "",
     "stock": 100,
     "logo" : "../assets/img/vaca.png"
@@ -82,7 +82,7 @@
     "categoria": "vaca",
     "descripcion": "",
     "precio": 500,
-    "img": "",
+    "img": "../assets/img/entraña.png",
     "alt": "",
     "stock": 100,
     "logo" : "../assets/img/vaca.png"
@@ -93,7 +93,7 @@
     "categoria": "vaca",
     "descripcion": "",
     "precio": 500,
-    "img": "",
+    "img": "../assets/img/cuadril.png",
     "alt": "",
     "stock": 100,
     "logo" : "../assets/img/vaca.png"
@@ -104,18 +104,18 @@
     "categoria": "vaca",
     "descripcion": "",
     "precio": 500,
-    "img": "",
+    "img": "../assets/img/matambre.png",
     "alt": "",
     "stock": 100,
     "logo" : "../assets/img/vaca.png"
   },
   {
     "id": 12,
-    "nombre": "codillo",
+    "nombre": "osobuco",
     "categoria": "vaca",
     "descripcion": "",
     "precio": 500,
-    "img": "",
+    "img": "../assets/img/osobuco.png",
     "alt": "",
     "stock": 100,
     "logo" : "../assets/img/vaca.png"
@@ -126,7 +126,7 @@
     "categoria": "pollo",
     "descripcion": "",
     "precio": 500,
-    "img": "",
+    "img": "../assets/img/pechuga.png",
     "alt": "",
     "stock": 100,
     "logo" : "../assets/img/pollo.png"
@@ -137,7 +137,7 @@
     "categoria": "pollo",
     "descripcion": "",
     "precio": 500,
-    "img": "",
+    "img": "../assets/img/patamuslo.png",
     "alt": "",
     "stock": 100,
     "logo" : "../assets/img/pollo.png"
@@ -148,7 +148,7 @@
     "categoria": "pollo",
     "descripcion": "",
     "precio": 500,
-    "img": "",
+    "img": "../assets/img/alitas.png",
     "alt": "",
     "stock": 100,
     "logo" : "../assets/img/pollo.png"
@@ -159,7 +159,7 @@
     "categoria": "pollo",
     "descripcion": "",
     "precio": 500,
-    "img": "",
+    "img": "../assets/img/polloEntero.png",
     "alt": "",
     "stock": 100,
     "logo" : "../assets/img/pollo.png"
