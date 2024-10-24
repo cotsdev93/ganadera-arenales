@@ -362,8 +362,6 @@ btnCategoria.forEach((boton) => {
 
 const btnNombre = document.querySelectorAll(".btnNombre");
 
-
-
 btnNombre.forEach((boton) => {
   boton.addEventListener("click", () => {
     const productos = bdProductos.registroPorNombre(boton.dataset.nombre);
@@ -371,14 +369,18 @@ btnNombre.forEach((boton) => {
     if (productos.length > 0) {
       cargarProductos(productos);
     } else {
-      noHayProductos(boton.dataset.nombre);
+      // Busca la categoría del producto en la base de datos
+      const categoria = bdProductos.productos.find(producto => 
+        producto.nombre.toLowerCase() === boton.dataset.nombre.toLowerCase()
+      )?.categoria; // Obtiene la categoría o undefined si no se encuentra
+
+      noHayProductos(boton.dataset.nombre, categoria);
       console.log("aca");
     }
   });
 });
 
 // Productos Listar
-
 
 
 class BaseDeDatosProductos {
@@ -388,11 +390,12 @@ class BaseDeDatosProductos {
   }
 
   async cargarRegistros() {
-    const resultado = await fetch("./JSON/productos.json");
+    const resultado = await fetch(`./JSON/productos.json?timestamp=${new Date().getTime()}`);
     this.productos = await resultado.json();
     this.productos.sort((a, b) => a.nombre.localeCompare(b.nombre));
     cargarProductos(this.productos);
   }
+  
 
   registrosPorCategoria(categoria) {
     return this.productos.filter((producto) => producto.categoria == categoria);
@@ -414,13 +417,13 @@ class BaseDeDatosProductos {
   }
 }
 
-function noHayProductos(nombre) {
+function noHayProductos(nombre, categoria) {
   const productosListar = document.querySelector(".productosListar");
 
   if (productosListar) {
     productosListar.innerHTML = `
-      <div class="noProductos">
-        <p>No se encontraron productos que coincidan con: "${nombre}"</p>
+      <div class="noHayProductos">
+        <p>Por el momento no contamos con stock de ${capitalizarPrimeraLetra(nombre)}</p>
       </div>
     `;
   }

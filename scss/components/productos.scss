@@ -116,6 +116,7 @@ body {
           border-right: solid 5px $grisClaro;
           border-left: none;
           overflow-x: auto;
+
           .productosListar {
             display: flex;
             flex-direction: row;
@@ -194,6 +195,16 @@ body {
                     brightness(70%);
                 }
               }
+            }
+          }
+          .noHayProductos {
+            width: 100%;
+            height: 72vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p {
+              color: $grisMasOscuro;
             }
           }
         }
