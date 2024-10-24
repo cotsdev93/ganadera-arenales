@@ -288,21 +288,17 @@ initMap();
 
 // Categorias Productos
 
-// Seleccionamos todos los botones de dropdown
 const dropDownButtons = document.querySelectorAll(".dropDownBtn");
 
-// Añadimos un evento a cada botón
 dropDownButtons.forEach((button) => {
   button.addEventListener("click", function () {
-    const dropDownId = button.getAttribute("id").replace("Btn", "DropDown"); // Obtener el ID del dropdown relacionado
+    const dropDownId = button.getAttribute("id").replace("Btn", "DropDown");
 
     toggleDropdown(dropDownId, button);
   });
 });
 
-// Función para manejar la apertura/cierre de los dropdowns
 function toggleDropdown(id, btn) {
-  // Obtener todos los dropdowns y botones
   const allDropdowns = document.querySelectorAll(".dropDownContent");
   const allButtons = document.querySelectorAll(".dropDownBtn");
 
@@ -332,6 +328,49 @@ function toggleDropdown(id, btn) {
   }
 }
 
+const btnCategoria = document.querySelectorAll(".btnCategoria");
+
+btnCategoria.forEach((boton) => {
+  boton.addEventListener("click", () => {
+    const categoria = boton.dataset.categoria;
+
+    // Si la categoría es "todos", cerrar todos los dropdowns
+    if (categoria == "todos") {
+      cargarProductos(bdProductos.traerRegistros());
+
+      const allDropdowns = document.querySelectorAll(".dropDownContent");
+
+      // Cerrar todos los dropdowns al seleccionar "todos"
+      allDropdowns.forEach((dropdown) => {
+        dropdown.style.maxHeight = "0";
+      });
+
+      // Quitar la clase activa de todos los botones dropdown
+      const allButtons = document.querySelectorAll(".dropDownBtn");
+      allButtons.forEach((button) => {
+        button.classList.remove("active");
+      });
+
+    } else {
+      // cargar productos según la categoría seleccionada
+      const productos = bdProductos.registrosPorCategoria(
+        boton.dataset.categoria
+      );
+      cargarProductos(productos);
+    }
+  });
+});
+
+const btnNombre = document.querySelectorAll(".btnNombre");
+
+btnNombre.forEach((boton) => {
+  boton.addEventListener("click", () => {
+    const productos = bdProductos.registroPorNombre(boton.dataset.nombre);
+    cargarProductos(productos);
+  });
+});
+
+
 // Productos Listar
 
 class BaseDeDatosProductos {
@@ -359,6 +398,10 @@ class BaseDeDatosProductos {
 
   registroPorId(id) {
     return this.productos.find((producto) => producto.id === id);
+  }
+
+  traerRegistros() {
+    return this.productos;
   }
 }
 
@@ -403,27 +446,3 @@ const bdProductos = new BaseDeDatosProductos();
 function capitalizarPrimeraLetra(texto) {
   return texto.charAt(0).toUpperCase() + texto.slice(1);
 }
-
-// const nombreProducto = capitalizarPrimeraLetra(producto.nombre);
-
-const btnCategoria = document.querySelectorAll(".btnCategoria");
-
-btnCategoria.forEach((boton) => {
-  boton.addEventListener("click", () => {
-    const productos = bdProductos.registrosPorCategoria(
-      boton.dataset.categoria
-    );
-    cargarProductos(productos);
-  });
-});
-
-const btnNombre = document.querySelectorAll(".btnNombre")
-
-btnNombre.forEach((boton) => {
-  boton.addEventListener("click", () => {
-    const productos = bdProductos.registroPorNombre(
-      boton.dataset.nombre
-    )
-    cargarProductos(productos)
-  })
-})

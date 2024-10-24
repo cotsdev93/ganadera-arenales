@@ -1314,15 +1314,38 @@ body main .productosContainer .productos {
   justify-content: center;
   width: 100%;
 }
-body main .productosContainer .productos .productosCategorias {
+body main .productosContainer .productos .productosCategoriasContainer {
   width: 30%;
   height: 81vh;
   border-radius: 20px 0px 0px 20px;
   border: solid 5px #d1d1d1;
   padding: 10px;
   background-color: #f7f9f9;
+  overflow: hidden;
 }
-body main .productosContainer .productos .productosCategorias .dropDownBtn {
+body main .productosContainer .productos .productosCategoriasContainer .todos {
+  width: 70%;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #d1d1d1;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  color: #f7f9f9;
+  border: solid 1px #ebebeb;
+  margin-bottom: 5px;
+}
+body main .productosContainer .productos .productosCategoriasContainer .productosCategorias {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+body main .productosContainer .productos .productosCategoriasContainer .productosCategorias .dropDownBtn {
   width: 70%;
   padding: 5px;
   font-size: 15px;
@@ -1335,12 +1358,17 @@ body main .productosContainer .productos .productosCategorias .dropDownBtn {
   color: #f7f9f9;
   border: solid 1px #ebebeb;
 }
-body main .productosContainer .productos .productosCategorias .dropDownBtn:hover {
+body main .productosContainer .productos .productosCategoriasContainer .productosCategorias .dropDownBtn:hover {
   background-color: #d1d1d1;
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
-body main .productosContainer .productos .productosCategorias .dropDownContent {
+body main .productosContainer .productos .productosCategoriasContainer .productosCategorias .dropDownBtn img {
+  width: 30px;
+  transform: translateY(5px);
+  filter: invert(55%) sepia(1%) saturate(0%) hue-rotate(180deg) brightness(70%);
+}
+body main .productosContainer .productos .productosCategoriasContainer .productosCategorias .dropDownContent {
   width: 100%;
   margin: 5px;
   max-height: 0;
@@ -1348,11 +1376,11 @@ body main .productosContainer .productos .productosCategorias .dropDownContent {
   transition: max-height 1s ease-in-out, padding 0.5s ease-in-out;
   padding: 0 10px;
 }
-body main .productosContainer .productos .productosCategorias .dropDownContent ul {
+body main .productosContainer .productos .productosCategoriasContainer .productosCategorias .dropDownContent ul {
   padding: 0;
   margin: 5;
 }
-body main .productosContainer .productos .productosCategorias .dropDownContent ul li {
+body main .productosContainer .productos .productosCategoriasContainer .productosCategorias .dropDownContent ul li {
   list-style: none;
   text-align: center;
   cursor: pointer;
@@ -1364,11 +1392,11 @@ body main .productosContainer .productos .productosCategorias .dropDownContent u
   border: solid 0.5px #ebebeb;
   box-shadow: inset 0px 0px 5px 1px rgba(0, 0, 0, 0.1254901961);
 }
-body main .productosContainer .productos .productosCategorias .dropDownContent ul li:hover {
+body main .productosContainer .productos .productosCategoriasContainer .productosCategorias .dropDownContent ul li:hover {
   background-color: #ebebeb;
   padding-left: 10px;
 }
-body main .productosContainer .productos .productosCategorias.active .dropDownContent {
+body main .productosContainer .productos .productosCategoriasContainer .productosCategorias.active .dropDownContent {
   max-height: 300px;
   padding: 10px;
 }
