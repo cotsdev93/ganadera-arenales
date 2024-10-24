@@ -350,7 +350,6 @@ btnCategoria.forEach((boton) => {
       allButtons.forEach((button) => {
         button.classList.remove("active");
       });
-
     } else {
       // cargar productos según la categoría seleccionada
       const productos = bdProductos.registrosPorCategoria(
@@ -370,7 +369,6 @@ btnNombre.forEach((boton) => {
   });
 });
 
-
 // Productos Listar
 
 class BaseDeDatosProductos {
@@ -382,6 +380,7 @@ class BaseDeDatosProductos {
   async cargarRegistros() {
     const resultado = await fetch("./JSON/productos.json");
     this.productos = await resultado.json();
+    this.productos.sort((a, b) => a.nombre.localeCompare(b.nombre));
     cargarProductos(this.productos);
   }
 
