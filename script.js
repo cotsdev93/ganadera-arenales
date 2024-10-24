@@ -362,14 +362,24 @@ btnCategoria.forEach((boton) => {
 
 const btnNombre = document.querySelectorAll(".btnNombre");
 
+
+
 btnNombre.forEach((boton) => {
   boton.addEventListener("click", () => {
     const productos = bdProductos.registroPorNombre(boton.dataset.nombre);
-    cargarProductos(productos);
+
+    if (productos.length > 0) {
+      cargarProductos(productos);
+    } else {
+      noHayProductos(boton.dataset.nombre);
+      console.log("aca");
+    }
   });
 });
 
 // Productos Listar
+
+
 
 class BaseDeDatosProductos {
   constructor() {
@@ -404,6 +414,18 @@ class BaseDeDatosProductos {
   }
 }
 
+function noHayProductos(nombre) {
+  const productosListar = document.querySelector(".productosListar");
+
+  if (productosListar) {
+    productosListar.innerHTML = `
+      <div class="noProductos">
+        <p>No se encontraron productos que coincidan con: "${nombre}"</p>
+      </div>
+    `;
+  }
+}
+
 function cargarProductos(productos) {
   const productosListar = document.querySelector(".productosListar");
 
@@ -431,8 +453,6 @@ function cargarProductos(productos) {
         </div>
       `;
     }
-  } else {
-    console.error("El contenedor de productos no existe");
   }
 }
 
