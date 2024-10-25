@@ -1,0 +1,19 @@
+body {
+  .irArriba {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 85%;
+    right: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s;
+    font-size: 38px;
+    color: $grisMasOscuro;
+    cursor: pointer;
+  }
+  .mostrar {
+    pointer-events: auto;
+    opacity: 1;
+  }
+}

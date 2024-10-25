@@ -1,0 +1,96 @@
+body {
+  footer {
+    width: 100%;
+    height: auto;
+    background-color: $grisOscuro;
+    .primerBloque {
+      width: 100%;
+      height: 80px;
+      // border: solid 1px blue;
+      display: flex;
+      align-items: center;
+      .logoContainer {
+        // border: solid 1px red;
+        width: auto;
+        display: flex;
+        margin: 20px;
+        transform: translateY(5px);
+        .logo {
+          width: 40px;
+          transform: translateY(-2px);
+        }
+        .logoText {
+          display: flex;
+          span {
+            font-family: "Poppins";
+            font-size: 20px;
+            color: $grisMasClaro;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+    .lineaDivisoria {
+      width: 95%;
+      background-color: $gris;
+      border: 0;
+      border-top: solid 1px $grisClaro;
+      margin: auto;
+    }
+    .segundoBloque {
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .redesContainer {
+        // border: solid 1px red;
+        width: 50%;
+        color: $grisMasClaro;
+        margin-left: 20px;
+
+        i {
+          font-size: 20px;
+          margin-left: 20px;
+        }
+      }
+      .bloque02Text {
+        // border: solid 1px red;
+        width: 50%;
+        ul {
+          display: flex;
+          justify-content: flex-end;
+          gap: 5px;
+          margin-right: 20px;
+          li {
+            font-size: 12px;
+            padding: 5px;
+            white-space: nowrap;
+            width: auto;
+            color: $grisMasClaro;
+          }
+        }
+      }
+    }
+    .tercerBloque {
+      height: 80px;
+      .tercerBloque1 {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+        // border: solid 1px red;
+        .iso {
+          width: 50px;
+          // border: solid 1px red;
+        }
+        .senasa {
+          width: 90px;
+          // border: solid 1px red;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}

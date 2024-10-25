@@ -1,47 +1,47 @@
-// INTRO
+// // INTRO
 
-const intro = document.querySelector(".intro");
-const logo = document.querySelector(".logoHeader");
-const logoSpan = document.querySelectorAll(".logo");
+// const intro = document.querySelector(".intro");
+// const logo = document.querySelector(".logoHeader");
+// const logoSpan = document.querySelectorAll(".logo");
 
-function animacionInicial() {
-  setTimeout(() => {
-    logoSpan.forEach((span, idx) => {
-      setTimeout(() => {
-        span.classList.add("active");
-      }, (idx + 1) * 400);
-    });
+// function animacionInicial() {
+//   setTimeout(() => {
+//     logoSpan.forEach((span, idx) => {
+//       setTimeout(() => {
+//         span.classList.add("active");
+//       }, (idx + 1) * 400);
+//     });
 
-    setTimeout(() => {
-      logoSpan.forEach((span, idx) => {
-        setTimeout(() => {
-          span.classList.remove("active");
-          span.classList.add("fade");
-        }, (idx + 1) * 50);
-      });
-    }, 3000);
+//     setTimeout(() => {
+//       logoSpan.forEach((span, idx) => {
+//         setTimeout(() => {
+//           span.classList.remove("active");
+//           span.classList.add("fade");
+//         }, (idx + 1) * 50);
+//       });
+//     }, 3000);
 
-    setTimeout(() => {
-      intro.style.top = "-120vh";
-    }, 3200);
-  });
-}
+//     setTimeout(() => {
+//       intro.style.top = "-120vh";
+//     }, 3200);
+//   });
+// }
 
-// POP UP
+// // POP UP
 
-const popup = document.querySelector(".popupContainer");
-const buttonx = document.getElementById("x");
-function popUp() {
-  if (isSmallScreen) {
-    popup.style.top = "100px";
-  } else {
-    popup.style.top = "50px";
-  }
-}
+// const popup = document.querySelector(".popupContainer");
+// const buttonx = document.getElementById("x");
+// function popUp() {
+//   if (isSmallScreen) {
+//     popup.style.top = "100px";
+//   } else {
+//     popup.style.top = "50px";
+//   }
+// }
 
-buttonx.addEventListener("click", () => {
-  popup.style.transform = "translateX(-50%) translateY(-100vh)";
-});
+// buttonx.addEventListener("click", () => {
+//   popup.style.transform = "translateX(-50%) translateY(-100vh)";
+// });
 
 // INICIO INTRO Y POP UP
 
@@ -423,7 +423,7 @@ function noHayProductos(nombre, categoria) {
   if (productosListar) {
     productosListar.innerHTML = `
       <div class="noHayProductos">
-        <p>Por el momento no contamos con stock de ${capitalizarPrimeraLetra(nombre)}</p>
+        <p>Por el momento no contamos con stock de <b>${capitalizarPrimeraLetra(nombre)}</b></p>
       </div>
     `;
   }
@@ -468,3 +468,49 @@ const bdProductos = new BaseDeDatosProductos();
 function capitalizarPrimeraLetra(texto) {
   return texto.charAt(0).toUpperCase() + texto.slice(1);
 }
+
+// IR ARRIBA
+
+
+const irArriba = document.querySelector(".irArriba");
+// const footer = document.querySelector("footer");
+
+let lastScrollY = window.scrollY;
+let initialScrollDownY = 0;
+let scrolledUp = false;
+
+window.addEventListener("scroll", () => {
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY > lastScrollY) {
+    if (scrolledUp) {
+      initialScrollDownY = currentScrollY;
+      scrolledUp = false;
+    }
+    if (currentScrollY > initialScrollDownY + 300) {
+      irArriba.classList.add("mostrar");
+    }
+  } else if (currentScrollY < lastScrollY) {
+    irArriba.classList.remove("mostrar");
+    scrolledUp = true;
+  }
+
+  // const footerRect = footer.getBoundingClientRect();
+  // const buttonRect = irArriba.getBoundingClientRect();
+
+  // if (footerRect.top < window.innerHeight) {
+  //   irArriba.style.position = "absolute";
+  //   irArriba.style.top = `${
+  //     window.scrollY + footerRect.top - buttonRect.height - 20
+  //   }px`;
+  // } else {
+  //   irArriba.style.position = "fixed";
+  //   irArriba.style.top = "85%";
+  // }
+
+  lastScrollY = currentScrollY;
+});
+
+irArriba.addEventListener("click", () => {
+  window.scrollTo(0, 0);
+});
