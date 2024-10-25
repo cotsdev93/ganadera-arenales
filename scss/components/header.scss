@@ -3,7 +3,7 @@ body {
     nav {
       background-color: $blanco;
       width: 100%;
-      height: 80px;
+      height: 65px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -16,63 +16,69 @@ body {
         padding-left: 40px;
         span {
           font-family: "Poppins";
-          font-size: 30px;
+          font-size: 25px;
         }
         img {
-          width: 60px;
+          width: 50px;
         }
       }
-      .navMenu {
+      .nav {
         display: flex;
-        align-items: center;
-        font-family: "Poppins";
-        li {
-          padding: 7px;
-          color: $grisClaro;
-          transition: 1s;
-          cursor: pointer;
-          a {
-            transition: 1s;
+        margin-right: 50px;
+        .navMenu {
+          display: flex;
+          align-items: center;
+          font-family: "Poppins";
+          margin-right: 40px;
+          li {
+            padding: 7px;
             color: $grisClaro;
-            &:hover {
-              color: $grisOscuro;
+            transition: 1s;
+            cursor: pointer;
+            font-size: 14px;
+            a {
+              transition: 1s;
+              color: $grisClaro;
+              &:hover {
+                color: $grisOscuro;
+              }
             }
           }
         }
-      }
-      #carrito {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: $grisClaro;
-        position: relative;
-        margin-right: 40px;
-        z-index: 7;
-        cursor: pointer;
-        .fa-cart-shopping {
-          font-size: 23px;
-          color: $blanco;
-          position: absolute;
-          top: 52%;
-          left: 47%;
-          transform: translate(-50%, -50%);
-        }
-        .circuloCantidad {
-          width: 15px;
-          height: 15px;
+        #carrito {
+          width: 40px;
+          height: 40px;
           border-radius: 50%;
-          background-color: $grisOscuro;
-          position: absolute;
-          top: 10%;
-          left: 90%;
-          transform: translate(-50%, -50%);
-          span {
+          background-color: $grisClaro;
+          position: relative;
+          // margin-right: 40px;
+          z-index: 7;
+          cursor: pointer;
+          .fa-cart-shopping {
+            font-size: 23px;
             color: $blanco;
-            font-size: 10px;
             position: absolute;
-            left: 50%;
-            top: 50%;
+            top: 52%;
+            left: 47%;
             transform: translate(-50%, -50%);
+          }
+          .circuloCantidad {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: $grisOscuro;
+            position: absolute;
+            top: 10%;
+            left: 90%;
+            transform: translate(-50%, -50%);
+            span {
+              color: $blanco;
+              font-size: 10px;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+            }
           }
         }
       }
@@ -219,7 +225,7 @@ body {
           z-index: 4;
         }
         .carritoListarContainer {
-          z-index:3;
+          z-index: 3;
         }
         .show {
           right: 0px;

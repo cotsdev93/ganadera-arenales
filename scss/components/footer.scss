@@ -42,28 +42,29 @@ body {
         padding-right: 5px;
         width: 50%;
         transition: 1s ease-in-out;
+        font-size: 13px;
         .direccion {
-          color: $grisMasClaro;
-          margin: 0px 20px 0px 5px;
+          color: $grisClaro;
+          margin: 0px 20px 0px 3px;
           cursor: pointer;
+          transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
         }
         .fa-location-dot {
-          color: $grisMasClaro;
+          color: $grisClaro;
           font-size: 15px;
           cursor: pointer;
-          transform: translateY(-5px);
+          transform: translateY(-4px);
           transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
         }
         &:hover {
           .direccion {
-            text-decoration: underline;
-            text-underline-offset: 2px;
-            text-decoration-color: $grisClaro;
+            color: $grisMasClaro;
+            transform: translateY(-2px);
           }
           .fa-location-dot {
             transition: 0.5s ease-in-out;
             color: rgb(156, 5, 5);
-            transform: translateY(0px);
+            transform: translateY(-2px);
           }
         }
       }
