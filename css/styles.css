@@ -1544,6 +1544,7 @@ body footer .primerBloque {
   height: 80px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 body footer .primerBloque .logoContainer {
   width: auto;
@@ -1563,6 +1564,26 @@ body footer .primerBloque .logoContainer .logoText span {
   font-size: 20px;
   color: #ebebeb;
   margin-left: 5px;
+}
+body footer .primerBloque .direccionContainer {
+  display: flex;
+  align-items: center;
+  color: #d1d1d1;
+}
+body footer .primerBloque .direccionContainer .direccion {
+  color: #ebebeb;
+  margin: 5px;
+  cursor: pointer;
+}
+body footer .primerBloque .direccionContainer .fa-location-dot {
+  color: #ebebeb;
+  font-size: 15px;
+  cursor: pointer;
+}
+body footer .primerBloque .direccionContainer:hover .direccion {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: #d1d1d1;
 }
 body footer .lineaDivisoria {
   width: 95%;
@@ -1609,6 +1630,7 @@ body footer .segundoBloque .bloque02Text ul li {
 body footer .segundoBloque .bloque02Text ul li:hover {
   text-decoration: underline;
   text-underline-offset: 2px;
+  text-decoration-color: #d1d1d1;
 }
 body footer .tercerBloque {
   height: 80px;
@@ -1655,6 +1677,7 @@ body footer .tercerBloque .tercerBloque2 ul li {
 }
 body footer .tercerBloque .tercerBloque2 ul li:hover {
   text-decoration: underline;
+  text-decoration-color: #d1d1d1;
   text-underline-offset: 2px;
 }
 

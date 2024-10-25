@@ -9,6 +9,7 @@ body {
       // border: solid 1px blue;
       display: flex;
       align-items: center;
+      justify-content: space-between;
       .logoContainer {
         // border: solid 1px red;
         width: auto;
@@ -26,6 +27,28 @@ body {
             font-size: 20px;
             color: $grisMasClaro;
             margin-left: 5px;
+          }
+        }
+      }
+      .direccionContainer {
+        display: flex;
+        align-items: center;
+        color: $grisClaro;
+        .direccion {
+          color: $grisMasClaro;
+          margin: 5px;
+          cursor: pointer;
+        }
+        .fa-location-dot {
+          color: $grisMasClaro;
+          font-size: 15px;
+          cursor: pointer;
+        }
+        &:hover {
+          .direccion {
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            text-decoration-color: $grisClaro;
           }
         }
       }
@@ -73,10 +96,10 @@ body {
             cursor: pointer;
             &:hover {
               text-decoration: underline;
-              text-underline-offset: 2px
+              text-underline-offset: 2px;
+              text-decoration-color: $grisClaro;
             }
           }
-
         }
       }
     }
@@ -127,7 +150,8 @@ body {
             cursor: pointer;
             &:hover {
               text-decoration: underline;
-              text-underline-offset: 2px
+              text-decoration-color: $grisClaro; 
+              text-underline-offset: 2px;
             }
           }
         }
