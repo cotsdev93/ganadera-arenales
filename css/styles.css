@@ -1538,6 +1538,7 @@ body footer {
   width: 100%;
   height: auto;
   background-color: #a3a3a3;
+  padding: 5px;
 }
 body footer .primerBloque {
   width: 100%;
@@ -1568,22 +1569,33 @@ body footer .primerBloque .logoContainer .logoText span {
 body footer .primerBloque .direccionContainer {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   color: #d1d1d1;
+  padding-right: 5px;
+  width: 50%;
+  transition: 1s ease-in-out;
 }
 body footer .primerBloque .direccionContainer .direccion {
   color: #ebebeb;
-  margin: 5px;
+  margin: 0px 20px 0px 5px;
   cursor: pointer;
 }
 body footer .primerBloque .direccionContainer .fa-location-dot {
   color: #ebebeb;
   font-size: 15px;
   cursor: pointer;
+  transform: translateY(-5px);
+  transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 body footer .primerBloque .direccionContainer:hover .direccion {
   text-decoration: underline;
   text-underline-offset: 2px;
   text-decoration-color: #d1d1d1;
+}
+body footer .primerBloque .direccionContainer:hover .fa-location-dot {
+  transition: 0.5s ease-in-out;
+  color: rgb(156, 5, 5);
+  transform: translateY(0px);
 }
 body footer .lineaDivisoria {
   width: 95%;
@@ -1601,39 +1613,44 @@ body footer .segundoBloque {
 }
 body footer .segundoBloque .redesContainer {
   width: 50%;
-  color: #ebebeb;
   margin-left: 20px;
 }
 body footer .segundoBloque .redesContainer i {
   font-size: 20px;
   margin-left: 20px;
   cursor: pointer;
+  transition: 0.5s;
+  color: #d1d1d1;
+}
+body footer .segundoBloque .redesContainer i:hover {
+  color: #ebebeb;
+  transform: translateY(-2px);
 }
 body footer .segundoBloque .bloque02Text {
   width: 50%;
+  justify-content: flex-end;
 }
 body footer .segundoBloque .bloque02Text ul {
   display: flex;
-  justify-content: flex-end;
-  gap: 5px;
   margin-right: 20px;
+  justify-content: flex-end;
 }
 body footer .segundoBloque .bloque02Text ul li {
   font-size: 12px;
   padding: 5px;
   white-space: nowrap;
   width: auto;
-  color: #ebebeb;
   font-weight: 600;
   cursor: pointer;
+  transition: 0.5s;
+  color: #d1d1d1;
 }
 body footer .segundoBloque .bloque02Text ul li:hover {
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  text-decoration-color: #d1d1d1;
+  color: #ebebeb;
+  transform: translateY(-2px);
 }
 body footer .tercerBloque {
-  height: 80px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1666,19 +1683,18 @@ body footer .tercerBloque .tercerBloque2 ul {
   margin-right: 20px;
   display: flex;
   align-items: center;
-  gap: 5px;
 }
 body footer .tercerBloque .tercerBloque2 ul li {
   font-size: 10px;
   padding: 5px;
-  color: #ebebeb;
   font-weight: 500;
   cursor: pointer;
+  color: #d1d1d1;
+  transition: 0.5s;
 }
 body footer .tercerBloque .tercerBloque2 ul li:hover {
-  text-decoration: underline;
-  text-decoration-color: #d1d1d1;
-  text-underline-offset: 2px;
+  transform: translateY(-2px);
+  color: #ebebeb;
 }
 
 /*# sourceMappingURL=styles.css.map */

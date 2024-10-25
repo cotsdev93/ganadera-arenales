@@ -3,6 +3,7 @@ body {
     width: 100%;
     height: auto;
     background-color: $grisOscuro;
+    padding: 5px;
     .primerBloque {
       width: 100%;
       height: 80px;
@@ -10,6 +11,8 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      // border: solid 1px red;
+
       .logoContainer {
         // border: solid 1px red;
         width: auto;
@@ -33,22 +36,34 @@ body {
       .direccionContainer {
         display: flex;
         align-items: center;
+        justify-content: flex-end;
         color: $grisClaro;
+        // border: solid 1px red;
+        padding-right: 5px;
+        width: 50%;
+        transition: 1s ease-in-out;
         .direccion {
           color: $grisMasClaro;
-          margin: 5px;
+          margin: 0px 20px 0px 5px;
           cursor: pointer;
         }
         .fa-location-dot {
           color: $grisMasClaro;
           font-size: 15px;
           cursor: pointer;
+          transform: translateY(-5px);
+          transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
         }
         &:hover {
           .direccion {
             text-decoration: underline;
             text-underline-offset: 2px;
             text-decoration-color: $grisClaro;
+          }
+          .fa-location-dot {
+            transition: 0.5s ease-in-out;
+            color: rgb(156, 5, 5);
+            transform: translateY(0px);
           }
         }
       }
@@ -66,45 +81,52 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      // border: solid 1px red;
+
       .redesContainer {
         // border: solid 1px red;
         width: 50%;
-        color: $grisMasClaro;
         margin-left: 20px;
-
         i {
           font-size: 20px;
           margin-left: 20px;
           cursor: pointer;
+          transition: 0.5s;
+          color: $grisClaro;
+          &:hover {
+            color: $grisMasClaro;
+            transform: translateY(-2px);
+          }
         }
       }
       .bloque02Text {
         // border: solid 1px red;
         width: 50%;
+        justify-content: flex-end;
         ul {
           display: flex;
-          justify-content: flex-end;
-          gap: 5px;
+          // gap: 5px;
           margin-right: 20px;
+          justify-content: flex-end;
           li {
             font-size: 12px;
             padding: 5px;
             white-space: nowrap;
             width: auto;
-            color: $grisMasClaro;
             font-weight: 600;
             cursor: pointer;
+            transition: 0.5s;
+            color: $grisClaro;
             &:hover {
-              text-decoration: underline;
-              text-underline-offset: 2px;
-              text-decoration-color: $grisClaro;
+              color: $grisMasClaro;
+              transform: translateY(-2px);
             }
           }
         }
       }
     }
     .tercerBloque {
-      height: 80px;
+      height: 70px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -139,19 +161,19 @@ body {
           margin-right: 20px;
           display: flex;
           align-items: center;
-          gap: 5px;
+          // gap: 5px;
           // margin-right: 20px;
           // background-color: red;
           li {
             font-size: 10px;
             padding: 5px;
-            color: $grisMasClaro;
             font-weight: 500;
             cursor: pointer;
+            color: $grisClaro;
+            transition: 0.5s;
             &:hover {
-              text-decoration: underline;
-              text-decoration-color: $grisClaro; 
-              text-underline-offset: 2px;
+              transform: translateY(-2px);
+              color: $grisMasClaro;
             }
           }
         }
