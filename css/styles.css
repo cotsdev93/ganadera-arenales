@@ -1586,6 +1586,7 @@ body footer .segundoBloque .redesContainer {
 body footer .segundoBloque .redesContainer i {
   font-size: 20px;
   margin-left: 20px;
+  cursor: pointer;
 }
 body footer .segundoBloque .bloque02Text {
   width: 50%;
@@ -1602,12 +1603,21 @@ body footer .segundoBloque .bloque02Text ul li {
   white-space: nowrap;
   width: auto;
   color: #ebebeb;
+  font-weight: 600;
+  cursor: pointer;
+}
+body footer .segundoBloque .bloque02Text ul li:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 body footer .tercerBloque {
   height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 body footer .tercerBloque .tercerBloque1 {
-  width: 50%;
+  width: auto;
   height: 100%;
   display: flex;
   align-items: center;
@@ -1619,6 +1629,33 @@ body footer .tercerBloque .tercerBloque1 .iso {
 body footer .tercerBloque .tercerBloque1 .senasa {
   width: 90px;
   margin-left: 20px;
+}
+body footer .tercerBloque .tercerBloque1 .bpa {
+  width: 60px;
+  transform: translateY(-10px);
+  margin-left: 20px;
+}
+body footer .tercerBloque .tercerBloque2 {
+  width: auto;
+  height: 50px;
+  display: flex;
+}
+body footer .tercerBloque .tercerBloque2 ul {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+body footer .tercerBloque .tercerBloque2 ul li {
+  font-size: 10px;
+  padding: 5px;
+  color: #ebebeb;
+  font-weight: 500;
+  cursor: pointer;
+}
+body footer .tercerBloque .tercerBloque2 ul li:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 /*# sourceMappingURL=styles.css.map */
