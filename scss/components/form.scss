@@ -6,13 +6,14 @@ body {
       display: flex;
       position: relative;
       overflow: hidden;
+      background-color: $grisMasClaro;
       img {
         position: absolute;
-        width: 500px;
+        width: 480px;
         right: -60px;
-        top: -50px;
-        z-index: -1;
-        opacity: 20%;
+        top: -40px;
+        z-index: 0;
+        opacity: 15%;
         // border: solid 1px red;
       }
       .hablemos {

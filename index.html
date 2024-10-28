@@ -92,8 +92,8 @@
           <ul class="navMenu">
             <li class="opcionMenu"><a href="#sobreNosotros">About us</a></li>
             <li class="opcionMenu"><a href="#exportacion">Export</a></li>
-            <li class="opcionMenu"><a href="#form">Contact</a></li>
             <li class="opcionMenu"><a href="#productos">Products</a></li>
+            <li class="opcionMenu"><a href="#form">Contact</a></li>
           </ul>
           <div id="carrito">
             <i class="fa-solid fa-cart-shopping"></i>
@@ -258,6 +258,78 @@
           </div>
         </div>
       </div>
+      <div class="productosContainer">
+        <h3>Nuestros productos:</h3>
+        <div class="productos">
+          <div class="productosCategoriasContainer">
+            <button
+              class="todos btnCategoria"
+              data-categoria="todos"
+              id="todos"
+            >
+              Todos
+            </button>
+            <div class="productosCategorias">
+              <button
+                class="dropDownBtn btnCategoria"
+                id="cerdoBtn"
+                data-categoria="cerdo"
+              >
+                <img src="./assets/img/cerdo.png" alt="" />
+                Cerdo
+              </button>
+              <div class="dropDownContent" id="cerdoDropDown">
+                <ul>
+                  <li class="btnNombre" data-nombre="lomo">Lomo</li>
+                  <li class="btnNombre" data-nombre="chuleta">Chuletas</li>
+                  <li class="btnNombre" data-nombre="costilla">Costillas</li>
+                  <li class="btnNombre" data-nombre="panceta">Panceta</li>
+                  <li class="btnNombre" data-nombre="jamon">Jamon</li>
+                </ul>
+              </div>
+
+              <button
+                class="dropDownBtn btnCategoria"
+                id="vacaBtn"
+                data-categoria="vaca"
+              >
+                <img src="./assets/img/vaca.png" alt="" />
+                Vaca
+              </button>
+              <div class="dropDownContent" id="vacaDropDown">
+                <ul>
+                  <li class="btnNombre" data-nombre="vacio">Vacio</li>
+                  <li class="btnNombre" data-nombre="asado">Asado</li>
+                  <li class="btnNombre" data-nombre="entraña">Entraña</li>
+                  <li class="btnNombre" data-nombre="cuadril">Cuadril</li>
+                  <li class="btnNombre" data-nombre="matambre">Matambre</li>
+                  <li class="btnNombre" data-nombre="osobuco">Osobuco</li>
+                </ul>
+              </div>
+
+              <button
+                class="dropDownBtn btnCategoria"
+                id="polloBtn"
+                data-categoria="pollo"
+              >
+                <img src="./assets/img/pollo.png" alt="" />
+                Pollo
+              </button>
+              <div class="dropDownContent" id="polloDropDown">
+                <ul>
+                  <li class="btnNombre" data-nombre="pechuga">Pechuga</li>
+                  <li class="btnNombre" data-nombre="pata">Pata Muslo</li>
+                  <li class="btnNombre" data-nombre="alitas">Alitas</li>
+                  <li class="btnNombre" data-nombre="entero">Pollo entero</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="productosListarContainer">
+            <div class="productosListar"></div>
+          </div>
+        </div>
+      </div>
       <div class="form" id="form">
         <img src="./assets/img/logoSolo.png" alt="" />
         <div class="hablemos" data-aos="fade-up">
@@ -339,78 +411,7 @@
           </form>
         </div>
       </div>
-      <div class="productosContainer">
-        <h3>Nuestros productos:</h3>
-        <div class="productos">
-          <div class="productosCategoriasContainer">
-            <button
-              class="todos btnCategoria"
-              data-categoria="todos"
-              id="todos"
-            >
-              Todos
-            </button>
-            <div class="productosCategorias">
-              <button
-                class="dropDownBtn btnCategoria"
-                id="cerdoBtn"
-                data-categoria="cerdo"
-              >
-                <img src="./assets/img/cerdo.png" alt="" />
-                Cerdo
-              </button>
-              <div class="dropDownContent" id="cerdoDropDown">
-                <ul>
-                  <li class="btnNombre" data-nombre="lomo">Lomo</li>
-                  <li class="btnNombre" data-nombre="chuleta">Chuletas</li>
-                  <li class="btnNombre" data-nombre="costilla">Costillas</li>
-                  <li class="btnNombre" data-nombre="panceta">Panceta</li>
-                  <li class="btnNombre" data-nombre="jamon">Jamon</li>
-                </ul>
-              </div>
 
-              <button
-                class="dropDownBtn btnCategoria"
-                id="vacaBtn"
-                data-categoria="vaca"
-              >
-                <img src="./assets/img/vaca.png" alt="" />
-                Vaca
-              </button>
-              <div class="dropDownContent" id="vacaDropDown">
-                <ul>
-                  <li class="btnNombre" data-nombre="vacio">Vacio</li>
-                  <li class="btnNombre" data-nombre="asado">Asado</li>
-                  <li class="btnNombre" data-nombre="entraña">Entraña</li>
-                  <li class="btnNombre" data-nombre="cuadril">Cuadril</li>
-                  <li class="btnNombre" data-nombre="matambre">Matambre</li>
-                  <li class="btnNombre" data-nombre="osobuco">Osobuco</li>
-                </ul>
-              </div>
-
-              <button
-                class="dropDownBtn btnCategoria"
-                id="polloBtn"
-                data-categoria="pollo"
-              >
-                <img src="./assets/img/pollo.png" alt="" />
-                Pollo
-              </button>
-              <div class="dropDownContent" id="polloDropDown">
-                <ul>
-                  <li class="btnNombre" data-nombre="pechuga">Pechuga</li>
-                  <li class="btnNombre" data-nombre="pata">Pata Muslo</li>
-                  <li class="btnNombre" data-nombre="alitas">Alitas</li>
-                  <li class="btnNombre" data-nombre="entero">Pollo entero</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="productosListarContainer">
-            <div class="productosListar"></div>
-          </div>
-        </div>
-      </div>
     </main>
     <div class="irArriba">
       <i class="fa-solid fa-circle-chevron-up"></i>
