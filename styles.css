@@ -835,7 +835,7 @@ body main .sobreNosotros .imgContainer02 img {
   width: 100%;
   height: 150px;
   object-fit: cover;
-  object-position: 0% 66%;
+  object-position: 0% 65%;
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
 }
 body main .sobreNosotros .imgContainer02 h4 {
@@ -1544,8 +1544,6 @@ body footer {
   height: auto;
   background-color: #a3a3a3;
   padding: 5px;
-  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
-  border-top: solid 0.5px #fffef4;
 }
 body footer .primerBloque {
   width: 100%;
@@ -1573,25 +1571,37 @@ body footer .primerBloque .logoContainer .logoText span {
   color: #ebebeb;
   margin-left: 5px;
 }
-body footer .primerBloque .tercerBloque1 {
-  width: auto;
-  height: 100%;
+body footer .primerBloque .direccionContainer {
   display: flex;
   align-items: center;
-  margin-right: 20px;
+  justify-content: flex-end;
+  color: #d1d1d1;
+  padding-right: 5px;
+  width: 50%;
+  transition: 1s ease-in-out;
+  font-size: 13px;
 }
-body footer .primerBloque .tercerBloque1 .iso {
-  width: 70px;
+body footer .primerBloque .direccionContainer .direccion {
+  color: #d1d1d1;
+  margin: 0px 20px 0px 3px;
+  cursor: pointer;
+  transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
-body footer .primerBloque .tercerBloque1 .senasa {
-  width: 100px;
-  margin-left: 20px;
-  transform: translateY(3px);
+body footer .primerBloque .direccionContainer .fa-location-dot {
+  color: #d1d1d1;
+  font-size: 15px;
+  cursor: pointer;
+  transform: translateY(-4px);
+  transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
-body footer .primerBloque .tercerBloque1 .bpa {
-  width: 70px;
-  transform: translateY(-8px);
-  margin-left: 20px;
+body footer .primerBloque .direccionContainer:hover .direccion {
+  color: #ebebeb;
+  transform: translateY(-2px);
+}
+body footer .primerBloque .direccionContainer:hover .fa-location-dot {
+  transition: 0.5s ease-in-out;
+  color: rgb(156, 5, 5);
+  transform: translateY(-2px);
 }
 body footer .lineaDivisoria {
   width: 95%;
@@ -1616,10 +1626,10 @@ body footer .segundoBloque .redesContainer i {
   margin-left: 20px;
   cursor: pointer;
   transition: 0.5s;
-  color: #ebebeb;
+  color: #d1d1d1;
 }
 body footer .segundoBloque .redesContainer i:hover {
-  color: #fffef4;
+  color: #ebebeb;
   transform: translateY(-2px);
 }
 body footer .segundoBloque .bloque02Text {
@@ -1636,55 +1646,43 @@ body footer .segundoBloque .bloque02Text ul li {
   padding: 5px;
   white-space: nowrap;
   width: auto;
-  font-weight: 550;
+  font-weight: 600;
   cursor: pointer;
   transition: 0.5s;
-  color: #ebebeb;
+  color: #d1d1d1;
 }
 body footer .segundoBloque .bloque02Text ul li:hover {
-  color: #fffef4;
-  transform: translateY(-1.5px);
+  color: #ebebeb;
+  transform: translateY(-2px);
 }
 body footer .tercerBloque {
-  height: 60px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-body footer .tercerBloque .direccionContainer {
+body footer .tercerBloque .tercerBloque1 {
+  width: auto;
+  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding-left: 5px;
-  width: auto;
-  transition: 1s ease-in-out;
-  font-size: 13px;
-}
-body footer .tercerBloque .direccionContainer .direccion {
-  color: #ebebeb;
-  margin-left: 5px;
-  cursor: pointer;
-  transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-body footer .tercerBloque .direccionContainer .fa-location-dot {
-  color: #fffef4;
-  font-size: 15px;
-  cursor: pointer;
-  transform: translateY(-3px);
-  transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
   margin-left: 20px;
 }
-body footer .tercerBloque .direccionContainer:hover .direccion {
-  color: #ebebeb;
-  transform: translateY(-1px);
+body footer .tercerBloque .tercerBloque1 .iso {
+  width: 50px;
 }
-body footer .tercerBloque .direccionContainer:hover .fa-location-dot {
-  transition: 0.5s ease-in-out;
-  color: rgb(156, 5, 5);
-  transform: translateY(-2px);
+body footer .tercerBloque .tercerBloque1 .senasa {
+  width: 90px;
+  margin-left: 20px;
+}
+body footer .tercerBloque .tercerBloque1 .bpa {
+  width: 60px;
+  transform: translateY(-10px);
+  margin-left: 20px;
 }
 body footer .tercerBloque .tercerBloque2 {
   width: auto;
+  height: 50px;
   display: flex;
 }
 body footer .tercerBloque .tercerBloque2 ul {

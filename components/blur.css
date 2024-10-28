@@ -1,0 +1,8 @@
+body .toBlur {
+  transition: 2s ease-in-out;
+}
+body .toBlur .blur {
+  filter: blur(3px);
+}
+
+/*# sourceMappingURL=blur.css.map */
