@@ -302,16 +302,15 @@ function toggleDropdown(id, btn) {
   const allDropdowns = document.querySelectorAll(".dropDownContent");
   const allButtons = document.querySelectorAll(".dropDownBtn");
 
-  // Cerrar todos los dropdowns y quitar la clase activa de todos los botones
   allDropdowns.forEach((dropdown) => {
     if (dropdown.id !== id) {
-      dropdown.style.maxHeight = "0"; // Cerrar los que no están seleccionados
+      dropdown.style.maxHeight = "0";
     }
   });
 
   allButtons.forEach((button) => {
     if (button !== btn) {
-      button.classList.remove("active"); // Quitar la clase activa de los otros botones
+      button.classList.remove("active");
     }
   });
 
@@ -320,11 +319,11 @@ function toggleDropdown(id, btn) {
   const isActive = btn.classList.contains("active");
 
   if (isActive) {
-    dropdown.style.maxHeight = "0"; // Cerrar si está activo
-    btn.classList.remove("active"); // Eliminar la clase activa del botón
+    dropdown.style.maxHeight = "0"; 
+    btn.classList.remove("active"); 
   } else {
-    dropdown.style.maxHeight = dropdown.scrollHeight + "px"; // Abrir el dropdown
-    btn.classList.add("active"); // Agregar la clase activa al botón
+    dropdown.style.maxHeight = dropdown.scrollHeight + "px"; 
+    btn.classList.add("active");
   }
 }
 
@@ -370,8 +369,9 @@ btnNombre.forEach((boton) => {
       cargarProductos(productos);
     } else {
       // Busca la categoría del producto en la base de datos
-      const categoria = bdProductos.productos.find(producto => 
-        producto.nombre.toLowerCase() === boton.dataset.nombre.toLowerCase()
+      const categoria = bdProductos.productos.find(
+        (producto) =>
+          producto.nombre.toLowerCase() === boton.dataset.nombre.toLowerCase()
       )?.categoria; // Obtiene la categoría o undefined si no se encuentra
 
       noHayProductos(boton.dataset.nombre, categoria);
@@ -380,8 +380,40 @@ btnNombre.forEach((boton) => {
   });
 });
 
-// Productos Listar
+// FORM
 
+const form = document.querySelector(".form");
+const input = document.querySelectorAll("input");
+
+form.addEventListener("submit", function (e) {
+  setTimeout(vaciarCampos(), 3000);
+});
+
+function vaciarCampos() {
+  setTimeout(() => {
+    input.forEach(function (e) {
+      e.value = "";
+    });
+  }, 2000);
+}
+
+document.querySelector("form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  fetch("https://formsubmit.co/cotsdev93@gmail.com", {
+    method: "POST",
+    body: new FormData(this),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Success:", data);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+});
+
+// Productos Listar
 
 class BaseDeDatosProductos {
   constructor() {
@@ -390,12 +422,13 @@ class BaseDeDatosProductos {
   }
 
   async cargarRegistros() {
-    const resultado = await fetch(`./JSON/productos.json?timestamp=${new Date().getTime()}`);
+    const resultado = await fetch(
+      `./JSON/productos.json?timestamp=${new Date().getTime()}`
+    );
     this.productos = await resultado.json();
     this.productos.sort((a, b) => a.nombre.localeCompare(b.nombre));
     cargarProductos(this.productos);
   }
-  
 
   registrosPorCategoria(categoria) {
     return this.productos.filter((producto) => producto.categoria == categoria);
@@ -417,13 +450,15 @@ class BaseDeDatosProductos {
   }
 }
 
-function noHayProductos(nombre, categoria) {
+function noHayProductos(nombre) {
   const productosListar = document.querySelector(".productosListar");
 
   if (productosListar) {
     productosListar.innerHTML = `
       <div class="noHayProductos">
-        <p>Por el momento no contamos con stock de <b>${capitalizarPrimeraLetra(nombre)}</b></p>
+        <p>Por el momento no contamos con stock de <b>${capitalizarPrimeraLetra(
+          nombre
+        )}</b></p>
       </div>
     `;
   }
@@ -445,9 +480,12 @@ function cargarProductos(productos) {
             <p class="nombreProducto">${capitalizarPrimeraLetra(
               producto.nombre
             )}</p>
-            <div class="precioContainer">
-              <p class="precio">$${producto.precio}</p>
-              <p class="xKilo"><i class="fa-solid fa-x"></i> kg. </p>
+            <div class="productoInfo2">
+              <div class="precioContainer">
+               <p class="precio">$${producto.precio}</p>
+                <p class="xKilo"><i class="fa-solid fa-x"></i> kg. </p>
+              </div>
+              <i class="fa-solid fa-cart-plus"></i>
             </div>
           </div>
           <div class="logoContainer">
@@ -469,11 +507,104 @@ function capitalizarPrimeraLetra(texto) {
   return texto.charAt(0).toUpperCase() + texto.slice(1);
 }
 
-// IR ARRIBA
+// Carrito
 
+class Carrito {
+  constructor() {
+    this.carrito = [];
+    this.total = 0;
+    this.cantidadProductos = 0;
+
+    this.listar();
+  }
+
+  estaEnCarrito({ id }) {
+    return this.carrito.find((producto) => producto.id === id);
+  }
+
+  agregar(producto) {
+    const productoEnCarrito = this.estaEnCarrito(producto);
+
+    if (!productoEnCarrito) {
+      this.carrito.push({ ...producto, cantidad: 1 });
+    } else {
+      productoEnCarrito.cantidad += 1;
+    }
+
+    this.listar();
+  }
+
+  quitar(id) {
+    const indice = this.carrito.findIndex((producto) => producto.id == id);
+
+    if (this.carrito[indice].cantidad > 1) {
+      this.carrito[indice].cantidad--;
+    } else {
+      this.carrito.splice(indice, 1);
+    }
+
+    this.listar();
+  }
+
+  listar() {
+    this.total = 0;
+    this.cantidadProductos = 0;
+    carritoListar.innerHTML = "";
+
+    for (const producto of this.carrito) {
+      carritoListar.innerHTML += `
+        <div class="productoCarrito">
+          <img src="./assets/img/${producto.imagen}" />
+          <div class="dataCarrito">
+            <p class="cNombre">${producto.nombre}</p>
+            <div class="dataCarrito2">
+              <p class="cCantidad">x u. ${producto.cantidad}</p>
+              <p class="cPrecio">$${producto.precio}</p>
+            </div>
+            <a href="#" class="btnQuitar" data-id="${producto.id}">
+              <i class="fa-solid fa-square-minus"></i>
+            </a>
+            <a href="#" class="btnAgregar" data-id="${producto.id}">
+              <i class="fa-solid fa-square-plus"></i>
+            </a>
+          </div>
+        </div>
+        <div class="line"></div>
+        `;
+      this.total += producto.precio * producto.cantidad;
+      this.cantidadProductos += producto.cantidad;
+    }
+
+    for (const boton of botonesAgregar) {
+      boton.addEventListener("click", (event) => {
+        event.preventDefault();
+        const idProducto = Number(boton.dataset.id);
+        const producto = bd.registroPorId(idProducto);
+        console.log(producto);
+        carrito.agregar(producto);
+
+        // Toastify({
+        //   text: `${producto.nombre} fue agregado al carrito`,
+        //   duration: 1500,
+        //   style: {
+        //     background: "linear-gradient(to right, #00b09b, #96c93d)",
+        //   },
+        //   offset: {
+        //     x: 180,
+        //   },
+        // }).showToast();
+      });
+    }
+
+    spanCantidadProductos.innerText = this.cantidadProductos;
+    spanTotalCarrito.innerText = this.total;
+  }
+}
+
+// Ir arriba
 
 const irArriba = document.querySelector(".irArriba");
-// const footer = document.querySelector("footer");
+const footer = document.querySelector("footer");
 
 let lastScrollY = window.scrollY;
 let initialScrollDownY = 0;
@@ -495,18 +626,18 @@ window.addEventListener("scroll", () => {
     scrolledUp = true;
   }
 
-  // const footerRect = footer.getBoundingClientRect();
-  // const buttonRect = irArriba.getBoundingClientRect();
+  const footerRect = footer.getBoundingClientRect();
+  const buttonRect = irArriba.getBoundingClientRect();
 
-  // if (footerRect.top < window.innerHeight) {
-  //   irArriba.style.position = "absolute";
-  //   irArriba.style.top = `${
-  //     window.scrollY + footerRect.top - buttonRect.height - 20
-  //   }px`;
-  // } else {
-  //   irArriba.style.position = "fixed";
-  //   irArriba.style.top = "85%";
-  // }
+  if (footerRect.top < window.innerHeight) {
+    irArriba.style.position = "absolute";
+    irArriba.style.top = `${
+      window.scrollY + footerRect.top - buttonRect.height - 20
+    }px`;
+  } else {
+    irArriba.style.position = "fixed";
+    irArriba.style.top = "85%";
+  }
 
   lastScrollY = currentScrollY;
 });

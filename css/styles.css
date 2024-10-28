@@ -347,8 +347,10 @@ body header nav .carritoListarContainer {
   background-color: #f7f9f9;
   transition: 1s;
   box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.0196078431);
+  border: solid 1px red;
 }
 body header nav .carritoListarContainer .carritoListar {
+  border: solid 1px red;
   width: 100%;
   height: auto;
   justify-content: center;
@@ -410,9 +412,8 @@ body header nav .carritoListarContainer .carritoListar .line {
   margin: auto;
 }
 body header nav .carritoListarContainer .total {
-  font-size: 20px;
-  padding: 0px 0px 0px 0px;
-  margin-right: 20px;
+  border: solid 1px red;
+  font-size: 10px;
   text-align: right;
 }
 body header nav .showCarrito {
@@ -1465,20 +1466,33 @@ body main .productosContainer .productos .productosListarContainer .productosLis
   height: 100%;
 }
 body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer .productoInfo .nombreProducto {
-  margin: 0px 0px 5px 0px;
+  margin-bottom: 5px;
 }
-body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer .productoInfo .precioContainer {
+body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer .productoInfo .productoInfo2 {
   display: flex;
+  justify-content: space-between;
 }
-body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer .productoInfo .precioContainer .precio {
+body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer .productoInfo .productoInfo2 .precioContainer {
+  display: flex;
+  width: 80%;
+}
+body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer .productoInfo .productoInfo2 .precioContainer .precio {
   color: green;
 }
-body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer .productoInfo .precioContainer .xKilo {
+body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer .productoInfo .productoInfo2 .precioContainer .xKilo {
   padding-left: 5px;
   color: #727272;
 }
-body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer .productoInfo .precioContainer .xKilo .fa-solid {
+body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer .productoInfo .productoInfo2 .precioContainer .xKilo .fa-solid {
   font-size: 9px;
+}
+body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer .productoInfo .productoInfo2 .fa-cart-plus {
+  color: #218838;
+  transition: 0.5s;
+  cursor: pointer;
+}
+body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer .productoInfo .productoInfo2 .fa-cart-plus:hover {
+  color: #28a745;
 }
 body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer .logoContainer {
   width: 50px;

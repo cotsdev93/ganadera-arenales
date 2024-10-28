@@ -164,20 +164,35 @@ body {
                 padding: 5px;
                 line-height: 1;
                 height: 100%;
+                // border: solid 1px red;
                 .nombreProducto {
-                  margin: 0px 0px 5px 0px;
+                  margin-bottom: 5px;
                 }
-                .precioContainer {
+                .productoInfo2 {
+                  // border: solid 1px red;
                   display: flex;
-                  .precio {
-                    color: green;
-                  }
-                  .xKilo {
-                    padding-left: 5px;
-                    color: $gris;
+                  justify-content: space-between;
+                  .precioContainer {
+                    display: flex;
+                    width: 80%;
+                    .precio {
+                      color: green;
+                    }
+                    .xKilo {
+                      padding-left: 5px;
+                      color: $gris;
 
-                    .fa-solid {
-                      font-size: 9px;
+                      .fa-solid {
+                        font-size: 9px;
+                      }
+                    }
+                  }
+                  .fa-cart-plus {
+                    color: #218838;
+                    transition: 0.5s;
+                    cursor: pointer;
+                    &:hover {
+                      color: #28a745;
                     }
                   }
                 }
