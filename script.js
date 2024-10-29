@@ -45,12 +45,12 @@
 
 // INICIO INTRO Y POP UP
 
-window.addEventListener("DOMContentLoaded", () => {
-  animacionInicial();
-  setTimeout(() => {
-    popUp();
-  }, 5000);
-});
+// window.addEventListener("DOMContentLoaded", () => {
+//   animacionInicial();
+//   setTimeout(() => {
+//     popUp();
+//   }, 5000);
+// });
 
 // NAV
 
@@ -84,26 +84,6 @@ opcionMenu.forEach((opcion) => {
     //   blureado3.classList.toggle("blur");
     // }
   });
-});
-
-// CARRITO
-
-const spanTotalCarrito = document.querySelector("#totalCarrito");
-const spanCantidadProductos = document.querySelector("#cantidadProductos");
-const botonCarrito = document.querySelector("#carrito");
-const carritoListar = document.querySelector(".carritoListar");
-const carritoListarContainer = document.querySelector(
-  ".carritoListarContainer"
-);
-
-botonCarrito.addEventListener("click", () => {
-  carritoListarContainer.classList.toggle("showCarrito");
-
-  if (carritoListarContainer.classList.contains("showCarrito")) {
-    body.style.overflow = "hidden"; // Desactiva el scroll del body
-  } else {
-    body.style.overflow = "";
-  }
 });
 
 // SLIDER
@@ -319,10 +299,10 @@ function toggleDropdown(id, btn) {
   const isActive = btn.classList.contains("active");
 
   if (isActive) {
-    dropdown.style.maxHeight = "0"; 
-    btn.classList.remove("active"); 
+    dropdown.style.maxHeight = "0";
+    btn.classList.remove("active");
   } else {
-    dropdown.style.maxHeight = dropdown.scrollHeight + "px"; 
+    dropdown.style.maxHeight = dropdown.scrollHeight + "px";
     btn.classList.add("active");
   }
 }
@@ -380,39 +360,6 @@ btnNombre.forEach((boton) => {
   });
 });
 
-// FORM
-
-const form = document.querySelector(".form");
-const input = document.querySelectorAll("input");
-
-form.addEventListener("submit", function (e) {
-  setTimeout(vaciarCampos(), 3000);
-});
-
-function vaciarCampos() {
-  setTimeout(() => {
-    input.forEach(function (e) {
-      e.value = "";
-    });
-  }, 2000);
-}
-
-document.querySelector("form").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  fetch("https://formsubmit.co/cotsdev93@gmail.com", {
-    method: "POST",
-    body: new FormData(this),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log("Success:", data);
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
-});
-
 // Productos Listar
 
 class BaseDeDatosProductos {
@@ -467,11 +414,10 @@ function noHayProductos(nombre) {
 function cargarProductos(productos) {
   const productosListar = document.querySelector(".productosListar");
 
-  if (productosListar) {
-    productosListar.innerHTML = "";
+  productosListar.innerHTML = "";
 
-    for (const producto of productos) {
-      productosListar.innerHTML += `
+  for (const producto of productos) {
+    productosListar.innerHTML += `
         <div class="productoContainer">
           <div class="imgContainer">
             <img class="img"src="${producto.img}" alt="${producto.alt}" />
@@ -485,7 +431,9 @@ function cargarProductos(productos) {
                <p class="precio">$${producto.precio}</p>
                 <p class="xKilo"><i class="fa-solid fa-x"></i> kg. </p>
               </div>
-              <i class="fa-solid fa-cart-plus"></i>
+              <a href="#" class="btnAgregar" data-id="${producto.id}">
+                <i class="fa-solid fa-cart-plus"></i>
+              </a>
             </div>
           </div>
           <div class="logoContainer">
@@ -493,7 +441,17 @@ function cargarProductos(productos) {
           </div>
         </div>
       `;
-    }
+      const botonesAgregar = document.querySelectorAll(".btnAgregar");
+    
+      for (const boton of botonesAgregar) {
+        boton.addEventListener("click", (event) => {
+          event.preventDefault();
+          const idProducto = Number(boton.dataset.id);
+          const producto = bdProductos.registroPorId(idProducto);
+          console.log(producto);
+          carrito.agregar(producto);
+        });
+      }
   }
 }
 
@@ -507,7 +465,25 @@ function capitalizarPrimeraLetra(texto) {
   return texto.charAt(0).toUpperCase() + texto.slice(1);
 }
 
-// Carrito
+// CARRITO
+
+const spanTotalCarrito = document.querySelector("#totalCarrito");
+const spanCantidadProductos = document.querySelector("#cantidadProductos");
+const botonCarrito = document.querySelector("#carrito");
+const carritoListar = document.querySelector(".carritoListar");
+const carritoListarContainer = document.querySelector(
+  ".carritoListarContainer"
+);
+
+botonCarrito.addEventListener("click", () => {
+  carritoListarContainer.classList.toggle("showCarrito");
+
+  if (carritoListarContainer.classList.contains("showCarrito")) {
+    body.style.overflow = "hidden";
+  } else {
+    body.style.overflow = "";
+  }
+});
 
 class Carrito {
   constructor() {
@@ -554,7 +530,7 @@ class Carrito {
     for (const producto of this.carrito) {
       carritoListar.innerHTML += `
         <div class="productoCarrito">
-          <img src="./assets/img/${producto.imagen}" />
+          <img src="${producto.img}" />
           <div class="dataCarrito">
             <p class="cNombre">${producto.nombre}</p>
             <div class="dataCarrito2">
@@ -575,11 +551,13 @@ class Carrito {
       this.cantidadProductos += producto.cantidad;
     }
 
+    const botonesAgregar = document.querySelectorAll(".btnAgregar");
+
     for (const boton of botonesAgregar) {
       boton.addEventListener("click", (event) => {
         event.preventDefault();
         const idProducto = Number(boton.dataset.id);
-        const producto = bd.registroPorId(idProducto);
+        const producto = bdProductos.registroPorId(idProducto);
         console.log(producto);
         carrito.agregar(producto);
 
@@ -596,10 +574,55 @@ class Carrito {
       });
     }
 
+    const botonesQuitar = document.querySelectorAll(".btnQuitar");
+
+    for (const boton of botonesQuitar) {
+      boton.addEventListener("click", (event) => {
+        event.preventDefault();
+        const idProducto = Number(boton.dataset.id);
+        this.quitar(idProducto);
+      });
+    }
+
     spanCantidadProductos.innerText = this.cantidadProductos;
     spanTotalCarrito.innerText = this.total;
   }
 }
+
+const carrito = new Carrito();
+
+// FORM
+
+const form = document.querySelector(".form");
+const input = document.querySelectorAll("input");
+
+form.addEventListener("submit", function (e) {
+  setTimeout(vaciarCampos(), 3000);
+});
+
+function vaciarCampos() {
+  setTimeout(() => {
+    input.forEach(function (e) {
+      e.value = "";
+    });
+  }, 2000);
+}
+
+document.querySelector("form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  fetch("https://formsubmit.co/cotsdev93@gmail.com", {
+    method: "POST",
+    body: new FormData(this),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Success:", data);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+});
 
 // Ir arriba
 

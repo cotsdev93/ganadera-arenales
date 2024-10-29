@@ -26,6 +26,7 @@ html {
 html ::-webkit-scrollbar {
   width: 12px; /* Ancho de la barra vertical */
   height: 12px; /* Altura de la barra horizontal (si existe) */
+  display: block;
 }
 html ::-webkit-scrollbar-track {
   background: #f1f1f1; /* Color de fondo del track */

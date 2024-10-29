@@ -26,6 +26,7 @@ html {
 html ::-webkit-scrollbar {
   width: 12px; /* Ancho de la barra vertical */
   height: 12px; /* Altura de la barra horizontal (si existe) */
+  display: block;
 }
 html ::-webkit-scrollbar-track {
   background: #f1f1f1; /* Color de fondo del track */
@@ -347,10 +348,8 @@ body header nav .carritoListarContainer {
   background-color: #f7f9f9;
   transition: 1s;
   box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.0196078431);
-  border: solid 1px red;
 }
 body header nav .carritoListarContainer .carritoListar {
-  border: solid 1px red;
   width: 100%;
   height: auto;
   justify-content: center;
@@ -412,7 +411,6 @@ body header nav .carritoListarContainer .carritoListar .line {
   margin: auto;
 }
 body header nav .carritoListarContainer .total {
-  border: solid 1px red;
   font-size: 10px;
   text-align: right;
 }

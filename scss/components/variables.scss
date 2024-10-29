@@ -31,7 +31,7 @@ html {
   ::-webkit-scrollbar {
     width: 12px; /* Ancho de la barra vertical */
     height: 12px; /* Altura de la barra horizontal (si existe) */
-    // display: none;
+    display: block;
   }
   
   /* Fondo de la barra de desplazamiento */
