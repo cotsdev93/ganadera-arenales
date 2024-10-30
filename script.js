@@ -411,12 +411,21 @@ function noHayProductos(nombre) {
   }
 }
 
+function formatearNumero(numero) {
+  return Number(numero).toLocaleString("es-ES", {
+    useGrouping: true,
+  });
+}
+
 function cargarProductos(productos) {
   const productosListar = document.querySelector(".productosListar");
 
   productosListar.innerHTML = "";
 
   for (const producto of productos) {
+
+    const precioFormateado = formatearNumero(producto.precio);
+    
     productosListar.innerHTML += `
         <div class="productoContainer">
           <div class="imgContainer">
@@ -428,7 +437,7 @@ function cargarProductos(productos) {
             )}</p>
             <div class="productoInfo2">
               <div class="precioContainer">
-               <p class="precio">$${producto.precio}</p>
+               <p class="precio">$${precioFormateado}</p>
                 <p class="xKilo"><i class="fa-solid fa-x"></i> kg. </p>
               </div>
               <a href="#" class="btnAgregar" data-id="${producto.id}">
@@ -441,17 +450,17 @@ function cargarProductos(productos) {
           </div>
         </div>
       `;
-      const botonesAgregar = document.querySelectorAll(".btnAgregar");
-    
-      for (const boton of botonesAgregar) {
-        boton.addEventListener("click", (event) => {
-          event.preventDefault();
-          const idProducto = Number(boton.dataset.id);
-          const producto = bdProductos.registroPorId(idProducto);
-          console.log(producto);
-          carrito.agregar(producto);
-        });
-      }
+    const botonesAgregar = document.querySelectorAll(".btnAgregar");
+
+    for (const boton of botonesAgregar) {
+      boton.addEventListener("click", (event) => {
+        event.preventDefault();
+        const idProducto = Number(boton.dataset.id);
+        const producto = bdProductos.registroPorId(idProducto);
+        console.log(producto);
+        carrito.agregar(producto);
+      });
+    }
   }
 }
 
