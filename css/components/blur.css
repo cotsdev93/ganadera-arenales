@@ -1,8 +1,6 @@
-body .toBlur {
-  transition: 2s ease-in-out;
-}
-body .toBlur .blur {
-  filter: blur(3px);
+body .blureado {
+  transition: 1s;
+  filter: blur(5px);
 }
 
 /*# sourceMappingURL=blur.css.map */

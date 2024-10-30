@@ -1,56 +1,61 @@
-// // INTRO
+// INTRO
 
-// const intro = document.querySelector(".intro");
-// const logo = document.querySelector(".logoHeader");
-// const logoSpan = document.querySelectorAll(".logo");
+const intro = document.querySelector(".intro");
+const logo = document.querySelector(".logoHeader");
+const logoSpan = document.querySelectorAll(".logo");
 
-// function animacionInicial() {
-//   setTimeout(() => {
-//     logoSpan.forEach((span, idx) => {
-//       setTimeout(() => {
-//         span.classList.add("active");
-//       }, (idx + 1) * 400);
-//     });
+function animacionInicial() {
+  setTimeout(() => {
+    logoSpan.forEach((span, idx) => {
+      setTimeout(() => {
+        span.classList.add("active");
+      }, (idx + 1) * 400);
+    });
 
-//     setTimeout(() => {
-//       logoSpan.forEach((span, idx) => {
-//         setTimeout(() => {
-//           span.classList.remove("active");
-//           span.classList.add("fade");
-//         }, (idx + 1) * 50);
-//       });
-//     }, 3000);
+    setTimeout(() => {
+      logoSpan.forEach((span, idx) => {
+        setTimeout(() => {
+          span.classList.remove("active");
+          span.classList.add("fade");
+        }, (idx + 1) * 50);
+      });
+    }, 3000);
 
-//     setTimeout(() => {
-//       intro.style.top = "-120vh";
-//     }, 3200);
-//   });
-// }
+    setTimeout(() => {
+      intro.style.top = "-120vh";
+    }, 3200);
+  });
+}
 
-// // POP UP
+// POP UP
 
-// const popup = document.querySelector(".popupContainer");
-// const buttonx = document.getElementById("x");
-// function popUp() {
-//   if (isSmallScreen) {
-//     popup.style.top = "100px";
-//   } else {
-//     popup.style.top = "50px";
-//   }
-// }
+const popup = document.querySelector(".popupContainer");
+const buttonx = document.getElementById("x");
+const blureado = document.getElementById("blureado")
+function popUp() {
+  if (isSmallScreen) {
+    popup.style.top = "100px";
+  } else {
+    popup.style.top = "50px";
+  }
+  blureado.classList.toggle("blureado")
+  console.log("funca")
+}
 
-// buttonx.addEventListener("click", () => {
-//   popup.style.transform = "translateX(-50%) translateY(-100vh)";
-// });
+buttonx.addEventListener("click", () => {
+  popup.style.transform = "translateX(-50%) translateY(-100vh)";
+  blureado.classList.toggle("blureado")
+
+});
 
 // INICIO INTRO Y POP UP
 
-// window.addEventListener("DOMContentLoaded", () => {
-//   animacionInicial();
-//   setTimeout(() => {
-//     popUp();
-//   }, 5000);
-// });
+window.addEventListener("DOMContentLoaded", () => {
+  animacionInicial();
+  setTimeout(() => {
+    popUp();
+  }, 5000);
+});
 
 // NAV
 

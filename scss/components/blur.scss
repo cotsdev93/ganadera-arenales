@@ -1,8 +1,6 @@
 body {
-  .toBlur {
-    transition: 2s ease-in-out;
-    .blur {
-      filter: blur(3px);
-    }
+  .blureado {
+    transition: 1s;
+    filter: blur(5px);
   }
 }

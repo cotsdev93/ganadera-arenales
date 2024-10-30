@@ -50,7 +50,7 @@
     />
   </head>
   <body>
-    <!-- <div class="intro">
+    <div class="intro">
       <h1 class="logoHeader">
         <span class="logo">Ganadera</span>
         <img class="logo" src="./assets/img/logoSolo.png" alt="" />
@@ -79,391 +79,393 @@
         </div>
         <button id="x"><i class="fa-solid fa-x"></i></button>
       </div>
-    </div> -->
-    <header>
-      <nav>
-        <div class="logoNav">
-          <span translate="no">Ganadera</span>
-          <img class="logo" src="./assets/img/logoSolo.png" alt="" />
-          <span translate="no">Arenales</span>
-        </div>
-        <div class="nav">
-          <ul class="navMenu">
-            <li class="opcionMenu"><a href="#sobreNosotros">About us</a></li>
-            <li class="opcionMenu"><a href="#exportacion">Export</a></li>
-            <li class="opcionMenu"><a href="#productos">Products</a></li>
-            <li class="opcionMenu"><a href="#form">Contact</a></li>
-          </ul>
-          <div id="carrito">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <div class="circuloCantidad">
-              <span id="cantidadProductos">0</span>
-            </div>
-          </div>
-        </div>
-        <div class="carritoListarContainer">
-          <div class="carritoListar"></div>
-          <h5 class="total">total: $<span id="totalCarrito">0</span>.-</h5>
-        </div>
-        <div class="menuContainer">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <div class="sliderContainer">
-        <div class="slider" id="slider">
-          <section class="sliderSection">
-            <img src="./assets/img/slider01.webp" alt="" />
-            <div class="textTitle01">
-              <p>De la pradera</p>
-              <p>a tu mesa...</p>
-            </div>
-            <div class="text01">
-              <p>
-                Criadas con cuidado, nuestras vacas proporcionan carne de
-                calidad superior. Descubre el auténtico sabor en cada bocado.
-              </p>
-            </div>
-          </section>
-          <section class="sliderSection">
-            <img src="./assets/img/slider02.webp" alt="" />
-            <div class="textTitle02">
-              <p>Calidad</p>
-              <p>que se ve.</p>
-            </div>
-            <div class="text02">
-              <p>
-                Cada corte es seleccionado con precisión para brindarte la
-                frescura y el sabor que mereces.
-              </p>
-            </div>
-          </section>
-          <section class="sliderSection">
-            <img src="./assets/img/slider03.webp" alt="" />
-            <div class="textTitle03">
-              <p>Sinfiona</p>
-              <p>de sabores</p>
-            </div>
-            <div class="text03">
-              <p>
-                Nuestra carne de primera se asa a la perfección para resaltar
-                los sabores intensos y la jugosidad en cada plato.
-              </p>
-            </div>
-          </section>
-        </div>
-        <div class="btnLeft"><i class="bx bx-chevron-left"></i></div>
-        <div class="btnRight"><i class="bx bx-chevron-right"></i></div>
-      </div>
-      <div class="sobreNosotros" id="sobreNosotros">
-        <h3 data-aos="fade-up">Seguridad e Higiene</h3>
-        <div class="imgContainer01" data-aos="fade-up">
-          <img src="./assets/img/higiene.jpg" alt="" />
-          <h4>En la produccion:</h4>
-        </div>
-        <div class="higieneInfo01">
-          <div class="info" data-aos="fade-up" data-aos-delay="100">
-            <h5>Control de Enfermedades y Vacunación:</h5>
-            <p>
-              Implementación de programas de vacunación para el ganado.
-              Monitoreo constante de la salud del ganado para prevenir
-              enfermedades.
-            </p>
-          </div>
-          <div class="info" data-aos="fade-up" data-aos-delay="300">
-            <h5>Buenas Prácticas Agrícolas (BPA):</h5>
-            <p>
-              Mantenimiento de instalaciones limpias y desinfectadas. Manejo
-              adecuado de residuos y subproductos.
-            </p>
-          </div>
-          <div class="info" data-aos="fade-up" data-aos-delay="600">
-            <h5>Trazabilidad:</h5>
-            <p>
-              Establecimiento de sistemas de trazabilidad que permitan seguir la
-              cadena de producción desde la cría hasta la exportación. Registro
-              detallado de información sobre cada lote de carne.
-            </p>
-          </div>
-        </div>
-        <div class="imgContainer02" data-aos="fade-up">
-          <img src="./assets/img/camion.jpg" alt="" />
-          <h4>En el transporte:</h4>
-        </div>
-        <div class="higieneInfo02">
-          <div class="info" data-aos="fade-up" data-aos-delay="100">
-            <h5>Transporte Seguro:</h5>
-            <p>
-              Uso de vehículos refrigerados y adecuadamente higienizados.
-              Monitoreo de la temperatura durante el transporte para garantizar
-              la cadena de frío.
-            </p>
-          </div>
-          <div class="info" data-aos="fade-up" data-aos-delay="300">
-            <h5>Almacenamiento Adecuado:</h5>
-            <p>
-              Instalaciones de almacenamiento refrigeradas y limpias. Rotación
-              adecuada de inventario para garantizar la frescura de los
-              productos.
-            </p>
-          </div>
-        </div>
-        <div class="imgContainer03" data-aos="fade-up">
-          <img src="./assets/img/procesamiento.jpg" alt="" />
-          <h4>En el procesamiento:</h4>
-        </div>
-        <div class="higieneInfo03">
-          <div class="info" data-aos="fade-up" data-aos-delay="100">
-            <h5>Control de Calidad:</h5>
-            <p>
-              Implementación de sistemas de control de calidad en cada etapa del
-              procesamiento. Uso de tecnologías modernas para la detección
-              temprana de posibles contaminantes.
-            </p>
-          </div>
-          <div class="info" data-aos="fade-up" data-aos-delay="300">
-            <h5>Higiene Personal y Protección del Personal:</h5>
-            <p>
-              Capacitación continua sobre prácticas de higiene personal para los
-              trabajadores. Suministro de equipos de protección personal (EPP)
-              adecuados.
-            </p>
-          </div>
-          <div class="info" data-aos="fade-up" data-aos-delay="600">
-            <h5>Seguridad Alimentaria:</h5>
-            <p>
-              Cumplimiento de estándares internacionales de seguridad
-              alimentaria. Análisis periódicos de muestras para detectar
-              posibles contaminantes biológicos, químicos o físicos.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="exportacion" id="exportacion">
-        <div class="exportacionContainer">
-          <div class="mapContainer">
-            <div class="mapTextsContainer">
-              <h3 data-aos="fade-up" data-aos-delay="100">Paises Clientes</h3>
-              <p data-aos="fade-up" data-aos-delay="200">
-                Nos enorgullece compartir que nuestras carnes de alta calidad
-                han llegado a los cinco continentes. Desde los vastos campos de
-                nuestras tierras hasta su mesa, llevamos la tradición ganadera a
-                cada rincón del mundo. Descubra el sabor auténtico que
-                trasciende fronteras.
-              </p>
-            </div>
-            <div id="map" data-aos="fade-up" data-aos-delay="500"></div>
-          </div>
-        </div>
-      </div>
-      <div class="productosContainer" id="productos">
-        <h3>Nuestros productos:</h3>
-        <div class="productos">
-          <div class="productosCategoriasContainer">
-            <button
-              class="todos btnCategoria"
-              data-categoria="todos"
-              id="todos"
-            >
-              Todos
-            </button>
-            <div class="productosCategorias">
-              <button
-                class="dropDownBtn btnCategoria"
-                id="cerdoBtn"
-                data-categoria="cerdo"
-              >
-                <img src="./assets/img/cerdo.png" alt="" />
-                Cerdo
-              </button>
-              <div class="dropDownContent" id="cerdoDropDown">
-                <ul>
-                  <li class="btnNombre" data-nombre="lomo">Lomo</li>
-                  <li class="btnNombre" data-nombre="chuleta">Chuletas</li>
-                  <li class="btnNombre" data-nombre="costilla">Costillas</li>
-                  <li class="btnNombre" data-nombre="panceta">Panceta</li>
-                  <li class="btnNombre" data-nombre="jamon">Jamon</li>
-                </ul>
-              </div>
-
-              <button
-                class="dropDownBtn btnCategoria"
-                id="vacaBtn"
-                data-categoria="vaca"
-              >
-                <img src="./assets/img/vaca.png" alt="" />
-                Vaca
-              </button>
-              <div class="dropDownContent" id="vacaDropDown">
-                <ul>
-                  <li class="btnNombre" data-nombre="vacio">Vacio</li>
-                  <li class="btnNombre" data-nombre="asado">Asado</li>
-                  <li class="btnNombre" data-nombre="entraña">Entraña</li>
-                  <li class="btnNombre" data-nombre="cuadril">Cuadril</li>
-                  <li class="btnNombre" data-nombre="matambre">Matambre</li>
-                  <li class="btnNombre" data-nombre="osobuco">Osobuco</li>
-                </ul>
-              </div>
-
-              <button
-                class="dropDownBtn btnCategoria"
-                id="polloBtn"
-                data-categoria="pollo"
-              >
-                <img src="./assets/img/pollo.png" alt="" />
-                Pollo
-              </button>
-              <div class="dropDownContent" id="polloDropDown">
-                <ul>
-                  <li class="btnNombre" data-nombre="pechuga">Pechuga</li>
-                  <li class="btnNombre" data-nombre="pata">Pata Muslo</li>
-                  <li class="btnNombre" data-nombre="alitas">Alitas</li>
-                  <li class="btnNombre" data-nombre="entero">Pollo entero</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="productosListarContainer">
-            <div class="productosListar"></div>
-          </div>
-        </div>
-      </div>
-      <div class="form" id="form">
-        <img src="./assets/img/logoSolo.png" alt="" />
-        <div class="hablemos" data-aos="fade-up">
-          <h3>Hablemos...</h3>
-          <p>
-            En Ganadera Arenales estamos comprometidos con la excelencia en la
-            exportación de carne de alta calidad. Valoramos tu interés y nos
-            encantaría estar en contacto contigo.
-          </p>
-          <p>
-            Al dejarnos tus datos, nos permitirás mantenerte informado sobre
-            nuestras últimas novedades, productos destacados y oportunidades
-            exclusivas.
-          </p>
-        </div>
-        <div class="formInputs" data-aos="fade-up">
-          <form
-            action="https://formsubmit.co/cotsdev93@gmail.com"
-            method="POST"
-          >
-            <div class="input">
-              <label for="name">Nombre Completo</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                class="form-control"
-                required
-                autocomplete="on"
-              />
-            </div>
-            <div class="input">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                class="form-control"
-                required
-                autocomplete="on"
-              />
-            </div>
-            <div class="input">
-              <label for="phone">Numero Telefono</label>
-              <input
-                type="text"
-                id="phone"
-                name="phone"
-                class="form-control"
-                required
-                autocomplete="on"
-              />
-            </div>
-            <div class="input">
-              <label for="company">Empresa</label>
-              <input
-                id="company"
-                type="text"
-                name="company"
-                class="form-control"
-                required
-                autocomplete="on"
-              />
-            </div>
-            <div class="input">
-              <label for="country">Pais</label>
-              <input
-                id="country"
-                type="text"
-                name="country"
-                class="form-control"
-                required
-                autocomplete="on"
-              />
-            </div>
-            <div class="buttonContainer">
-              <button type="submit">Enviar</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </main>
-    <div class="irArriba">
-      <i class="fa-solid fa-circle-chevron-up"></i>
     </div>
-    <footer>
-      <div class="primerBloque">
-        <div class="logoContainer">
-          <img
-            class="logo"
-            src="./assets/img/logoSoloGrisMasClaro.png"
-            alt=""
-          />
-          <div class="logoText">
+    <div id="blureado">
+      <header>
+        <nav>
+          <div class="logoNav">
             <span translate="no">Ganadera</span>
+            <img class="logo" src="./assets/img/logoSolo.png" alt="" />
             <span translate="no">Arenales</span>
           </div>
+          <div class="nav">
+            <ul class="navMenu">
+              <li class="opcionMenu"><a href="#sobreNosotros">About us</a></li>
+              <li class="opcionMenu"><a href="#exportacion">Export</a></li>
+              <li class="opcionMenu"><a href="#productos">Products</a></li>
+              <li class="opcionMenu"><a href="#form">Contact</a></li>
+            </ul>
+            <div id="carrito">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <div class="circuloCantidad">
+                <span id="cantidadProductos">0</span>
+              </div>
+            </div>
+          </div>
+          <div class="carritoListarContainer">
+            <div class="carritoListar"></div>
+            <h5 class="total">total: $<span id="totalCarrito">0</span>.-</h5>
+          </div>
+          <div class="menuContainer">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div class="sliderContainer">
+          <div class="slider" id="slider">
+            <section class="sliderSection">
+              <img src="./assets/img/slider01.webp" alt="" />
+              <div class="textTitle01">
+                <p>De la pradera</p>
+                <p>a tu mesa...</p>
+              </div>
+              <div class="text01">
+                <p>
+                  Criadas con cuidado, nuestras vacas proporcionan carne de
+                  calidad superior. Descubre el auténtico sabor en cada bocado.
+                </p>
+              </div>
+            </section>
+            <section class="sliderSection">
+              <img src="./assets/img/slider02.webp" alt="" />
+              <div class="textTitle02">
+                <p>Calidad</p>
+                <p>que se ve.</p>
+              </div>
+              <div class="text02">
+                <p>
+                  Cada corte es seleccionado con precisión para brindarte la
+                  frescura y el sabor que mereces.
+                </p>
+              </div>
+            </section>
+            <section class="sliderSection">
+              <img src="./assets/img/slider03.webp" alt="" />
+              <div class="textTitle03">
+                <p>Sinfiona</p>
+                <p>de sabores</p>
+              </div>
+              <div class="text03">
+                <p>
+                  Nuestra carne de primera se asa a la perfección para resaltar
+                  los sabores intensos y la jugosidad en cada plato.
+                </p>
+              </div>
+            </section>
+          </div>
+          <div class="btnLeft"><i class="bx bx-chevron-left"></i></div>
+          <div class="btnRight"><i class="bx bx-chevron-right"></i></div>
         </div>
-        <div class="tercerBloque1">
-          <img class="iso" src="./assets/img/ISO.png" alt="" />
-          <img class="senasa" src="./assets/img/senasa.png" alt="" />
-          <img class="bpa" src="./assets/img/bpa.png" alt="" />
+        <div class="sobreNosotros" id="sobreNosotros">
+          <h3 data-aos="fade-up">Seguridad e Higiene</h3>
+          <div class="imgContainer01" data-aos="fade-up">
+            <img src="./assets/img/higiene.jpg" alt="" />
+            <h4>En la produccion:</h4>
+          </div>
+          <div class="higieneInfo01">
+            <div class="info" data-aos="fade-up" data-aos-delay="100">
+              <h5>Control de Enfermedades y Vacunación:</h5>
+              <p>
+                Implementación de programas de vacunación para el ganado.
+                Monitoreo constante de la salud del ganado para prevenir
+                enfermedades.
+              </p>
+            </div>
+            <div class="info" data-aos="fade-up" data-aos-delay="300">
+              <h5>Buenas Prácticas Agrícolas (BPA):</h5>
+              <p>
+                Mantenimiento de instalaciones limpias y desinfectadas. Manejo
+                adecuado de residuos y subproductos.
+              </p>
+            </div>
+            <div class="info" data-aos="fade-up" data-aos-delay="600">
+              <h5>Trazabilidad:</h5>
+              <p>
+                Establecimiento de sistemas de trazabilidad que permitan seguir
+                la cadena de producción desde la cría hasta la exportación.
+                Registro detallado de información sobre cada lote de carne.
+              </p>
+            </div>
+          </div>
+          <div class="imgContainer02" data-aos="fade-up">
+            <img src="./assets/img/camion.jpg" alt="" />
+            <h4>En el transporte:</h4>
+          </div>
+          <div class="higieneInfo02">
+            <div class="info" data-aos="fade-up" data-aos-delay="100">
+              <h5>Transporte Seguro:</h5>
+              <p>
+                Uso de vehículos refrigerados y adecuadamente higienizados.
+                Monitoreo de la temperatura durante el transporte para
+                garantizar la cadena de frío.
+              </p>
+            </div>
+            <div class="info" data-aos="fade-up" data-aos-delay="300">
+              <h5>Almacenamiento Adecuado:</h5>
+              <p>
+                Instalaciones de almacenamiento refrigeradas y limpias. Rotación
+                adecuada de inventario para garantizar la frescura de los
+                productos.
+              </p>
+            </div>
+          </div>
+          <div class="imgContainer03" data-aos="fade-up">
+            <img src="./assets/img/procesamiento.jpg" alt="" />
+            <h4>En el procesamiento:</h4>
+          </div>
+          <div class="higieneInfo03">
+            <div class="info" data-aos="fade-up" data-aos-delay="100">
+              <h5>Control de Calidad:</h5>
+              <p>
+                Implementación de sistemas de control de calidad en cada etapa
+                del procesamiento. Uso de tecnologías modernas para la detección
+                temprana de posibles contaminantes.
+              </p>
+            </div>
+            <div class="info" data-aos="fade-up" data-aos-delay="300">
+              <h5>Higiene Personal y Protección del Personal:</h5>
+              <p>
+                Capacitación continua sobre prácticas de higiene personal para
+                los trabajadores. Suministro de equipos de protección personal
+                (EPP) adecuados.
+              </p>
+            </div>
+            <div class="info" data-aos="fade-up" data-aos-delay="600">
+              <h5>Seguridad Alimentaria:</h5>
+              <p>
+                Cumplimiento de estándares internacionales de seguridad
+                alimentaria. Análisis periódicos de muestras para detectar
+                posibles contaminantes biológicos, químicos o físicos.
+              </p>
+            </div>
+          </div>
         </div>
+        <div class="exportacion" id="exportacion">
+          <div class="exportacionContainer">
+            <div class="mapContainer">
+              <div class="mapTextsContainer">
+                <h3 data-aos="fade-up" data-aos-delay="100">Paises Clientes</h3>
+                <p data-aos="fade-up" data-aos-delay="200">
+                  Nos enorgullece compartir que nuestras carnes de alta calidad
+                  han llegado a los cinco continentes. Desde los vastos campos
+                  de nuestras tierras hasta su mesa, llevamos la tradición
+                  ganadera a cada rincón del mundo. Descubra el sabor auténtico
+                  que trasciende fronteras.
+                </p>
+              </div>
+              <div id="map" data-aos="fade-up" data-aos-delay="500"></div>
+            </div>
+          </div>
+        </div>
+        <div class="productosContainer" id="productos">
+          <h3>Nuestros productos:</h3>
+          <div class="productos">
+            <div class="productosCategoriasContainer">
+              <button
+                class="todos btnCategoria"
+                data-categoria="todos"
+                id="todos"
+              >
+                Todos
+              </button>
+              <div class="productosCategorias">
+                <button
+                  class="dropDownBtn btnCategoria"
+                  id="cerdoBtn"
+                  data-categoria="cerdo"
+                >
+                  <img src="./assets/img/cerdo.png" alt="" />
+                  Cerdo
+                </button>
+                <div class="dropDownContent" id="cerdoDropDown">
+                  <ul>
+                    <li class="btnNombre" data-nombre="lomo">Lomo</li>
+                    <li class="btnNombre" data-nombre="chuleta">Chuletas</li>
+                    <li class="btnNombre" data-nombre="costilla">Costillas</li>
+                    <li class="btnNombre" data-nombre="panceta">Panceta</li>
+                    <li class="btnNombre" data-nombre="jamon">Jamon</li>
+                  </ul>
+                </div>
+
+                <button
+                  class="dropDownBtn btnCategoria"
+                  id="vacaBtn"
+                  data-categoria="vaca"
+                >
+                  <img src="./assets/img/vaca.png" alt="" />
+                  Vaca
+                </button>
+                <div class="dropDownContent" id="vacaDropDown">
+                  <ul>
+                    <li class="btnNombre" data-nombre="vacio">Vacio</li>
+                    <li class="btnNombre" data-nombre="asado">Asado</li>
+                    <li class="btnNombre" data-nombre="entraña">Entraña</li>
+                    <li class="btnNombre" data-nombre="cuadril">Cuadril</li>
+                    <li class="btnNombre" data-nombre="matambre">Matambre</li>
+                    <li class="btnNombre" data-nombre="osobuco">Osobuco</li>
+                  </ul>
+                </div>
+
+                <button
+                  class="dropDownBtn btnCategoria"
+                  id="polloBtn"
+                  data-categoria="pollo"
+                >
+                  <img src="./assets/img/pollo.png" alt="" />
+                  Pollo
+                </button>
+                <div class="dropDownContent" id="polloDropDown">
+                  <ul>
+                    <li class="btnNombre" data-nombre="pechuga">Pechuga</li>
+                    <li class="btnNombre" data-nombre="pata">Pata Muslo</li>
+                    <li class="btnNombre" data-nombre="alitas">Alitas</li>
+                    <li class="btnNombre" data-nombre="entero">Pollo entero</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="productosListarContainer">
+              <div class="productosListar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="form" id="form">
+          <img src="./assets/img/logoSolo.png" alt="" />
+          <div class="hablemos" data-aos="fade-up">
+            <h3>Hablemos...</h3>
+            <p>
+              En Ganadera Arenales estamos comprometidos con la excelencia en la
+              exportación de carne de alta calidad. Valoramos tu interés y nos
+              encantaría estar en contacto contigo.
+            </p>
+            <p>
+              Al dejarnos tus datos, nos permitirás mantenerte informado sobre
+              nuestras últimas novedades, productos destacados y oportunidades
+              exclusivas.
+            </p>
+          </div>
+          <div class="formInputs" data-aos="fade-up">
+            <form
+              action="https://formsubmit.co/cotsdev93@gmail.com"
+              method="POST"
+            >
+              <div class="input">
+                <label for="name">Nombre Completo</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-control"
+                  required
+                  autocomplete="on"
+                />
+              </div>
+              <div class="input">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control"
+                  required
+                  autocomplete="on"
+                />
+              </div>
+              <div class="input">
+                <label for="phone">Numero Telefono</label>
+                <input
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  class="form-control"
+                  required
+                  autocomplete="on"
+                />
+              </div>
+              <div class="input">
+                <label for="company">Empresa</label>
+                <input
+                  id="company"
+                  type="text"
+                  name="company"
+                  class="form-control"
+                  required
+                  autocomplete="on"
+                />
+              </div>
+              <div class="input">
+                <label for="country">Pais</label>
+                <input
+                  id="country"
+                  type="text"
+                  name="country"
+                  class="form-control"
+                  required
+                  autocomplete="on"
+                />
+              </div>
+              <div class="buttonContainer">
+                <button type="submit">Enviar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+      <div class="irArriba">
+        <i class="fa-solid fa-circle-chevron-up"></i>
       </div>
-      <hr class="lineaDivisoria" />
-      <div class="segundoBloque">
-        <div class="redesContainer">
-          <i class="fa-brands fa-facebook-f"></i>
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-linkedin-in"></i>
-          <i class="fa-solid fa-envelope"></i>
+      <footer>
+        <div class="primerBloque">
+          <div class="logoContainer">
+            <img
+              class="logo"
+              src="./assets/img/logoSoloGrisMasClaro.png"
+              alt=""
+            />
+            <div class="logoText">
+              <span translate="no">Ganadera</span>
+              <span translate="no">Arenales</span>
+            </div>
+          </div>
+          <div class="tercerBloque1">
+            <img class="iso" src="./assets/img/ISO.png" alt="" />
+            <img class="senasa" src="./assets/img/senasa.png" alt="" />
+            <img class="bpa" src="./assets/img/bpa.png" alt="" />
+          </div>
         </div>
-        <div class="bloque02Text">
-          <ul>
-            <li>Newsletter</li>
-            <li>Trabaja con nosotros</li>
-            <li>Contactanos</li>
-            <li>Politicas de Calidad</li>
-          </ul>
+        <hr class="lineaDivisoria" />
+        <div class="segundoBloque">
+          <div class="redesContainer">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div class="bloque02Text">
+            <ul>
+              <li>Newsletter</li>
+              <li>Trabaja con nosotros</li>
+              <li>Contactanos</li>
+              <li>Politicas de Calidad</li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <hr class="lineaDivisoria" />
-      <div class="tercerBloque">
-        <div class="direccionContainer">
-          <i class="fa-solid fa-location-dot"></i>
-          <p class="direccion">Necochea 576 - Ramos Mejia - La Matanza</p>
+        <hr class="lineaDivisoria" />
+        <div class="tercerBloque">
+          <div class="direccionContainer">
+            <i class="fa-solid fa-location-dot"></i>
+            <p class="direccion">Necochea 576 - Ramos Mejia - La Matanza</p>
+          </div>
+          <div class="tercerBloque2">
+            <ul>
+              <li>Aviso legal</li>
+              <li>Politica de privacidad</li>
+              <li>Politica de cookies</li>
+            </ul>
+          </div>
         </div>
-        <div class="tercerBloque2">
-          <ul>
-            <li>Aviso legal</li>
-            <li>Politica de privacidad</li>
-            <li>Politica de cookies</li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>
