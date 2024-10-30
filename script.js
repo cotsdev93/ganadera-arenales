@@ -360,6 +360,7 @@ btnNombre.forEach((boton) => {
   });
 });
 
+
 // Productos Listar
 
 class BaseDeDatosProductos {
@@ -369,9 +370,7 @@ class BaseDeDatosProductos {
   }
 
   async cargarRegistros() {
-    const resultado = await fetch(
-      `./JSON/productos.json?timestamp=${new Date().getTime()}`
-    );
+    const resultado = await fetch(`./JSON/productos.json?timestamp=${new Date().getTime()}`);
     this.productos = await resultado.json();
     this.productos.sort((a, b) => a.nombre.localeCompare(b.nombre));
     cargarProductos(this.productos);
@@ -403,18 +402,14 @@ function noHayProductos(nombre) {
   if (productosListar) {
     productosListar.innerHTML = `
       <div class="noHayProductos">
-        <p>Por el momento no contamos con stock de <b>${capitalizarPrimeraLetra(
-          nombre
-        )}</b></p>
+        <p>Por el momento no contamos con stock de <b>${capitalizarPrimeraLetra(nombre)}</b></p>
       </div>
     `;
   }
 }
 
 function formatearNumero(numero) {
-  return Number(numero).toLocaleString("es-ES", {
-    useGrouping: true,
-  });
+  return Number(numero).toLocaleString("es-ES", { useGrouping: true });
 }
 
 function cargarProductos(productos) {
@@ -423,18 +418,15 @@ function cargarProductos(productos) {
   productosListar.innerHTML = "";
 
   for (const producto of productos) {
-
     const precioFormateado = formatearNumero(producto.precio);
-    
+
     productosListar.innerHTML += `
         <div class="productoContainer">
           <div class="imgContainer">
-            <img class="img"src="${producto.img}" alt="${producto.alt}" />
+            <img class="img" src="${producto.img}" alt="${producto.alt}" />
           </div>
           <div class="productoInfo">
-            <p class="nombreProducto">${capitalizarPrimeraLetra(
-              producto.nombre
-            )}</p>
+            <p class="nombreProducto">${capitalizarPrimeraLetra(producto.nombre)}</p>
             <div class="productoInfo2">
               <div class="precioContainer">
                <p class="precio">$${precioFormateado}</p>
@@ -450,18 +442,21 @@ function cargarProductos(productos) {
           </div>
         </div>
       `;
-    const botonesAgregar = document.querySelectorAll(".btnAgregar");
-
-    for (const boton of botonesAgregar) {
-      boton.addEventListener("click", (event) => {
-        event.preventDefault();
-        const idProducto = Number(boton.dataset.id);
-        const producto = bdProductos.registroPorId(idProducto);
-        console.log(producto);
-        carrito.agregar(producto);
-      });
-    }
   }
+
+  // Corrección: eliminamos eventos anteriores y asignamos eventos una vez.
+  document.querySelectorAll(".btnAgregar").forEach(boton => {
+    boton.removeEventListener("click", agregarProductoAlCarrito);
+    boton.addEventListener("click", agregarProductoAlCarrito);
+  });
+}
+
+function agregarProductoAlCarrito(event) {
+  event.preventDefault();
+  const idProducto = Number(event.currentTarget.dataset.id);
+  const producto = bdProductos.registroPorId(idProducto);
+  console.log(producto);
+  carrito.agregar(producto);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -480,9 +475,7 @@ const spanTotalCarrito = document.querySelector("#totalCarrito");
 const spanCantidadProductos = document.querySelector("#cantidadProductos");
 const botonCarrito = document.querySelector("#carrito");
 const carritoListar = document.querySelector(".carritoListar");
-const carritoListarContainer = document.querySelector(
-  ".carritoListarContainer"
-);
+const carritoListarContainer = document.querySelector(".carritoListarContainer");
 
 botonCarrito.addEventListener("click", () => {
   carritoListarContainer.classList.toggle("showCarrito");
@@ -513,7 +506,7 @@ class Carrito {
     if (!productoEnCarrito) {
       this.carrito.push({ ...producto, cantidad: 1 });
     } else {
-      productoEnCarrito.cantidad += 1;
+      productoEnCarrito.cantidad++;
     }
 
     this.listar();
@@ -537,6 +530,7 @@ class Carrito {
     carritoListar.innerHTML = "";
 
     for (const producto of this.carrito) {
+      const precioFormateado = formatearNumero(producto.precio);
       carritoListar.innerHTML += `
         <div class="productoCarrito">
           <img src="${producto.img}" />
@@ -544,7 +538,7 @@ class Carrito {
             <p class="cNombre">${producto.nombre}</p>
             <div class="dataCarrito2">
               <p class="cCantidad">x u. ${producto.cantidad}</p>
-              <p class="cPrecio">$${producto.precio}</p>
+              <p class="cPrecio">$${precioFormateado}</p>
             </div>
             <a href="#" class="btnQuitar" data-id="${producto.id}">
               <i class="fa-solid fa-square-minus"></i>
@@ -560,42 +554,26 @@ class Carrito {
       this.cantidadProductos += producto.cantidad;
     }
 
-    const botonesAgregar = document.querySelectorAll(".btnAgregar");
+    // Corrección: Evita duplicación al eliminar y luego agregar los eventos
+    document.querySelectorAll(".btnAgregar").forEach(boton => {
+      boton.removeEventListener("click", agregarProductoAlCarrito);
+      boton.addEventListener("click", agregarProductoAlCarrito);
+    });
 
-    for (const boton of botonesAgregar) {
-      boton.addEventListener("click", (event) => {
-        event.preventDefault();
-        const idProducto = Number(boton.dataset.id);
-        const producto = bdProductos.registroPorId(idProducto);
-        console.log(producto);
-        carrito.agregar(producto);
-
-        // Toastify({
-        //   text: `${producto.nombre} fue agregado al carrito`,
-        //   duration: 1500,
-        //   style: {
-        //     background: "linear-gradient(to right, #00b09b, #96c93d)",
-        //   },
-        //   offset: {
-        //     x: 180,
-        //   },
-        // }).showToast();
-      });
-    }
-
-    const botonesQuitar = document.querySelectorAll(".btnQuitar");
-
-    for (const boton of botonesQuitar) {
-      boton.addEventListener("click", (event) => {
-        event.preventDefault();
-        const idProducto = Number(boton.dataset.id);
-        this.quitar(idProducto);
-      });
-    }
+    document.querySelectorAll(".btnQuitar").forEach(boton => {
+      boton.removeEventListener("click", quitarProductoDelCarrito);
+      boton.addEventListener("click", quitarProductoDelCarrito);
+    });
 
     spanCantidadProductos.innerText = this.cantidadProductos;
     spanTotalCarrito.innerText = this.total;
   }
+}
+
+function quitarProductoDelCarrito(event) {
+  event.preventDefault();
+  const idProducto = Number(event.currentTarget.dataset.id);
+  carrito.quitar(idProducto);
 }
 
 const carrito = new Carrito();
