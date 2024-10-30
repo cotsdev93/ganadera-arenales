@@ -246,8 +246,10 @@ body .popupContainer .popup button {
     font-size: 12px;
   }
 }
+body #blureado {
+  transition: filter 2s;
+}
 body .blureado {
-  transition: 1s;
   filter: blur(5px);
 }
 
