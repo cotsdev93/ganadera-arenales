@@ -537,15 +537,17 @@ class Carrito {
           <div class="dataCarrito">
             <p class="cNombre">${producto.nombre}</p>
             <div class="dataCarrito2">
+            <p class="cPrecio">$${precioFormateado}</p>
               <p class="cCantidad">x u. ${producto.cantidad}</p>
-              <p class="cPrecio">$${precioFormateado}</p>
             </div>
-            <a href="#" class="btnQuitar" data-id="${producto.id}">
-              <i class="fa-solid fa-square-minus"></i>
-            </a>
-            <a href="#" class="btnAgregar" data-id="${producto.id}">
-              <i class="fa-solid fa-square-plus"></i>
-            </a>
+            <div class="cBtnsCantidad">
+              <a href="#" class="btnQuitar" data-id="${producto.id}">
+                <i class="fa-solid fa-square-minus"></i>
+              </a>
+              <a href="#" class="btnAgregar" data-id="${producto.id}">
+                <i class="fa-solid fa-square-plus"></i>
+              </a>
+            </div>
           </div>
         </div>
         <div class="line"></div>

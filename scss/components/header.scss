@@ -127,25 +127,33 @@ body {
                   color: green;
                 }
               }
-              .btnQuitar {
-                color: $grisClaro;
-                transition: 0.5s;
-                &:hover {
-                  color: rgb(248, 124, 124);
-                  &:active {
-                    transition: none;
-                    color: red;
+              .cBtnsCantidad {
+                display: flex;
+                justify-content: flex-end;
+                width: 80%;
+                .btnQuitar {
+                  color: $grisClaro;
+                  transition: 0.5s;
+                  margin: 0px 2.5px;
+                  &:hover {
+                    color: rgb(248, 124, 124);
+                    &:active {
+                      transition: none;
+                      color: red;
+                    }
                   }
                 }
-              }
-              .btnAgregar {
-                color: $grisClaro;
-                transition: 0.5s;
-                &:hover {
-                  color: rgb(108, 230, 108);
-                  &:active {
-                    color: rgb(0, 215, 0);
-                    transition: none;
+                .btnAgregar {
+                  color: $grisClaro;
+                  transition: 0.5s;
+                  margin: 0px 2.5px;
+
+                  &:hover {
+                    color: rgb(108, 230, 108);
+                    &:active {
+                      color: rgb(0, 215, 0);
+                      transition: none;
+                    }
                   }
                 }
               }
