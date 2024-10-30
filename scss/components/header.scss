@@ -152,7 +152,7 @@ body {
             }
           }
           .line {
-            width: 80%;
+            width: 90%;
             height: 1px;
             background-color: $grisClaro;
             margin: auto;
@@ -160,8 +160,13 @@ body {
         }
         .total {
           // border: solid 1px red;
-          font-size: 10px;
+          font-size: 15px;
           text-align: right;
+          margin-right: 15px;
+          color: $grisMasOscuro;
+          #totalCarrito {
+            color: green;
+          }
         }
       }
       .showCarrito {
