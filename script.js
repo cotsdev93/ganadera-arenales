@@ -31,21 +31,20 @@ function animacionInicial() {
 
 const popup = document.querySelector(".popupContainer");
 const buttonx = document.getElementById("x");
-const blureado = document.getElementById("blureado")
+const blureado = document.getElementById("blureado");
 function popUp() {
   if (isSmallScreen) {
     popup.style.top = "100px";
   } else {
     popup.style.top = "50px";
   }
-  blureado.classList.toggle("blureado")
-  console.log("funca")
+  blureado.classList.toggle("blureado");
+  console.log("funca");
 }
 
 buttonx.addEventListener("click", () => {
   popup.style.transform = "translateX(-50%) translateY(-100vh)";
-  blureado.classList.toggle("blureado")
-
+  blureado.classList.toggle("blureado");
 });
 
 // INICIO INTRO Y POP UP
@@ -365,7 +364,6 @@ btnNombre.forEach((boton) => {
   });
 });
 
-
 // Productos Listar
 
 class BaseDeDatosProductos {
@@ -375,7 +373,9 @@ class BaseDeDatosProductos {
   }
 
   async cargarRegistros() {
-    const resultado = await fetch(`./JSON/productos.json?timestamp=${new Date().getTime()}`);
+    const resultado = await fetch(
+      `./JSON/productos.json?timestamp=${new Date().getTime()}`
+    );
     this.productos = await resultado.json();
     this.productos.sort((a, b) => a.nombre.localeCompare(b.nombre));
     cargarProductos(this.productos);
@@ -407,7 +407,9 @@ function noHayProductos(nombre) {
   if (productosListar) {
     productosListar.innerHTML = `
       <div class="noHayProductos">
-        <p>Por el momento no contamos con stock de <b>${capitalizarPrimeraLetra(nombre)}</b></p>
+        <p>Por el momento no contamos con stock de <b>${capitalizarPrimeraLetra(
+          nombre
+        )}</b></p>
       </div>
     `;
   }
@@ -431,7 +433,9 @@ function cargarProductos(productos) {
             <img class="img" src="${producto.img}" alt="${producto.alt}" />
           </div>
           <div class="productoInfo">
-            <p class="nombreProducto">${capitalizarPrimeraLetra(producto.nombre)}</p>
+            <p class="nombreProducto">${capitalizarPrimeraLetra(
+              producto.nombre
+            )}</p>
             <div class="productoInfo2">
               <div class="precioContainer">
                <p class="precio">$${precioFormateado}</p>
@@ -450,7 +454,7 @@ function cargarProductos(productos) {
   }
 
   // Corrección: eliminamos eventos anteriores y asignamos eventos una vez.
-  document.querySelectorAll(".btnAgregar").forEach(boton => {
+  document.querySelectorAll(".btnAgregar").forEach((boton) => {
     boton.removeEventListener("click", agregarProductoAlCarrito);
     boton.addEventListener("click", agregarProductoAlCarrito);
   });
@@ -480,7 +484,9 @@ const spanTotalCarrito = document.querySelector("#totalCarrito");
 const spanCantidadProductos = document.querySelector("#cantidadProductos");
 const botonCarrito = document.querySelector("#carrito");
 const carritoListar = document.querySelector(".carritoListar");
-const carritoListarContainer = document.querySelector(".carritoListarContainer");
+const carritoListarContainer = document.querySelector(
+  ".carritoListarContainer"
+);
 
 botonCarrito.addEventListener("click", () => {
   carritoListarContainer.classList.toggle("showCarrito");
@@ -534,21 +540,28 @@ class Carrito {
     this.cantidadProductos = 0;
     carritoListar.innerHTML = "";
 
-    for (const producto of this.carrito) {
-      const precioFormateado = formatearNumero(producto.precio);
-      carritoListar.innerHTML += `
+    if (this.carrito.length === 0) {
+      carritoListar.innerHTML = `
+      <div class="carritoVacio">
+        <p>El carrito está vacío</p>
+      </div>
+    `;
+    } else {
+      for (const producto of this.carrito) {
+        const precioFormateado = formatearNumero(producto.precio);
+        carritoListar.innerHTML += `
         <div class="productoCarrito">
           <img src="${producto.img}" />
           <div class="dataCarrito">
             <p class="cNombre">${producto.nombre}</p>
             <div class="dataCarrito2">
             <p class="cPrecio">$${precioFormateado}</p>
-              <p class="cCantidad">x u. ${producto.cantidad}</p>
             </div>
             <div class="cBtnsCantidad">
               <a href="#" class="btnQuitar" data-id="${producto.id}">
-                <i class="fa-solid fa-square-minus"></i>
+              <i class="fa-solid fa-square-minus"></i>
               </a>
+              <p class="cCantidad">x u. ${producto.cantidad}</p>
               <a href="#" class="btnAgregar" data-id="${producto.id}">
                 <i class="fa-solid fa-square-plus"></i>
               </a>
@@ -557,17 +570,17 @@ class Carrito {
         </div>
         <div class="line"></div>
         `;
-      this.total += producto.precio * producto.cantidad;
-      this.cantidadProductos += producto.cantidad;
+        this.total += producto.precio * producto.cantidad;
+        this.cantidadProductos += producto.cantidad;
+      }
     }
-
     // Corrección: Evita duplicación al eliminar y luego agregar los eventos
-    document.querySelectorAll(".btnAgregar").forEach(boton => {
+    document.querySelectorAll(".btnAgregar").forEach((boton) => {
       boton.removeEventListener("click", agregarProductoAlCarrito);
       boton.addEventListener("click", agregarProductoAlCarrito);
     });
 
-    document.querySelectorAll(".btnQuitar").forEach(boton => {
+    document.querySelectorAll(".btnQuitar").forEach((boton) => {
       boton.removeEventListener("click", quitarProductoDelCarrito);
       boton.addEventListener("click", quitarProductoDelCarrito);
     });

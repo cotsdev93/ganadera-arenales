@@ -87,73 +87,91 @@ body {
         display: flex;
         flex-direction: column;
         padding-top: 80px;
-        width: 180px;
+        width: 190px;
         height: 100%;
         position: fixed;
-        right: -180px;
+        right: -190px;
         top: 0;
         background-color: $blanco;
         transition: 1s;
         box-shadow: 0px 0px 1px 1px #00000005;
-        // border: solid 1px red;
+        border: solid 0.5px $grisClaro;
+        border-radius: 5px;
         .carritoListar {
-          // border: solid 1px red;
-          width: 100%;
+          border: solid 1px $grisClaro;
+          margin: 5px;
+          width: auto;
           height: auto;
+          max-height: 60vh;
           justify-content: center;
+          border-radius: 5px;
+          overflow-x: hidden;
+          overflow-y: auto;
+          &::-webkit-scrollbar {
+            width: 9px;
+            color: $rojo;
+          }
           .productoCarrito {
             display: flex;
             width: 100%;
             margin: 5px;
+            // border: solid 1px red;
             img {
-              width: 60px;
+              width: 70px;
               object-fit: cover;
+              // border: solid 1px red;
             }
             .dataCarrito {
               width: 100%;
+              // border: solid 1px red;
               .cNombre {
                 width: 100%;
+                // border: solid 1px red;
               }
-              .dataCarrito2 {
-                display: flex;
-                height: 20px;
-                .cCantidad {
-                  width: 40%;
-                  font-size: 15px;
-                  color: $grisOscuro;
-                }
-                .cPrecio {
-                  width: 50%;
-                  color: green;
-                }
+            }
+            .dataCarrito2 {
+              display: flex;
+              height: 20px;
+              // border: solid 1px red;
+              align-items: center;
+
+              .cPrecio {
+                width: 50%;
+                color: green;
               }
-              .cBtnsCantidad {
-                display: flex;
-                justify-content: flex-end;
-                width: 80%;
-                .btnQuitar {
-                  color: $grisClaro;
-                  transition: 0.5s;
-                  margin: 0px 2.5px;
-                  &:hover {
-                    color: rgb(248, 124, 124);
-                    &:active {
-                      transition: none;
-                      color: red;
-                    }
+            }
+            .cBtnsCantidad {
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              width: 100%;
+              // border: solid 1px blue;
+              .btnQuitar {
+                color: $grisClaro;
+                transition: 0.5s;
+                margin: 0px 3px;
+                &:hover {
+                  color: rgb(248, 124, 124);
+                  &:active {
+                    transition: none;
+                    color: red;
                   }
                 }
-                .btnAgregar {
-                  color: $grisClaro;
-                  transition: 0.5s;
-                  margin: 0px 2.5px;
+              }
+              .cCantidad {
+                font-size: 15px;
+                color: $grisOscuro;
+              }
+              .btnAgregar {
+                color: $grisClaro;
+                transition: 0.5s;
+                margin: 0px 3px;
 
-                  &:hover {
-                    color: rgb(108, 230, 108);
-                    &:active {
-                      color: rgb(0, 215, 0);
-                      transition: none;
-                    }
+                &:hover {
+                  color: rgb(108, 230, 108);
+                  &:active {
+                    color: rgb(0, 215, 0);
+                    transition: none;
                   }
                 }
               }
@@ -175,6 +193,20 @@ body {
           #totalCarrito {
             color: green;
           }
+        }
+      }
+      .carritoVacio {
+        width: auto;
+        height: 50px;
+        // border: solid 1px $grisClaro;
+        // margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        p {
+          color: $grisOscuro;
+          font-size: 13px;
         }
       }
       .showCarrito {
