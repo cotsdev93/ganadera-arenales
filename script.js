@@ -572,6 +572,7 @@ class Carrito {
         `;
         this.total += producto.precio * producto.cantidad;
         this.cantidadProductos += producto.cantidad;
+        
       }
     }
     // Corrección: Evita duplicación al eliminar y luego agregar los eventos
@@ -586,7 +587,8 @@ class Carrito {
     });
 
     spanCantidadProductos.innerText = this.cantidadProductos;
-    spanTotalCarrito.innerText = this.total;
+    spanTotalCarrito.innerText = formatearNumero(this.total);
+    
   }
 }
 
