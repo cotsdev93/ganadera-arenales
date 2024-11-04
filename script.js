@@ -36,7 +36,7 @@ function popUp() {
   if (isSmallScreen) {
     popup.style.top = "100px";
   } else {
-    popup.style.top = "50px";
+    popup.style.top = "40px";
   }
   blureado.classList.toggle("blureado");
   console.log("funca");
@@ -477,7 +477,7 @@ function agregarProductoAlCarrito(event) {
     backgroundColor: "linear-gradient(135deg, #a90a0a, #a90a1c)", 
     stopOnFocus: true,
     style: {
-      borderRadius: "8px",
+      // borderRadius: "8px",
       color: "#ffffff",
     },
   }).showToast();
