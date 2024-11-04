@@ -1484,7 +1484,8 @@ body main .productosContainer .productos .productosListarContainer .productosLis
 }
 body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer .imgContainer img {
   width: 90%;
-  transition: all 0.7s;
+  transition: all 0.5s;
+  filter: drop-shadow(-1px 1px 6px rgba(0, 0, 0, 0.3137254902));
 }
 body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer:hover {
   background-color: #d1d1d1;
