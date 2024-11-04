@@ -576,7 +576,7 @@ class Carrito {
               <a href="#" class="btnQuitar" data-id="${producto.id}">
               <i class="fa-solid fa-square-minus"></i>
               </a>
-              <p class="cCantidad">x u. ${producto.cantidad}</p>
+              <p class="cCantidad">x ${producto.cantidad} kg.</p>
               <a href="#" class="btnAgregar" data-id="${producto.id}">
                 <i class="fa-solid fa-square-plus"></i>
               </a>
