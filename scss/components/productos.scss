@@ -189,10 +189,13 @@ body {
                   }
                   .fa-cart-plus {
                     color: #218838;
-                    transition: 0.5s;
+                    transition: 0.2s;
                     cursor: pointer;
                     &:hover {
-                      color: #28a745;
+                      color: #26bd49;
+                    }
+                    &:active{
+                      color: #17de46
                     }
                   }
                 }

@@ -1523,11 +1523,14 @@ body main .productosContainer .productos .productosListarContainer .productosLis
 }
 body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer .productoInfo .productoInfo2 .fa-cart-plus {
   color: #218838;
-  transition: 0.5s;
+  transition: 0.2s;
   cursor: pointer;
 }
 body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer .productoInfo .productoInfo2 .fa-cart-plus:hover {
-  color: #28a745;
+  color: #26bd49;
+}
+body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer .productoInfo .productoInfo2 .fa-cart-plus:active {
+  color: #17de46;
 }
 body main .productosContainer .productos .productosListarContainer .productosListar .productoContainer .logoContainer {
   width: 50px;
