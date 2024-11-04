@@ -30,7 +30,8 @@ body {
           align-items: center;
           font-family: "Poppins";
           margin-right: 40px;
-          li {
+          .opcionMenu {
+            // border: solid 1px red;
             padding: 7px;
             color: $grisClaro;
             transition: 1s;
@@ -226,82 +227,102 @@ body {
   body {
     header {
       nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: $shadow;
+        position: relative;
+        overflow: hidden;
+        // border: solid 3px red;
         .logoNav {
-          display: flex;
-          align-items: center;
-          padding-left: 10px;
+          padding-left: 5px;
+          // border: solid blue 1px;
           span {
             font-family: "Poppins";
             font-size: 20px;
           }
           img {
-            width: 40px;
+            width: 25px;
+            margin: 5px;
           }
         }
-        .navMenu {
+        .navMobile {
           display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          padding-top: 80px;
-          width: 145px;
-          height: 100vh;
-          position: fixed;
-          right: -145px;
-          filter: none;
-          margin-left: 0px;
-          top: 0;
-          background-color: $grisClaro;
-          transition: 1s;
-          box-shadow: 0px 0px 1px 1px #00000020;
-          z-index: 1;
-          li {
+          justify-content: space-around;
+          align-items: center;
+          width: 40%;
+          .nav {
+            margin: 0px;
+            .navMenu {
+              display: flex;
+              flex-direction: column;
+              padding-top: 80px;
+              width: 150px;
+              height: 100%;
+              position: fixed;
+              right: -150px;
+              margin-right: 0px;
+              top: 0;
+              background-color: $grisClaro;
+              transition: 1s;
+              box-shadow: 0px 0px 1px 1px #00000020;
+              z-index: 1;
+              margin-right: 0px;
+              // border: solid 1px red;
+
+              .opcionMenu {
+                margin-top: 20px;
+                // border: solid 1px rgb(51, 195, 97);
+                width: 100%;
+                height: 50px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding-left: 15px;
+                a {
+                  color: $blanco;
+                  border-bottom: 1px solid #00000020;
+                  font-size: 20px;
+                  font-weight: 500;
+                }
+              }
+            }
+            .show {
+              right: 0px;
+            }
+          }
+          #carrito {
+            margin-right: 0px;
+          }
+
+          .show {
+            right: 0px;
+          }
+          .menuContainer {
+            display: block;
+            width: 25px;
+            height: 25px;
+            background-color: $grisClaro;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 12px;
-            width: 100%;
-            a {
-              color: $blanco;
-              padding-top: 0px;
-            }
+            border-radius: 3px;
+            color: $blanco;
+            margin-right: 20px;
+            transition: 1s;
+            z-index: 2;
           }
-        }
-        #carrito {
-          margin-right: 0px;
-          z-index: 4;
-        }
-        .carritoListarContainer {
-          z-index: 3;
-        }
-        .show {
-          right: 0px;
-        }
-        .menuContainer {
-          display: block;
-          width: 25px;
-          height: 25px;
-          background-color: $grisClaro;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 3px;
-          color: $blanco;
-          margin-right: 20px;
-          transition: 1s;
-          z-index: 2;
-        }
-        .opacity {
-          transition: 1s;
-          opacity: 50%;
-          color: $grisOscuro;
+          .opacity {
+            transition: 1s;
+            opacity: 50%;
+            color: $grisOscuro;
+          }
         }
       }
       .irArriba {
         position: fixed;
+        z-index: 50;
       }
     }
-  }
-  .hidden {
-    overflow: hidden;
   }
 }
