@@ -4,7 +4,6 @@ const intro = document.querySelector(".intro");
 const logo = document.querySelector(".logoHeader");
 const logoSpan = document.querySelectorAll(".logo");
 
-
 function animacionInicial() {
   setTimeout(() => {
     logoSpan.forEach((span, idx) => {
@@ -63,15 +62,15 @@ const menu = document.querySelector(".menuContainer");
 const navMenu = document.querySelector(".navMenu");
 const opcionMenu = document.querySelectorAll(".opcionMenu");
 const body = document.querySelector("body");
-const blureado2 = document.getElementById("blureado2")
+const blureado2 = document.getElementById("blureado2");
 var isSmallScreen = window.innerWidth <= 737;
 
 menu.addEventListener("click", () => {
   navMenu.classList.toggle("show");
   menu.classList.toggle("opacity");
   body.classList.toggle("hidden");
-  blureado2.classList.toggle("blureado2")
-  logoNav.classList.toggle("blureado2")
+  blureado2.classList.toggle("blureado2");
+  logoNav.classList.toggle("blureado2");
 });
 
 opcionMenu.forEach((opcion) => {
@@ -81,7 +80,7 @@ opcionMenu.forEach((opcion) => {
     body.classList.remove("hidden");
     if (isSmallScreen) {
       blureado2.classList.toggle("blureado2");
-      logoNav.classList.toggle("blureado2")
+      logoNav.classList.toggle("blureado2");
     }
   });
 });
@@ -466,11 +465,11 @@ function agregarProductoAlCarrito(event) {
     text: `${capitalizarPrimeraLetra(
       producto.nombre
     )} fue agregado al carrito.`,
-    duration: 3000, 
+    duration: 3000,
     close: true,
     gravity: "top",
-    position: "center", 
-    backgroundColor: "linear-gradient(135deg, #a90a0a, #a90a1c)", 
+    position: "center",
+    backgroundColor: "linear-gradient(135deg, #a90a0a, #a90a1c)",
     stopOnFocus: true,
     style: {
       // borderRadius: "8px",
@@ -498,18 +497,25 @@ const carritoListar = document.querySelector(".carritoListar");
 const carritoListarContainer = document.querySelector(
   ".carritoListarContainer"
 );
-const logoNav = document.querySelector(".logoNav")
+const logoNav = document.querySelector(".logoNav");
 
 botonCarrito.addEventListener("click", () => {
   carritoListarContainer.classList.toggle("showCarrito");
-  blureado2.classList.toggle("blureado2")
-  navMenu.classList.toggle("blureado2")
-  logoNav.classList.toggle("blureado2")
+  blureado2.classList.toggle("blureado2");
+  navMenu.classList.toggle("blureado2");
+  logoNav.classList.toggle("blureado2");
+
   if (carritoListarContainer.classList.contains("showCarrito")) {
     body.style.overflow = "hidden";
   } else {
     body.style.overflow = "";
   }
+
+  opcionMenu.forEach((opcion) => {
+    opcion.addEventListener("click", () => {
+      event.preventDefault();
+    });
+  });
 });
 
 class Carrito {
