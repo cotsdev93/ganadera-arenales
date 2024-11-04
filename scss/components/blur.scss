@@ -1,9 +1,17 @@
 body {
+  transition: all 2s;
   #blureado {
-    transition: filter 2s;
+    transition: all 2s;
+    #blureado2 {
+      transition: all 2s;
+    }
+    .blureado2 {
+      transition: all 2s;
+
+      filter: blur(5px);
+    }
   }
   .blureado {
-    // transition: filter 1s;
     filter: blur(5px);
   }
 }

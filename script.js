@@ -62,20 +62,14 @@ const menu = document.querySelector(".menuContainer");
 const navMenu = document.querySelector(".navMenu");
 const opcionMenu = document.querySelectorAll(".opcionMenu");
 const body = document.querySelector("body");
-
-// const blureado2 = document.querySelector(".blureado2");
-// const blureado3 = document.querySelector(".blureado3");
+const blureado2 = document.getElementById("blureado2")
 var isSmallScreen = window.innerWidth <= 737;
 
 menu.addEventListener("click", () => {
   navMenu.classList.toggle("show");
   menu.classList.toggle("opacity");
   body.classList.toggle("hidden");
-
-  // if (isSmallScreen) {
-  //   blureado2.classList.toggle("blur");
-  //   blureado3.classList.toggle("blur");
-  // }
+  blureado2.classList.toggle("blureado2")
 });
 
 opcionMenu.forEach((opcion) => {
@@ -505,6 +499,7 @@ const carritoListarContainer = document.querySelector(
 
 botonCarrito.addEventListener("click", () => {
   carritoListarContainer.classList.toggle("showCarrito");
+  blureado2.classList.toggle("blureado2")
 
   if (carritoListarContainer.classList.contains("showCarrito")) {
     body.style.overflow = "hidden";

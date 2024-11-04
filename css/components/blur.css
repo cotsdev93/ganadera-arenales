@@ -1,5 +1,15 @@
+body {
+  transition: all 2s;
+}
 body #blureado {
-  transition: filter 2s;
+  transition: all 2s;
+}
+body #blureado #blureado2 {
+  transition: all 2s;
+}
+body #blureado .blureado2 {
+  transition: all 2s;
+  filter: blur(5px);
 }
 body .blureado {
   filter: blur(5px);
