@@ -263,7 +263,10 @@ body .blureado {
   filter: blur(5px);
 }
 
-body header nav {
+html ::-webkit-scrollbar {
+  display: none;
+}
+html body header nav {
   background-color: #f7f9f9;
   width: 100%;
   height: 65px;
@@ -274,45 +277,45 @@ body header nav {
   position: relative;
   overflow: hidden;
 }
-body header nav .logoNav {
+html body header nav .logoNav {
   transition: all 1s;
   display: flex;
   align-items: center;
   padding-left: 40px;
 }
-body header nav .logoNav span {
+html body header nav .logoNav span {
   font-family: "Poppins";
   font-size: 25px;
 }
-body header nav .logoNav img {
+html body header nav .logoNav img {
   width: 50px;
 }
-body header nav .nav {
+html body header nav .nav {
   display: flex;
   margin-right: 50px;
 }
-body header nav .nav .navMenu {
+html body header nav .nav .navMenu {
   display: flex;
   align-items: center;
   font-family: "Poppins";
   margin-right: 40px;
   transition: all 0.5s;
 }
-body header nav .nav .navMenu .opcionMenu {
+html body header nav .nav .navMenu .opcionMenu {
   padding: 7px;
   color: #d1d1d1;
   transition: 0.5s;
   cursor: pointer;
   font-size: 14px;
 }
-body header nav .nav .navMenu .opcionMenu a {
+html body header nav .nav .navMenu .opcionMenu a {
   transition: 1s;
   color: #d1d1d1;
 }
-body header nav .nav .navMenu .opcionMenu a:hover {
+html body header nav .nav .navMenu .opcionMenu a:hover {
   color: #a3a3a3;
 }
-body header nav .nav #carrito {
+html body header nav .nav #carrito {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -321,7 +324,7 @@ body header nav .nav #carrito {
   z-index: 7;
   cursor: pointer;
 }
-body header nav .nav #carrito .fa-cart-shopping {
+html body header nav .nav #carrito .fa-cart-shopping {
   font-size: 23px;
   color: #f7f9f9;
   position: absolute;
@@ -329,7 +332,7 @@ body header nav .nav #carrito .fa-cart-shopping {
   left: 47%;
   transform: translate(-50%, -50%);
 }
-body header nav .nav #carrito .circuloCantidad {
+html body header nav .nav #carrito .circuloCantidad {
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -339,7 +342,7 @@ body header nav .nav #carrito .circuloCantidad {
   left: 90%;
   transform: translate(-50%, -50%);
 }
-body header nav .nav #carrito .circuloCantidad span {
+html body header nav .nav #carrito .circuloCantidad span {
   color: #f7f9f9;
   font-size: 10px;
   position: absolute;
@@ -347,7 +350,7 @@ body header nav .nav #carrito .circuloCantidad span {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-body header nav .carritoListarContainer {
+html body header nav .carritoListarContainer {
   z-index: 6;
   display: flex;
   flex-direction: column;
@@ -363,7 +366,7 @@ body header nav .carritoListarContainer {
   border: solid 0.5px #d1d1d1;
   border-radius: 5px;
 }
-body header nav .carritoListarContainer .carritoListar {
+html body header nav .carritoListarContainer .carritoListar {
   border: solid 1px #d1d1d1;
   margin: 5px;
   width: auto;
@@ -374,84 +377,84 @@ body header nav .carritoListarContainer .carritoListar {
   overflow-x: hidden;
   overflow-y: auto;
 }
-body header nav .carritoListarContainer .carritoListar::-webkit-scrollbar {
+html body header nav .carritoListarContainer .carritoListar::-webkit-scrollbar {
   width: 9px;
   color: #a90a0a;
 }
-body header nav .carritoListarContainer .carritoListar .productoCarrito {
+html body header nav .carritoListarContainer .carritoListar .productoCarrito {
   display: flex;
   width: 100%;
   margin: 5px;
 }
-body header nav .carritoListarContainer .carritoListar .productoCarrito img {
+html body header nav .carritoListarContainer .carritoListar .productoCarrito img {
   width: 70px;
   object-fit: cover;
 }
-body header nav .carritoListarContainer .carritoListar .productoCarrito .dataCarrito {
+html body header nav .carritoListarContainer .carritoListar .productoCarrito .dataCarrito {
   width: 100%;
 }
-body header nav .carritoListarContainer .carritoListar .productoCarrito .dataCarrito .cNombre {
+html body header nav .carritoListarContainer .carritoListar .productoCarrito .dataCarrito .cNombre {
   width: 100%;
 }
-body header nav .carritoListarContainer .carritoListar .productoCarrito .dataCarrito2 {
+html body header nav .carritoListarContainer .carritoListar .productoCarrito .dataCarrito2 {
   display: flex;
   height: 20px;
   align-items: center;
 }
-body header nav .carritoListarContainer .carritoListar .productoCarrito .dataCarrito2 .cPrecio {
+html body header nav .carritoListarContainer .carritoListar .productoCarrito .dataCarrito2 .cPrecio {
   width: 50%;
   color: green;
 }
-body header nav .carritoListarContainer .carritoListar .productoCarrito .cBtnsCantidad {
+html body header nav .carritoListarContainer .carritoListar .productoCarrito .cBtnsCantidad {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
 }
-body header nav .carritoListarContainer .carritoListar .productoCarrito .cBtnsCantidad .btnQuitar {
+html body header nav .carritoListarContainer .carritoListar .productoCarrito .cBtnsCantidad .btnQuitar {
   color: #d1d1d1;
   transition: 0.5s;
   margin: 0px 3px;
 }
-body header nav .carritoListarContainer .carritoListar .productoCarrito .cBtnsCantidad .btnQuitar:hover {
+html body header nav .carritoListarContainer .carritoListar .productoCarrito .cBtnsCantidad .btnQuitar:hover {
   color: rgb(248, 124, 124);
 }
-body header nav .carritoListarContainer .carritoListar .productoCarrito .cBtnsCantidad .btnQuitar:hover:active {
+html body header nav .carritoListarContainer .carritoListar .productoCarrito .cBtnsCantidad .btnQuitar:hover:active {
   transition: none;
   color: red;
 }
-body header nav .carritoListarContainer .carritoListar .productoCarrito .cBtnsCantidad .cCantidad {
+html body header nav .carritoListarContainer .carritoListar .productoCarrito .cBtnsCantidad .cCantidad {
   font-size: 15px;
   color: #a3a3a3;
 }
-body header nav .carritoListarContainer .carritoListar .productoCarrito .cBtnsCantidad .btnAgregar {
+html body header nav .carritoListarContainer .carritoListar .productoCarrito .cBtnsCantidad .btnAgregar {
   color: #d1d1d1;
   transition: 0.5s;
   margin: 0px 3px;
 }
-body header nav .carritoListarContainer .carritoListar .productoCarrito .cBtnsCantidad .btnAgregar:hover {
+html body header nav .carritoListarContainer .carritoListar .productoCarrito .cBtnsCantidad .btnAgregar:hover {
   color: rgb(108, 230, 108);
 }
-body header nav .carritoListarContainer .carritoListar .productoCarrito .cBtnsCantidad .btnAgregar:hover:active {
+html body header nav .carritoListarContainer .carritoListar .productoCarrito .cBtnsCantidad .btnAgregar:hover:active {
   color: rgb(0, 215, 0);
   transition: none;
 }
-body header nav .carritoListarContainer .carritoListar .line {
+html body header nav .carritoListarContainer .carritoListar .line {
   width: 90%;
   height: 1px;
   background-color: #d1d1d1;
   margin: auto;
 }
-body header nav .carritoListarContainer .total {
+html body header nav .carritoListarContainer .total {
   font-size: 15px;
   text-align: right;
   margin-right: 15px;
   color: #707070;
 }
-body header nav .carritoListarContainer .total #totalCarrito {
+html body header nav .carritoListarContainer .total #totalCarrito {
   color: green;
 }
-body header nav .carritoVacio {
+html body header nav .carritoVacio {
   width: auto;
   height: 50px;
   display: flex;
@@ -459,23 +462,22 @@ body header nav .carritoVacio {
   align-items: center;
   border-radius: 5px;
 }
-body header nav .carritoVacio p {
+html body header nav .carritoVacio p {
   color: #a3a3a3;
   font-size: 13px;
 }
-body header nav .showCarrito {
+html body header nav .showCarrito {
   right: 0px;
 }
-body header nav .menuContainer {
+html body header nav .menuContainer {
   display: none;
 }
-
-.hidden {
+html .hidden {
   overflow: hidden;
 }
 
 @media (max-width: 737px) {
-  body header nav {
+  html body header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -483,31 +485,31 @@ body header nav .menuContainer {
     position: relative;
     overflow: hidden;
   }
-  body header nav .logoNav {
-    padding-left: 5px;
+  html body header nav .logoNav {
+    padding-left: 10px;
   }
-  body header nav .logoNav span {
+  html body header nav .logoNav span {
     font-family: "Poppins";
-    font-size: 20px;
+    font-size: 17px;
   }
-  body header nav .logoNav img {
+  html body header nav .logoNav img {
     width: 25px;
     margin: 5px;
   }
-  body header nav .blureado2 {
+  html body header nav .blureado2 {
     filter: blur(5px);
     transition: all 0.5s;
   }
-  body header nav .navMobile {
+  html body header nav .navMobile {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 40%;
   }
-  body header nav .navMobile .nav {
+  html body header nav .navMobile .nav {
     margin: 0px;
   }
-  body header nav .navMobile .nav .navMenu {
+  html body header nav .navMobile .nav .navMenu {
     display: flex;
     flex-direction: column;
     padding-top: 80px;
@@ -523,7 +525,7 @@ body header nav .menuContainer {
     z-index: 1;
     margin-right: 0px;
   }
-  body header nav .navMobile .nav .navMenu .opcionMenu {
+  html body header nav .navMobile .nav .navMenu .opcionMenu {
     margin-top: 20px;
     width: 100%;
     height: 50px;
@@ -532,26 +534,26 @@ body header nav .menuContainer {
     align-items: center;
     padding-left: 15px;
   }
-  body header nav .navMobile .nav .navMenu .opcionMenu a {
+  html body header nav .navMobile .nav .navMenu .opcionMenu a {
     color: #f7f9f9;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1254901961);
     font-size: 20px;
     font-weight: 500;
   }
-  body header nav .navMobile .nav .blureado2 {
+  html body header nav .navMobile .nav .blureado2 {
     filter: blur(5px);
     transition: all 0.5s;
   }
-  body header nav .navMobile .nav .show {
+  html body header nav .navMobile .nav .show {
     right: 0px;
   }
-  body header nav .navMobile #carrito {
+  html body header nav .navMobile #carrito {
     margin-right: 0px;
   }
-  body header nav .navMobile .show {
+  html body header nav .navMobile .show {
     right: 0px;
   }
-  body header nav .navMobile .menuContainer {
+  html body header nav .navMobile .menuContainer {
     display: block;
     width: 25px;
     height: 25px;
@@ -565,12 +567,12 @@ body header nav .menuContainer {
     transition: 0.5s;
     z-index: 2;
   }
-  body header nav .navMobile .opacity {
+  html body header nav .navMobile .opacity {
     transition: 1s;
     opacity: 50%;
     color: #a3a3a3;
   }
-  body header .irArriba {
+  html body header .irArriba {
     position: fixed;
     z-index: 50;
   }
@@ -1593,6 +1595,7 @@ body main .productosContainer .productos .productosListarContainer .noHayProduct
 body main .productosContainer ::-webkit-scrollbar {
   width: 9px; /* Ancho de la barra vertical */
   height: 9px; /* Altura de la barra horizontal (si existe) */
+  display: block;
 }
 body main .productosContainer ::-webkit-scrollbar-track {
   background: #a3a3a3; /* Color de fondo del track */

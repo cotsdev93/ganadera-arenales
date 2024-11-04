@@ -232,6 +232,7 @@ body {
       ::-webkit-scrollbar {
         width: 9px; /* Ancho de la barra vertical */
         height: 9px; /* Altura de la barra horizontal (si existe) */
+        display: block;
       }
 
       /* Fondo de la barra de desplazamiento */

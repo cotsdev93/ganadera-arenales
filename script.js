@@ -39,7 +39,6 @@ function popUp() {
     popup.style.top = "40px";
   }
   blureado.classList.toggle("blureado");
-  console.log("funca");
 }
 
 buttonx.addEventListener("click", () => {
@@ -63,6 +62,7 @@ const navMenu = document.querySelector(".navMenu");
 const opcionMenu = document.querySelectorAll(".opcionMenu");
 const body = document.querySelector("body");
 const blureado2 = document.getElementById("blureado2");
+const nav = document.querySelectorAll(".nav");
 var isSmallScreen = window.innerWidth <= 737;
 
 menu.addEventListener("click", () => {
@@ -509,6 +509,15 @@ botonCarrito.addEventListener("click", () => {
     body.style.overflow = "hidden";
   } else {
     body.style.overflow = "";
+  }
+
+  if (navMenu.classList.contains("show")) {
+    console.log("va");
+    // navMenu.classList.toggle("show");
+    menu.classList.toggle("opacity");
+    body.classList.toggle("hidden");
+    blureado2.classList.toggle("blureado2");
+    logoNav.classList.toggle("blureado2");
   }
 
   opcionMenu.forEach((opcion) => {
