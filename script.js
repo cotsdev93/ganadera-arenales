@@ -4,6 +4,7 @@ const intro = document.querySelector(".intro");
 const logo = document.querySelector(".logoHeader");
 const logoSpan = document.querySelectorAll(".logo");
 
+
 function animacionInicial() {
   setTimeout(() => {
     logoSpan.forEach((span, idx) => {
@@ -70,6 +71,7 @@ menu.addEventListener("click", () => {
   menu.classList.toggle("opacity");
   body.classList.toggle("hidden");
   blureado2.classList.toggle("blureado2")
+  logoNav.classList.toggle("blureado2")
 });
 
 opcionMenu.forEach((opcion) => {
@@ -77,10 +79,10 @@ opcionMenu.forEach((opcion) => {
     navMenu.classList.remove("show");
     menu.classList.remove("opacity");
     body.classList.remove("hidden");
-    // if (isSmallScreen) {
-    //   blureado2.classList.toggle("blur");
-    //   blureado3.classList.toggle("blur");
-    // }
+    if (isSmallScreen) {
+      blureado2.classList.toggle("blureado2");
+      logoNav.classList.toggle("blureado2")
+    }
   });
 });
 
@@ -496,11 +498,13 @@ const carritoListar = document.querySelector(".carritoListar");
 const carritoListarContainer = document.querySelector(
   ".carritoListarContainer"
 );
+const logoNav = document.querySelector(".logoNav")
 
 botonCarrito.addEventListener("click", () => {
   carritoListarContainer.classList.toggle("showCarrito");
   blureado2.classList.toggle("blureado2")
-
+  navMenu.classList.toggle("blureado2")
+  logoNav.classList.toggle("blureado2")
   if (carritoListarContainer.classList.contains("showCarrito")) {
     body.style.overflow = "hidden";
   } else {

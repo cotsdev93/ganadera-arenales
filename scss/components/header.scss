@@ -11,6 +11,7 @@ body {
       position: relative;
       overflow: hidden;
       .logoNav {
+        transition: all 1s;
         display: flex;
         align-items: center;
         padding-left: 40px;
@@ -30,11 +31,13 @@ body {
           align-items: center;
           font-family: "Poppins";
           margin-right: 40px;
+          transition: all 0.5s;
+
           .opcionMenu {
             // border: solid 1px red;
             padding: 7px;
             color: $grisClaro;
-            transition: 1s;
+            transition: 0.5s;
             cursor: pointer;
             font-size: 14px;
             a {
@@ -95,7 +98,7 @@ body {
         top: 0;
         background-color: $blanco;
         transition: 1s;
-        box-shadow: 0px 0px 1px 1px #00000005;
+        box-shadow: 0px 0px 4px 2px #00000030;
         border: solid 0.5px $grisClaro;
         border-radius: 5px;
         .carritoListar {
@@ -246,6 +249,10 @@ body {
             margin: 5px;
           }
         }
+        .blureado2 {
+          filter: blur(5px);
+          transition: all 0.5s;
+        }
         .navMobile {
           display: flex;
           justify-content: space-around;
@@ -253,6 +260,7 @@ body {
           width: 40%;
           .nav {
             margin: 0px;
+
             .navMenu {
               display: flex;
               flex-direction: column;
@@ -264,11 +272,10 @@ body {
               margin-right: 0px;
               top: 0;
               background-color: $grisClaro;
-              transition: 1s;
+              transition: all 0.5s;
               box-shadow: 0px 0px 1px 1px #00000020;
               z-index: 1;
               margin-right: 0px;
-              // border: solid 1px red;
 
               .opcionMenu {
                 margin-top: 20px;
@@ -286,6 +293,10 @@ body {
                   font-weight: 500;
                 }
               }
+            }
+            .blureado2 {
+              filter: blur(5px);
+              transition: all 0.5s;
             }
             .show {
               right: 0px;
@@ -309,7 +320,7 @@ body {
             border-radius: 3px;
             color: $blanco;
             margin-right: 20px;
-            transition: 1s;
+            transition: 0.5s;
             z-index: 2;
           }
           .opacity {
