@@ -519,12 +519,13 @@ botonCarrito.addEventListener("click", () => {
     blureado2.classList.toggle("blureado2");
     logoNav.classList.toggle("blureado2");
   }
-
-  opcionMenu.forEach((opcion) => {
-    opcion.addEventListener("click", () => {
-      event.preventDefault();
+  if (carritoListarContainer.classList.contains("showCarrito")) {
+    opcionMenu.forEach((opcion) => {
+      opcion.addEventListener("click", () => {
+        event.preventDefault();
+      });
     });
-  });
+  }
 });
 
 class Carrito {
