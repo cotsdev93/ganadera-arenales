@@ -1198,34 +1198,41 @@ body main .exportacion:focus, body main .exportacion:active {
 
 @media (max-width: 737px) {
   body main .exportacion {
-    padding: 0px 20px 30px 20px;
-    background-color: #ebebeb;
-    height: 100%;
+    padding: 0px;
+  }
+  body main .exportacion .mapContainer {
+    display: block;
+  }
+  body main .exportacion .mapContainer .mapTextsContainer {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    position: relative;
-    z-index: 0;
+    align-items: center;
+    justify-content: center;
   }
-  body main .exportacion h3 {
-    padding: 10px 0px 10px 0px;
+  body main .exportacion .mapContainer .mapTextsContainer h3 {
+    color: #707070;
+    font-size: 30px;
+    text-align: left;
+    margin: 0px;
   }
-  body main .exportacion p {
-    padding: 0px 0px 15px 0px;
+  body main .exportacion .mapContainer .mapTextsContainer p {
+    width: 95%;
+    padding: 0px;
     color: #a3a3a3;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    margin: 5px;
     text-align: justify;
   }
-  body main .exportacion #map {
-    margin: auto;
-    width: 100%;
-    height: 400px;
+  body main .exportacion .mapContainer #map {
+    margin: 10px;
+    width: 95%;
+    height: 300px;
     border: solid #f7f9f9 4px;
-    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1254901961);
-  }
-  body main .exportacion #map:focus, body main .exportacion #map:active {
-    outline: none;
-  }
-  body main:focus, body main:active {
-    outline: none;
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
+    border-radius: 0%;
   }
 }
 body main .form {
