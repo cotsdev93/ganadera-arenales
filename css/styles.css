@@ -987,142 +987,152 @@ body main .sobreNosotros .higieneInfo03 .info p {
 }
 
 @media (max-width: 737px) {
-  .sobreNosotros {
+  body main .sobreNosotros {
     width: 100%;
     height: 100%;
-    padding: 0px;
   }
-  .sobreNosotros h3 {
-    padding: 15px;
+  body main .sobreNosotros h3 {
+    color: #707070;
+    font-size: 30px;
+    padding: 10px;
   }
-  .sobreNosotros .imgContainer01 {
+  body main .sobreNosotros .imgContainer01 {
     width: 100%;
     position: relative;
-    margin: 0px;
   }
-  .sobreNosotros .imgContainer01 img {
+  body main .sobreNosotros .imgContainer01 img {
     width: 100%;
     height: 150px;
     object-fit: cover;
     object-position: 20% 30%;
     box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
   }
-  .sobreNosotros .imgContainer01 h4 {
+  body main .sobreNosotros .imgContainer01 h4 {
     text-align: center;
     color: #fffef4;
     text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5019607843);
     padding: 15px;
-    font-size: 24px;
+    font-size: 25px;
     position: absolute;
     bottom: -10px;
     left: 50%;
     transform: translate(-50%);
-    width: 100%;
+    white-space: nowrap;
   }
-  .sobreNosotros .higieneInfo01 {
+  body main .sobreNosotros .higieneInfo01 {
     width: 100%;
-    display: inline-block;
-    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
   }
-  .sobreNosotros .higieneInfo01 .info {
-    width: 90%;
+  body main .sobreNosotros .higieneInfo01 .info {
+    width: 95%;
     height: 100%;
-    margin: 20px;
+    margin: 5px;
   }
-  .sobreNosotros .higieneInfo01 .info h5 {
+  body main .sobreNosotros .higieneInfo01 .info h5 {
     color: #707070;
     font-size: 18px;
+    line-height: 1.1;
   }
-  .sobreNosotros .higieneInfo01 .info p {
+  body main .sobreNosotros .higieneInfo01 .info p {
     color: #a3a3a3;
     font-size: 14px;
     text-align: justify;
+    line-height: 1.1;
   }
-  .sobreNosotros .imgContainer02 {
+  body main .sobreNosotros .imgContainer02 {
     width: 100%;
     position: relative;
-    margin: 0px;
   }
-  .sobreNosotros .imgContainer02 img {
+  body main .sobreNosotros .imgContainer02 img {
     width: 100%;
     height: 150px;
     object-fit: cover;
-    object-position: 0% 80%;
+    object-position: 0% 66%;
     box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
   }
-  .sobreNosotros .imgContainer02 h4 {
+  body main .sobreNosotros .imgContainer02 h4 {
     text-align: center;
     color: #fffef4;
     text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5019607843);
     padding: 15px;
-    font-size: 24px;
+    font-size: 28px;
     position: absolute;
     bottom: -10px;
     left: 50%;
     transform: translate(-50%);
-    width: 100%;
+    white-space: nowrap;
   }
-  .sobreNosotros .higieneInfo02 {
+  body main .sobreNosotros .higieneInfo02 {
     width: 100%;
-    display: inline-block;
-    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
   }
-  .sobreNosotros .higieneInfo02 .info {
-    width: 90%;
+  body main .sobreNosotros .higieneInfo02 .info {
+    width: 95%;
     height: 100%;
-    margin: 20px;
+    margin: 5px;
   }
-  .sobreNosotros .higieneInfo02 .info h5 {
+  body main .sobreNosotros .higieneInfo02 .info h5 {
     color: #707070;
     font-size: 18px;
   }
-  .sobreNosotros .higieneInfo02 .info p {
+  body main .sobreNosotros .higieneInfo02 .info p {
     color: #a3a3a3;
     font-size: 14px;
     text-align: justify;
+    line-height: 1.1;
   }
-  .sobreNosotros .imgContainer03 {
+  body main .sobreNosotros .imgContainer03 {
     width: 100%;
     position: relative;
-    margin: 0px;
   }
-  .sobreNosotros .imgContainer03 img {
+  body main .sobreNosotros .imgContainer03 img {
     width: 100%;
     height: 150px;
     object-fit: cover;
     object-position: 0% 40%;
     box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
   }
-  .sobreNosotros .imgContainer03 h4 {
+  body main .sobreNosotros .imgContainer03 h4 {
     text-align: center;
     color: #fffef4;
     text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5019607843);
-    padding: px;
+    padding: 15px;
     font-size: 28px;
     position: absolute;
     bottom: -10px;
     left: 50%;
     transform: translate(-50%);
-    width: 100%;
   }
-  .sobreNosotros .higieneInfo03 {
+  body main .sobreNosotros .higieneInfo03 {
     width: 100%;
-    display: inline-block;
-    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
   }
-  .sobreNosotros .higieneInfo03 .info {
-    width: 90%;
+  body main .sobreNosotros .higieneInfo03 .info {
+    width: 95%;
     height: 100%;
-    margin: 20px;
+    margin: 5px;
   }
-  .sobreNosotros .higieneInfo03 .info h5 {
+  body main .sobreNosotros .higieneInfo03 .info h5 {
     color: #707070;
     font-size: 18px;
   }
-  .sobreNosotros .higieneInfo03 .info p {
+  body main .sobreNosotros .higieneInfo03 .info p {
     color: #a3a3a3;
     font-size: 14px;
     text-align: justify;
+    line-height: 1.3;
   }
 }
 body main .exportacion {
