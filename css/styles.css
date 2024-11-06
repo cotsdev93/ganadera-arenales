@@ -1679,14 +1679,14 @@ body main .productosContainer ::-webkit-scrollbar-thumb:hover {
     overflow-x: hidden;
     display: flex;
     justify-content: center;
-    border: solid 1px red;
+    margin: 0px;
     width: 100%;
   }
   body main .productosContainer .productos .productosCategoriasContainer .productosCategorias .dropDownBtn {
     width: 33%;
     padding: 3px;
     display: flex;
-    margin: 5px;
+    margin: 0px 2px;
   }
   body main .productosContainer .productos .productosCategoriasContainer .productosCategorias .dropDownBtn:hover {
     background-color: #d1d1d1;

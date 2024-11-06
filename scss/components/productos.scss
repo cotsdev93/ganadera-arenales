@@ -312,13 +312,13 @@ body {
               overflow-x: hidden;
               display: flex;
               justify-content: center;
-              border: solid 1px red;
+              margin: 0px;
               width: 100%;
               .dropDownBtn {
                 width: 33%;
                 padding: 3px;
                 display: flex;
-                margin: 5px;
+                margin: 0px 2px;
                 &:hover {
                   background-color: $grisClaro;
                   transform: translateY(-1px);
