@@ -51,7 +51,6 @@ body {
           // border: solid 1px red;
           margin-left: 20px;
           transform: translateY(3px);
-
         }
         .bpa {
           // border: solid 1px red;
@@ -133,7 +132,7 @@ body {
         // border: solid 1px red;
         .direccion {
           color: $grisMasClaro;
-          margin-left:5px;
+          margin-left: 5px;
           cursor: pointer;
           transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
         }
@@ -200,7 +199,7 @@ body {
         align-items: center;
         justify-content: space-between;
         // border: solid 1px red;
-  
+
         .logoContainer {
           // border: solid 1px red;
           width: auto;
@@ -239,11 +238,10 @@ body {
             // border: solid 1px red;
             margin-left: 20px;
             transform: translateY(3px);
-  
           }
           .bpa {
             // border: solid 1px red;
-  
+
             width: 70px;
             transform: translateY(-8px);
             margin-left: 20px;
@@ -265,9 +263,15 @@ body {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        // border: solid 1px red;
         .redesContainer {
           width: 50%;
-          margin-left: 20px;
+          margin-left: 0px;
+          height: 40px;
+          // border: solid 1px red;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
           i {
             font-size: 20px;
             margin-left: 20px;
@@ -281,27 +285,38 @@ body {
           }
         }
         .bloque02Text {
-          // border: solid 1px red;
-          width: 50%;
-          justify-content: flex-end;
+          width: 90%;
+          justify-content: center;
+          height: 50px;
+
           ul {
             display: flex;
-            // gap: 5px;
-            margin-right: 20px;
-            justify-content: flex-end;
+            flex-wrap: wrap; // Permite que los elementos se dividan en líneas
+            margin-right: 0px;
+            justify-content: center;
+            height: 45px;
+          
             li {
+              width: 50%; // Cada <li> ocupa el 50% del ancho para formar dos columnas
               font-size: 12px;
-              padding: 5px;
+              padding: 2px;
               white-space: nowrap;
-              width: auto;
               font-weight: 550;
               cursor: pointer;
               transition: 0.5s;
               color: $grisMasClaro;
+              // margin: 0px 5px;
               &:hover {
                 color: $blanquito;
                 transform: translateY(-1.5px);
               }
+            }
+
+            // Estilos adicionales para alinear los primeros dos elementos a la derecha
+            li:nth-child(1),
+            li:nth-child(3) {
+              display: flex;
+              justify-content: flex-end; // Alinea a la derecha
             }
           }
         }
@@ -323,7 +338,7 @@ body {
           // border: solid 1px red;
           .direccion {
             color: $grisMasClaro;
-            margin-left:5px;
+            margin-left: 5px;
             cursor: pointer;
             transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
           }

@@ -2113,7 +2113,11 @@ body footer .tercerBloque .tercerBloque2 ul li:hover {
   }
   body footer .segundoBloque .redesContainer {
     width: 50%;
-    margin-left: 20px;
+    margin-left: 0px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   body footer .segundoBloque .redesContainer i {
     font-size: 20px;
@@ -2127,19 +2131,22 @@ body footer .tercerBloque .tercerBloque2 ul li:hover {
     transform: translateY(-2px);
   }
   body footer .segundoBloque .bloque02Text {
-    width: 50%;
-    justify-content: flex-end;
+    width: 90%;
+    justify-content: center;
+    height: 50px;
   }
   body footer .segundoBloque .bloque02Text ul {
     display: flex;
-    margin-right: 20px;
-    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-right: 0px;
+    justify-content: center;
+    height: 45px;
   }
   body footer .segundoBloque .bloque02Text ul li {
+    width: 50%;
     font-size: 12px;
-    padding: 5px;
+    padding: 2px;
     white-space: nowrap;
-    width: auto;
     font-weight: 550;
     cursor: pointer;
     transition: 0.5s;
@@ -2148,6 +2155,11 @@ body footer .tercerBloque .tercerBloque2 ul li:hover {
   body footer .segundoBloque .bloque02Text ul li:hover {
     color: #fffef4;
     transform: translateY(-1.5px);
+  }
+  body footer .segundoBloque .bloque02Text ul li:nth-child(1),
+  body footer .segundoBloque .bloque02Text ul li:nth-child(3) {
+    display: flex;
+    justify-content: flex-end;
   }
   body footer .tercerBloque {
     height: 60px;
