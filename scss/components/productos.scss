@@ -339,17 +339,15 @@ body {
             }
           }
           .productosListarContainer {
-            width: 60%;
-            height: 81vh;
-            border-radius: 0px 20px 20px 0px;
+            width: 80%;
+            height: 100%;
+            max-height: 75vh;
+            border-radius: 0px 0px 20px 20px;
             background-color: $grisClaro;
             box-shadow: inset 0px 0px 6px 2px #00000020;
-            border-top: solid 5px $grisClaro;
-            border-bottom: solid 5px $grisClaro;
-            border-right: solid 5px $grisClaro;
-            border-left: none;
-            overflow-x: auto;
-
+            border-top: none;
+            border-left: solid 5px $grisClaro;
+            
             .productosListar {
               display: flex;
               flex-direction: row;
@@ -360,7 +358,7 @@ body {
               .productoContainer {
                 border: solid 0.5px $grisOscuro;
                 border-radius: 5px;
-                width: 150px;
+                width: 45%;
                 height: 170px;
                 margin: 5px;
                 overflow: hidden;
