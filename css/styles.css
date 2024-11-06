@@ -2037,4 +2037,177 @@ body footer .tercerBloque .tercerBloque2 ul li:hover {
   color: #ebebeb;
 }
 
+@media (max-width: 737px) {
+  body footer {
+    width: 100%;
+    height: auto;
+    background-color: #a3a3a3;
+    padding: 5px;
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
+    border-top: solid 0.5px #fffef4;
+  }
+  body footer .primerBloque {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  body footer .primerBloque .logoContainer {
+    width: auto;
+    display: flex;
+    margin: 5px;
+    transform: translateY(5px);
+  }
+  body footer .primerBloque .logoContainer .logo {
+    width: 40px;
+    transform: translateY(-2px);
+  }
+  body footer .primerBloque .logoContainer .logoText {
+    display: flex;
+  }
+  body footer .primerBloque .logoContainer .logoText span {
+    font-family: "Poppins";
+    font-size: 20px;
+    color: #ebebeb;
+    margin-left: 5px;
+  }
+  body footer .primerBloque .tercerBloque1 {
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0px;
+    margin: 5px;
+  }
+  body footer .primerBloque .tercerBloque1 .iso {
+    width: 70px;
+  }
+  body footer .primerBloque .tercerBloque1 .senasa {
+    width: 100px;
+    margin-left: 20px;
+    transform: translateY(3px);
+  }
+  body footer .primerBloque .tercerBloque1 .bpa {
+    width: 70px;
+    transform: translateY(-8px);
+    margin-left: 20px;
+  }
+  body footer .lineaDivisoria {
+    width: 90%;
+    background-color: #727272;
+    border: 0;
+    border-top: solid 2px #d1d1d1;
+    margin: auto;
+    margin: 15px;
+  }
+  body footer .segundoBloque {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  body footer .segundoBloque .redesContainer {
+    width: 50%;
+    margin-left: 20px;
+  }
+  body footer .segundoBloque .redesContainer i {
+    font-size: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    color: #ebebeb;
+  }
+  body footer .segundoBloque .redesContainer i:hover {
+    color: #fffef4;
+    transform: translateY(-2px);
+  }
+  body footer .segundoBloque .bloque02Text {
+    width: 50%;
+    justify-content: flex-end;
+  }
+  body footer .segundoBloque .bloque02Text ul {
+    display: flex;
+    margin-right: 20px;
+    justify-content: flex-end;
+  }
+  body footer .segundoBloque .bloque02Text ul li {
+    font-size: 12px;
+    padding: 5px;
+    white-space: nowrap;
+    width: auto;
+    font-weight: 550;
+    cursor: pointer;
+    transition: 0.5s;
+    color: #ebebeb;
+  }
+  body footer .segundoBloque .bloque02Text ul li:hover {
+    color: #fffef4;
+    transform: translateY(-1.5px);
+  }
+  body footer .tercerBloque {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  body footer .tercerBloque .direccionContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5px;
+    width: auto;
+    transition: 1s ease-in-out;
+    font-size: 13px;
+  }
+  body footer .tercerBloque .direccionContainer .direccion {
+    color: #ebebeb;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  body footer .tercerBloque .direccionContainer .fa-location-dot {
+    color: #fffef4;
+    font-size: 15px;
+    cursor: pointer;
+    transform: translateY(-3px);
+    transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
+    margin-left: 20px;
+  }
+  body footer .tercerBloque .direccionContainer:hover .direccion {
+    color: #ebebeb;
+    transform: translateY(-1px);
+  }
+  body footer .tercerBloque .direccionContainer:hover .fa-location-dot {
+    transition: 0.5s ease-in-out;
+    color: rgb(156, 5, 5);
+    transform: translateY(-2px);
+  }
+  body footer .tercerBloque .tercerBloque2 {
+    width: auto;
+    display: flex;
+  }
+  body footer .tercerBloque .tercerBloque2 ul {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+  }
+  body footer .tercerBloque .tercerBloque2 ul li {
+    font-size: 10px;
+    padding: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #d1d1d1;
+    transition: 0.5s;
+  }
+  body footer .tercerBloque .tercerBloque2 ul li:hover {
+    transform: translateY(-2px);
+    color: #ebebeb;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

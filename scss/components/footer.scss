@@ -181,3 +181,194 @@ body {
     }
   }
 }
+
+@media (max-width: 737px) {
+  body {
+    footer {
+      width: 100%;
+      height: auto;
+      background-color: $grisOscuro;
+      padding: 5px;
+      box-shadow: $shadow;
+      border-top: solid 0.5px $blanquito;
+      .primerBloque {
+        width: 100%;
+        height: auto;
+        // border: solid 1px blue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        // border: solid 1px red;
+  
+        .logoContainer {
+          // border: solid 1px red;
+          width: auto;
+          display: flex;
+          margin: 5px;
+          transform: translateY(5px);
+          .logo {
+            width: 40px;
+            transform: translateY(-2px);
+          }
+          .logoText {
+            display: flex;
+            span {
+              font-family: "Poppins";
+              font-size: 20px;
+              color: $grisMasClaro;
+              margin-left: 5px;
+            }
+          }
+        }
+        .tercerBloque1 {
+          width: auto;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 0px;
+          // border: solid 1px red;
+          margin: 5px;
+          .iso {
+            width: 70px;
+            // border: solid 1px red;
+          }
+          .senasa {
+            width: 100px;
+            // border: solid 1px red;
+            margin-left: 20px;
+            transform: translateY(3px);
+  
+          }
+          .bpa {
+            // border: solid 1px red;
+  
+            width: 70px;
+            transform: translateY(-8px);
+            margin-left: 20px;
+          }
+        }
+      }
+      .lineaDivisoria {
+        width: 90%;
+        background-color: $gris;
+        border: 0;
+        border-top: solid 2px $grisClaro;
+        margin: auto;
+        margin: 15px;
+      }
+      .segundoBloque {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        .redesContainer {
+          width: 50%;
+          margin-left: 20px;
+          i {
+            font-size: 20px;
+            margin-left: 20px;
+            cursor: pointer;
+            transition: 0.5s;
+            color: $grisMasClaro;
+            &:hover {
+              color: $blanquito;
+              transform: translateY(-2px);
+            }
+          }
+        }
+        .bloque02Text {
+          // border: solid 1px red;
+          width: 50%;
+          justify-content: flex-end;
+          ul {
+            display: flex;
+            // gap: 5px;
+            margin-right: 20px;
+            justify-content: flex-end;
+            li {
+              font-size: 12px;
+              padding: 5px;
+              white-space: nowrap;
+              width: auto;
+              font-weight: 550;
+              cursor: pointer;
+              transition: 0.5s;
+              color: $grisMasClaro;
+              &:hover {
+                color: $blanquito;
+                transform: translateY(-1.5px);
+              }
+            }
+          }
+        }
+      }
+      .tercerBloque {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // border: solid 1px red;;
+        .direccionContainer {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          padding-left: 5px;
+          width: auto;
+          transition: 1s ease-in-out;
+          font-size: 13px;
+          // border: solid 1px red;
+          .direccion {
+            color: $grisMasClaro;
+            margin-left:5px;
+            cursor: pointer;
+            transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
+          }
+          .fa-location-dot {
+            color: $blanquito;
+            font-size: 15px;
+            cursor: pointer;
+            transform: translateY(-3px);
+            transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
+            margin-left: 20px;
+          }
+          &:hover {
+            .direccion {
+              color: $grisMasClaro;
+              transform: translateY(-1px);
+            }
+            .fa-location-dot {
+              transition: 0.5s ease-in-out;
+              color: rgb(156, 5, 5);
+              transform: translateY(-2px);
+            }
+          }
+        }
+        .tercerBloque2 {
+          width: auto;
+          display: flex;
+          ul {
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            li {
+              font-size: 10px;
+              padding: 5px;
+              font-weight: 500;
+              cursor: pointer;
+              color: $grisClaro;
+              transition: 0.5s;
+              &:hover {
+                transform: translateY(-2px);
+                color: $grisMasClaro;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
