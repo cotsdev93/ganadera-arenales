@@ -73,6 +73,7 @@ body {
     main {
       .exportacion {
         padding: 0px;
+        padding-top: 10px;
         // border: solid 5px red;
         .mapContainer {
           display: block;
@@ -108,6 +109,7 @@ body {
             border: solid $blanco 4px;
             box-shadow: $shadow;
             border-radius: 0%;
+            margin-bottom: 25px;
           }
         }
       }

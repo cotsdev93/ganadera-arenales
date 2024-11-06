@@ -48,12 +48,12 @@ buttonx.addEventListener("click", () => {
 
 // INICIO INTRO Y POP UP
 
-window.addEventListener("DOMContentLoaded", () => {
-  animacionInicial();
-  setTimeout(() => {
-    popUp();
-  }, 5000);
-});
+// window.addEventListener("DOMContentLoaded", () => {
+//   animacionInicial();
+//   setTimeout(() => {
+//     popUp();
+//   }, 5000);
+// });
 
 // NAV
 

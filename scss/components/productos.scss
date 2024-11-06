@@ -149,7 +149,7 @@ body {
                 img {
                   width: 90%;
                   transition: all 0.5s;
-                  filter: drop-shadow( -1px 1px 6px #00000050);
+                  filter: drop-shadow(-1px 1px 6px #00000050);
                 }
               }
               &:hover {
@@ -195,8 +195,8 @@ body {
                     &:hover {
                       color: #26bd49;
                     }
-                    &:active{
-                      color: #17de46
+                    &:active {
+                      color: #17de46;
                     }
                   }
                 }
@@ -254,6 +254,240 @@ body {
       ::-webkit-scrollbar-thumb:hover {
         background-color: #900909; /* Cambia el color cuando está en hover */
         cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 737px) {
+  body {
+    main {
+      .productosContainer {
+        h3 {
+          font-size: 28px;
+          color: $grisMasOscuro;
+          margin: 5px;
+          display: flex;
+          justify-content: center;
+        }
+        .productos {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          .productosCategoriasContainer {
+            width: 80%;
+            height: 12vh;
+            border-radius: 20px 20px 0px 0px;
+            border: solid 5px $grisClaro;
+            padding: 5px;
+            background-color: $blanco;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .todos {
+              width: 90%;
+              height: 20px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 5px;
+              // font-size: 15px;
+              // cursor: pointer;
+              // background-color: $grisClaro;
+              // border-radius: 5px;
+              // border: none;
+              // box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+              // transition: all 0.3s ease;
+              // color: $blanco;
+              // border: solid 1px $grisMasClaro;
+              // // transform: translateX(20px);
+              // margin-bottom: 5px;
+            }
+            .productosCategorias {
+              overflow-y: auto;
+              overflow-x: hidden;
+              display: flex;
+              justify-content: center;
+              border: solid 1px red;
+              width: 100%;
+              .dropDownBtn {
+                width: 33%;
+                padding: 3px;
+                display: flex;
+                margin: 5px;
+                &:hover {
+                  background-color: $grisClaro;
+                  transform: translateY(-1px);
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+                }
+                img {
+                  width: 30px;
+                  transform: translateY(5px);
+                  filter: invert(55%) sepia(1%) saturate(0%) hue-rotate(180deg)
+                    brightness(70%);
+                    transform: translateY(1px);
+                    // border: solid 1px red;
+                }
+              }
+              .dropDownContent {
+                display: none;
+              }
+            }
+          }
+          .productosListarContainer {
+            width: 60%;
+            height: 81vh;
+            border-radius: 0px 20px 20px 0px;
+            background-color: $grisClaro;
+            box-shadow: inset 0px 0px 6px 2px #00000020;
+            border-top: solid 5px $grisClaro;
+            border-bottom: solid 5px $grisClaro;
+            border-right: solid 5px $grisClaro;
+            border-left: none;
+            overflow-x: auto;
+
+            .productosListar {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              overflow: hidden;
+              justify-content: center;
+              margin: 10px;
+              .productoContainer {
+                border: solid 0.5px $grisOscuro;
+                border-radius: 5px;
+                width: 150px;
+                height: 170px;
+                margin: 5px;
+                overflow: hidden;
+                box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s;
+                cursor: pointer;
+                position: relative;
+                .imgContainer {
+                  width: 100%;
+                  height: 120px;
+                  // border: solid 1px red;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  background-color: $grisMasClaro;
+                  box-shadow: inset 0px 0px 5px 1px #00000020;
+                  // background: radial-gradient(circle, #ffffff, #f7f7f7, #e0e0e0, #e6e1e1);
+
+                  img {
+                    width: 90%;
+                    transition: all 0.5s;
+                    filter: drop-shadow(-1px 1px 6px #00000050);
+                  }
+                }
+                &:hover {
+                  background-color: $grisClaro;
+                  transform: translateY(-1px);
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+                  .img {
+                    transform: scale(1.05);
+                  }
+                }
+                .productoInfo {
+                  background-color: $grisMasClaro;
+                  padding: 5px;
+                  line-height: 1;
+                  height: 100%;
+                  // border: solid 1px red;
+                  .nombreProducto {
+                    margin-bottom: 5px;
+                  }
+                  .productoInfo2 {
+                    // border: solid 1px red;
+                    display: flex;
+                    justify-content: space-between;
+                    .precioContainer {
+                      display: flex;
+                      width: 80%;
+                      .precio {
+                        color: green;
+                      }
+                      .xKilo {
+                        padding-left: 5px;
+                        color: $gris;
+
+                        .fa-solid {
+                          font-size: 9px;
+                        }
+                      }
+                    }
+                    .fa-cart-plus {
+                      color: #218838;
+                      transition: 0.2s;
+                      cursor: pointer;
+                      &:hover {
+                        color: #26bd49;
+                      }
+                      &:active {
+                        color: #17de46;
+                      }
+                    }
+                  }
+                }
+                .logoContainer {
+                  width: 50px;
+                  height: 50px;
+                  // border: solid 1px red;
+                  position: absolute;
+                  right: 0;
+                  top: 0;
+                  .logo {
+                    width: 100%;
+                    filter: invert(55%) sepia(1%) saturate(0%)
+                      hue-rotate(180deg) brightness(70%);
+                  }
+                }
+              }
+            }
+            .noHayProductos {
+              width: 100%;
+              height: 72vh;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              p {
+                color: $grisMasOscuro;
+              }
+            }
+          }
+        }
+        /* Personalizar la barra de desplazamiento */
+        ::-webkit-scrollbar {
+          width: 9px; /* Ancho de la barra vertical */
+          height: 9px; /* Altura de la barra horizontal (si existe) */
+          display: block;
+        }
+
+        /* Fondo de la barra de desplazamiento */
+        ::-webkit-scrollbar-track {
+          background: $grisOscuro; /* Color de fondo del track */
+          border-radius: 5px; /* Bordes redondeados */
+          z-index: 0;
+        }
+
+        /* La barra de desplazamiento misma */
+        ::-webkit-scrollbar-thumb {
+          background-color: #a90a0a; /* Color de la barra */
+          border-radius: 10px; /* Bordes redondeados para suavidad */
+          border: 1px solid transparent; /* Espacio entre el scrollbar y el track */
+          background-clip: padding-box; /* Asegura que el borde sea visible */
+        }
+
+        /* Cambio de color cuando el mouse pasa sobre la barra */
+        ::-webkit-scrollbar-thumb:hover {
+          background-color: #900909; /* Cambia el color cuando está en hover */
+          cursor: pointer;
+        }
       }
     }
   }
