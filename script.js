@@ -507,26 +507,34 @@ botonCarrito.addEventListener("click", () => {
 
   if (carritoListarContainer.classList.contains("showCarrito")) {
     body.style.overflow = "hidden";
+    
+    // Agrega preventDefault solo cuando el carrito está visible
+    opcionMenu.forEach((opcion) => {
+      opcion.addEventListener("click", preventClick);
+    });
   } else {
     body.style.overflow = "";
+
+    // Elimina preventDefault cuando el carrito se cierra
+    opcionMenu.forEach((opcion) => {
+      opcion.removeEventListener("click", preventClick);
+    });
   }
 
   if (navMenu.classList.contains("show")) {
     console.log("va");
-    // navMenu.classList.toggle("show");
     menu.classList.toggle("opacity");
     body.classList.toggle("hidden");
     blureado2.classList.toggle("blureado2");
     logoNav.classList.toggle("blureado2");
   }
-  if (carritoListarContainer.classList.contains("showCarrito")) {
-    opcionMenu.forEach((opcion) => {
-      opcion.addEventListener("click", () => {
-        event.preventDefault();
-      });
-    });
-  }
 });
+
+// Función para prevenir el comportamiento por defecto en opcionMenu
+function preventClick(event) {
+  event.preventDefault();
+}
+
 
 class Carrito {
   constructor() {
