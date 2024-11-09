@@ -56,15 +56,30 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 // NAV
-
 const menu = document.querySelector(".menuContainer");
 const navMenu = document.querySelector(".navMenu");
-const opcionMenu = document.querySelectorAll(".opcionMenu");
+const opcionMenu = document.querySelectorAll(".opcionMenu a");
 const body = document.querySelector("body");
 const blureado2 = document.getElementById("blureado2");
+// const logoNav = document.querySelector(".logoNav"); 
 const nav = document.querySelectorAll(".nav");
 var isSmallScreen = window.innerWidth <= 737;
 
+// Función para hacer scroll al elemento con el ID especificado
+function scrollToElement(id) {
+  const element = document.getElementById(id);
+  if (element) {
+    const yOffset = 70; // Ajusta este valor según la altura de tu encabezado fijo
+    const yPosition = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    
+    window.scrollTo({
+      top: yPosition,
+      behavior: 'smooth'
+    });
+  }
+}
+
+// Evento para el botón del menú
 menu.addEventListener("click", () => {
   navMenu.classList.toggle("show");
   menu.classList.toggle("opacity");
@@ -73,17 +88,31 @@ menu.addEventListener("click", () => {
   logoNav.classList.toggle("blureado2");
 });
 
+// Evento para cada opción de menú
 opcionMenu.forEach((opcion) => {
-  opcion.addEventListener("click", () => {
+  opcion.addEventListener("click", (event) => {
+    event.preventDefault(); 
+
+    // Extraer el ID del atributo href
+    const targetId = opcion.getAttribute("href").substring(1);
+    
+    // Desplazarse al elemento correspondiente
+    scrollToElement(targetId);
+
+    // Cerrar el menú móvil si está en pantalla pequeña
     navMenu.classList.remove("show");
     menu.classList.remove("opacity");
     body.classList.remove("hidden");
+    
     if (isSmallScreen) {
       blureado2.classList.toggle("blureado2");
       logoNav.classList.toggle("blureado2");
     }
   });
 });
+
+
+
 
 // SLIDER
 
