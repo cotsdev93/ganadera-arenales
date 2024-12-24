@@ -507,11 +507,11 @@ function agregarProductoAlCarrito(event) {
   }).showToast();
 }
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const bdProductos = new BaseDeDatosProductos();
-// });
+document.addEventListener("DOMContentLoaded", () => {
+  const bdProductos = new BaseDeDatosProductos();
+});
 
-const bdProductos = new BaseDeDatosProductos();
+// const bdProductos = new BaseDeDatosProductos();
 
 function capitalizarPrimeraLetra(texto) {
   return texto.charAt(0).toUpperCase() + texto.slice(1);
