@@ -398,7 +398,7 @@ class BaseDeDatosProductos {
 
   async cargarRegistros() {
     const resultado = await fetch(
-      `./JSON/productos.json?timestamp=${new Date().getTime()}`
+      `JSON/productos.json?timestamp=${new Date().getTime()}`
     );
     this.productos = await resultado.json();
     this.productos.sort((a, b) => a.nombre.localeCompare(b.nombre));
@@ -507,9 +507,9 @@ function agregarProductoAlCarrito(event) {
   }).showToast();
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const bdProductos = new BaseDeDatosProductos();
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   const bdProductos = new BaseDeDatosProductos();
+// });
 
 const bdProductos = new BaseDeDatosProductos();
 
