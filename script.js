@@ -396,7 +396,7 @@ class BaseDeDatosProductos {
 
   async cargarRegistros() {
     const resultado = await fetch(
-      "productos.JSON"
+      "/productos.JSON"
     );
 
     this.productos = await resultado.json();
