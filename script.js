@@ -61,7 +61,7 @@ const navMenu = document.querySelector(".navMenu");
 const opcionMenu = document.querySelectorAll(".opcionMenu a");
 const body = document.querySelector("body");
 const blureado2 = document.getElementById("blureado2");
-// const logoNav = document.querySelector(".logoNav"); 
+// const logoNav = document.querySelector(".logoNav");
 const nav = document.querySelectorAll(".nav");
 var isSmallScreen = window.innerWidth <= 737;
 
@@ -70,11 +70,12 @@ function scrollToElement(id) {
   const element = document.getElementById(id);
   if (element) {
     const yOffset = 70; // Ajusta este valor según la altura de tu encabezado fijo
-    const yPosition = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-    
+    const yPosition =
+      element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
     window.scrollTo({
       top: yPosition,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   }
 }
@@ -91,11 +92,11 @@ menu.addEventListener("click", () => {
 // Evento para cada opción de menú
 opcionMenu.forEach((opcion) => {
   opcion.addEventListener("click", (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
 
     // Extraer el ID del atributo href
     const targetId = opcion.getAttribute("href").substring(1);
-    
+
     // Desplazarse al elemento correspondiente
     scrollToElement(targetId);
 
@@ -103,16 +104,13 @@ opcionMenu.forEach((opcion) => {
     navMenu.classList.remove("show");
     menu.classList.remove("opacity");
     body.classList.remove("hidden");
-    
+
     if (isSmallScreen) {
       blureado2.classList.toggle("blureado2");
       logoNav.classList.toggle("blureado2");
     }
   });
 });
-
-
-
 
 // SLIDER
 
@@ -398,8 +396,9 @@ class BaseDeDatosProductos {
 
   async cargarRegistros() {
     const resultado = await fetch(
-      `./JSON/productos.json?timestamp=${new Date().getTime()}`
+      "/JSON/productos.json?timestamp=" + new Date().getTime()
     );
+
     this.productos = await resultado.json();
     this.productos.sort((a, b) => a.nombre.localeCompare(b.nombre));
     cargarProductos(this.productos);
@@ -536,7 +535,7 @@ botonCarrito.addEventListener("click", () => {
 
   if (carritoListarContainer.classList.contains("showCarrito")) {
     body.style.overflow = "hidden";
-    
+
     // Agrega preventDefault solo cuando el carrito está visible
     opcionMenu.forEach((opcion) => {
       opcion.addEventListener("click", preventClick);
@@ -563,7 +562,6 @@ botonCarrito.addEventListener("click", () => {
 function preventClick(event) {
   event.preventDefault();
 }
-
 
 class Carrito {
   constructor() {
