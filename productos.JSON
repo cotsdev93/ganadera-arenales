@@ -5,10 +5,10 @@
     "categoria": "cerdo",
     "descripcion": "",
     "precio": 1500,
-    "img": "assets/img/lomoDeCerdo.png",
+    "img": "/assets/img/lomoDeCerdo.png",
     "alt": "",
     "stock": 100,
-    "logo" : "assets/img/cerdo.png"
+    "logo" : "/assets/img/cerdo.png"
   },
   {
     "id": 2,
@@ -16,10 +16,10 @@
     "categoria": "cerdo",
     "descripcion": "",
     "precio": 1500,
-    "img": "assets/img/chuletas.png",
+    "img": "/assets/img/chuletas.png",
     "alt": "",
     "stock": 100,
-    "logo" : "assets/img/cerdo.png"
+    "logo" : "/assets/img/cerdo.png"
   },
   {
     "id": 3,
@@ -27,10 +27,10 @@
     "categoria": "cerdo",
     "descripcion": "",
     "precio": 1500,
-    "img": "assets/img/costillasDeCerdo.png",
+    "img": "/assets/img/costillasDeCerdo.png",
     "alt": "",
     "stock": 100,
-    "logo" : "assets/img/cerdo.png"
+    "logo" : "/assets/img/cerdo.png"
   },
   {
     "id": 4,
@@ -38,10 +38,10 @@
     "categoria": "cerdo",
     "descripcion": "",
     "precio": 1500,
-    "img": "assets/img/panceta.png",
+    "img": "/assets/img/panceta.png",
     "alt": "",
     "stock": 100,
-    "logo" : "assets/img/cerdo.png"
+    "logo" : "/assets/img/cerdo.png"
   },
   {
     "id": 5,
@@ -49,10 +49,10 @@
     "categoria": "cerdo",
     "descripcion": "",
     "precio": 1500,
-    "img": "assets/img/jamon.png",
+    "img": "./assets/img/jamon.png",
     "alt": "",
     "stock": 100,
-    "logo" : "assets/img/cerdo.png"
+    "logo" : "./assets/img/cerdo.png"
   },
   {
     "id": 7,
