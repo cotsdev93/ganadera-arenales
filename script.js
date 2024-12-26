@@ -395,10 +395,10 @@ class BaseDeDatosProductos {
   }
 
   async cargarRegistros() {
-    const resultado = await fetch(`ganadera-arenales/JSON/productos.JSON`);
+    const resultado = await fetch(`./JSON/productos.JSON`);
     this.productos = await resultado.json();
+    this.productos.sort((a, b) => a.nombre.localeCompare(b.nombre));
     cargarProductos(this.productos);
-    // this.productos.sort((a, b) => a.nombre.localeCompare(b.nombre));
     console.log("funca");
   }
 
