@@ -395,14 +395,11 @@ class BaseDeDatosProductos {
   }
 
   async cargarRegistros() {
-    const resultado = await fetch(
-      "/productos.JSON"
-    );
-
+    const resultado = await fetch("./JSON/productos.json");
     this.productos = await resultado.json();
-    this.productos.sort((a, b) => a.nombre.localeCompare(b.nombre));
     cargarProductos(this.productos);
-    console.log("funca")
+    // this.productos.sort((a, b) => a.nombre.localeCompare(b.nombre));
+    console.log("funca");
   }
 
   registrosPorCategoria(categoria) {
