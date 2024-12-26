@@ -396,11 +396,11 @@ class BaseDeDatosProductos {
 
   async cargarRegistros() {
     const resultado = await fetch(
-      "productos.json"
+      "productos.JSON"
     );
 
     this.productos = await resultado.json();
-    // this.productos.sort((a, b) => a.nombre.localeCompare(b.nombre));
+    this.productos.sort((a, b) => a.nombre.localeCompare(b.nombre));
     cargarProductos(this.productos);
     console.log("funca")
   }
