@@ -162,135 +162,135 @@ AOS.init();
 
 // MAP
 
-function initMap() {
-  var isSmallScreen = window.innerWidth <= 737;
-  var centerPosition = isSmallScreen
-    ? { lat: 10, lng: 0 }
-    : { lat: 20, lng: 0 };
-  var zoomPosition = isSmallScreen ? 1 : 1.5;
-  var options = {
-    center: centerPosition,
-    zoom: zoomPosition,
-    // gestureHandling: "none",
-    mapTypeControl: false,
-    draggable: true,
-    fullscreenControl: false,
-    disableDefaultUI: true,
-    styles: [
-      {
-        elementType: "geometry",
-        stylers: [{ color: "#d1d1d1" }],
-      },
-      {
-        featureType: "water",
-        elementType: "geometry",
-        stylers: [{ color: "#ebebeb" }],
-      },
-      {
-        featureType: "water",
-        elementType: "labels.text.fill",
-        stylers: [{ visibility: "off" }],
-      },
-      {
-        featureType: "administrative.country",
-        elementType: "geometry.stroke",
-        stylers: [{ color: "#a3a3a3" }],
-      },
-      {
-        featureType: "administrative.country",
-        elementType: "labels.text",
-        stylers: [{ visibility: "off" }],
-      },
-      {
-        featureType: "administrative.country",
-        elementType: "labels.text",
-        stylers: [{ visibility: "off" }],
-      },
-      {
-        featureType: "administrative",
-        elementType: "labels.text",
-        stylers: [{ visibility: "off" }],
-      },
-    ],
-  };
-  const map = new google.maps.Map(document.getElementById("map"), options);
+// function initMap() {
+//   var isSmallScreen = window.innerWidth <= 737;
+//   var centerPosition = isSmallScreen
+//     ? { lat: 10, lng: 0 }
+//     : { lat: 20, lng: 0 };
+//   var zoomPosition = isSmallScreen ? 1 : 1.5;
+//   var options = {
+//     center: centerPosition,
+//     zoom: zoomPosition,
+//     // gestureHandling: "none",
+//     mapTypeControl: false,
+//     draggable: true,
+//     fullscreenControl: false,
+//     disableDefaultUI: true,
+//     styles: [
+//       {
+//         elementType: "geometry",
+//         stylers: [{ color: "#d1d1d1" }],
+//       },
+//       {
+//         featureType: "water",
+//         elementType: "geometry",
+//         stylers: [{ color: "#ebebeb" }],
+//       },
+//       {
+//         featureType: "water",
+//         elementType: "labels.text.fill",
+//         stylers: [{ visibility: "off" }],
+//       },
+//       {
+//         featureType: "administrative.country",
+//         elementType: "geometry.stroke",
+//         stylers: [{ color: "#a3a3a3" }],
+//       },
+//       {
+//         featureType: "administrative.country",
+//         elementType: "labels.text",
+//         stylers: [{ visibility: "off" }],
+//       },
+//       {
+//         featureType: "administrative.country",
+//         elementType: "labels.text",
+//         stylers: [{ visibility: "off" }],
+//       },
+//       {
+//         featureType: "administrative",
+//         elementType: "labels.text",
+//         stylers: [{ visibility: "off" }],
+//       },
+//     ],
+//   };
+//   const map = new google.maps.Map(document.getElementById("map"), options);
 
-  function crearMarcador(lat, lng, iconUrl, title, infoContent) {
-    const markerIcon = {
-      url: iconUrl,
-      scaledSize: new google.maps.Size(40, 45),
-    };
+//   function crearMarcador(lat, lng, iconUrl, title, infoContent) {
+//     const markerIcon = {
+//       url: iconUrl,
+//       scaledSize: new google.maps.Size(40, 45),
+//     };
 
-    const marker = new google.maps.Marker({
-      position: { lat, lng },
-      map: map,
-      title: title,
-      icon: markerIcon,
-    });
+//     const marker = new google.maps.Marker({
+//       position: { lat, lng },
+//       map: map,
+//       title: title,
+//       icon: markerIcon,
+//     });
 
-    const infoWindow = new google.maps.InfoWindow({
-      content: infoContent,
-    });
+//     const infoWindow = new google.maps.InfoWindow({
+//       content: infoContent,
+//     });
 
-    marker.addListener("mouseover", function () {
-      infoWindow.open(map, marker);
-    });
+//     marker.addListener("mouseover", function () {
+//       infoWindow.open(map, marker);
+//     });
 
-    marker.addListener("mouseout", function () {
-      setTimeout(() => {
-        infoWindow.close();
-      }, 1000);
-    });
+//     marker.addListener("mouseout", function () {
+//       setTimeout(() => {
+//         infoWindow.close();
+//       }, 1000);
+//     });
 
-    return marker;
-  }
+//     return marker;
+//   }
 
-  crearMarcador(
-    35.86166,
-    104.195397,
-    "assets/img/marker.png",
-    "marcador",
-    "China"
-  );
+//   crearMarcador(
+//     35.86166,
+//     104.195397,
+//     "assets/img/marker.png",
+//     "marcador",
+//     "China"
+//   );
 
-  crearMarcador(
-    37.09024,
-    -95.712891,
-    "assets/img/marker.png",
-    "marcador",
-    "USA"
-  );
+//   crearMarcador(
+//     37.09024,
+//     -95.712891,
+//     "assets/img/marker.png",
+//     "marcador",
+//     "USA"
+//   );
 
-  crearMarcador(
-    55.75222,
-    37.61556,
-    "assets/img/marker.png",
-    "marcador",
-    "Rusia"
-  );
+//   crearMarcador(
+//     55.75222,
+//     37.61556,
+//     "assets/img/marker.png",
+//     "marcador",
+//     "Rusia"
+//   );
 
-  crearMarcador(
-    7.48801,
-    -65.87919,
-    "assets/img/marker.png",
-    "marcador",
-    "Venezuela"
-  );
+//   crearMarcador(
+//     7.48801,
+//     -65.87919,
+//     "assets/img/marker.png",
+//     "marcador",
+//     "Venezuela"
+//   );
 
-  crearMarcador(
-    5.963889,
-    -73.796387,
-    "assets/img/marker.png",
-    "marcador",
-    "Colombia"
-  );
+//   crearMarcador(
+//     5.963889,
+//     -73.796387,
+//     "assets/img/marker.png",
+//     "marcador",
+//     "Colombia"
+//   );
 
-  crearMarcador(-6, -50.796387, "assets/img/marker.png", "marcador", "Brasil");
+//   crearMarcador(-6, -50.796387, "assets/img/marker.png", "marcador", "Brasil");
 
-  crearMarcador(-32, 25, "assets/img/marker.png", "marcador", "Sudafrica");
-}
+//   crearMarcador(-32, 25, "assets/img/marker.png", "marcador", "Sudafrica");
+// }
 
-initMap();
+// initMap();
 
 // Categorias Productos
 
@@ -395,10 +395,10 @@ class BaseDeDatosProductos {
   }
 
   async cargarRegistros() {
-    const resultado = await fetch(`productos.JSON`);
+    const resultado = await fetch("productos.JSON");
     this.productos = await resultado.json();
-    this.productos.sort((a, b) => a.nombre.localeCompare(b.nombre));
     cargarProductos(this.productos);
+    this.productos.sort((a, b) => a.nombre.localeCompare(b.nombre));
     console.log("funca");
   }
 
