@@ -396,7 +396,7 @@ class BaseDeDatosProductos {
 
   async cargarRegistros() {
     const resultado = await fetch(
-      "/JSON/productos.json?timestamp=" + new Date().getTime()
+      "../JSON/productos.json?timestamp=" + new Date().getTime()
     );
 
     this.productos = await resultado.json();
