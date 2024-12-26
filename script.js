@@ -396,11 +396,11 @@ class BaseDeDatosProductos {
 
   async cargarRegistros() {
     const resultado = await fetch(
-      "productos.json?timestamp=" + new Date().getTime()
+      "./productos.JSON" 
     );
 
     this.productos = await resultado.json();
-    // this.productos.sort((a, b) => a.nombre.localeCompare(b.nombre));
+    this.productos.sort((a, b) => a.nombre.localeCompare(b.nombre));
     cargarProductos(this.productos);
     console.log("funca")
   }
@@ -507,11 +507,7 @@ function agregarProductoAlCarrito(event) {
   }).showToast();
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const bdProductos = new BaseDeDatosProductos();
-});
-
-// const bdProductos = new BaseDeDatosProductos();
+const bdProductos = new BaseDeDatosProductos();
 
 function capitalizarPrimeraLetra(texto) {
   return texto.charAt(0).toUpperCase() + texto.slice(1);
